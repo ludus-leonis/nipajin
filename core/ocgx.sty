@@ -1,0 +1,50 @@
+\newwrite\ocgHandle
+\def\ocgFile{\jobname.ocg}
+\RequirePackage{eso-pic}
+
+\InputIfFileExists{\ocgFile}{}{}
+
+\newenvironment{ocg}[3]{%
+	\@ocgxetex@newocg{#1}{#2}{#3}%
+	\special{pdf: content /OC /#2\space BDC}%
+	\message{/#2}%
+	\ignorespaces
+}{%
+	\special{pdf: content EMC}%
+	\ignorespacesafterend
+}
+
+\immediate\openout\ocgHandle=\ocgFile
+
+\newtoks\ocgproptoks
+\newtoks\ocglisttoks
+\newtoks\ocglisttokson
+\newtoks\ocglisttoksoff
+
+\newcount\ocg@number
+\def\@ocgxetex@newocg#1#2#3%
+{% #1:name, #2:num, #3:on
+\expandafter\ifx\csname OCG#2\endcsname\relax
+	\expandafter\gdef\csname OCG#2\endcsname{#2}%
+	\global\advance\ocg@number by 1
+	\immediate\write\ocgHandle{\string\special{pdf:obj @ocg\the\ocg@number\space <</Type/OCG /Name (#1)>>}}%
+	\edef\x{\global\ocglisttoks{\the\ocglisttoks @ocg\the\ocg@number\space}}\x
+	\edef\x{\global\ocgproptoks{\the\ocgproptoks /#2 @ocg\the\ocg@number\space ^^J}}\x%
+\else
+\fi
+}
+
+\AtEndDocument{\immediate\write\ocgHandle{
+\string\special{pdf:put @catalog <<
+/OC Properties <<
+	/OCGs [\the\ocglisttoks]
+	/D <</BaseState/ON /Order [\the\ocglisttoks]>>
+	>>
+>>}}}
+
+\AtEndDocument{\immediate\write\ocgHandle{\string\AddToShipoutPicture{\string\makeatletter
+\special{pdf: put @resources <<
+	/Properties << ^^J%
+	\the\ocgproptoks
+	>>
+>>}\string\makeatother}}}

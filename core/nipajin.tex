@@ -1,0 +1,71 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\documentclass{article}
+
+\usepackage{nipajin}
+
+% each language file has to re-define the following items:
+
+\newcommand{\versionRules}{v0.0}
+\newcommand{\translation}{}
+\newcommand{\disclaimer}{}
+\newcommand{\textIntro}{}
+\newcommand{\headlinePlayer}{}
+\newcommand{\tocPlayer}{}
+\newcommand{\textPlayer}{}
+\newcommand{\headlineEffects}{}
+\newcommand{\tocEffects}{}
+\newcommand{\textEffects}{}
+\newcommand{\headlineGM}{}
+\newcommand{\tocGM}{}
+\newcommand{\textGM}{}
+
+\input{content.tex} % Makefile will map the current language into content.txt
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\begin{multicols}{2}\raggedbottom
+
+\vspace*{-12pt}\color{white}
+
+\vfill\backgroundtop{trueBlack}{6cm}
+
+\coverbanner{\versionRules, \today}{\translation}{\disclaimer}
+
+\noindent\textIntro
+
+\end{multicols}
+\vspace*{2mm}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\headlinePlayer}}{\headlinePlayer}
+\begin{multicols}{2}\raggedbottom
+
+\noindent\textPlayer
+
+\end{multicols}
+
+\newpage
+
+\backgroundtop{secondary}{14cm}
+\mybannersimple{\MakeUppercase{\headlineEffects}}{\headlineEffects}
+\begin{multicols}{2}
+\textEffects
+\end{multicols}
+
+\mybanner{\MakeUppercase{\headlineGM}}{\headlineGM}
+\begin{multicols}{2}
+
+\textGM
+
+\end{multicols}
+
+\end{document}

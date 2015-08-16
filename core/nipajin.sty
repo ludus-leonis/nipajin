@@ -1,0 +1,374 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\ProvidesFile{nipajin.sty}
+\ProvidesPackage{nipajin}
+
+% --- common packages --------------------------------------------------
+
+\usepackage[cmyk,table,usenames,dvipsnames]{xcolor} % load early to avoid name clash
+\usepackage{verbatim}  % \begin{comment} support
+\usepackage{eso-pic}   % AddToShipoutPicture support
+\usepackage{units}	 % nice fractions (like "1/2")
+\usepackage{multicol}  % 2-columns
+
+% --- colors -----------------------------------------------------------
+
+\DefineNamedColor{named}{primary}{cmyk}{0.00,0.79,0.79,0.17}   % red
+\DefineNamedColor{named}{secondary}{cmyk}{0.00,0.08,0.08,0.02} % rose
+\DefineNamedColor{named}{trueBlack}{cmyk}{0.75,0.68,0.67,0.90} % blacker than black
+
+% --- custom latex commands --------------------------------------------
+
+\makeatletter
+\def\gnewcommand{\g@star@or@long\new@command}
+\def\grenewcommand{\g@star@or@long\renew@command}
+\def\g@star@or@long#1{%
+  \@ifstar{\let\l@ngrel@x\global#1}{\def\l@ngrel@x{\long\global}#1}}
+\makeatother
+
+% --- units ------------------------------------------------------------
+
+\setlength{\unitlength}{1mm}
+
+% --- language ---------------------------------------------------------
+
+\usepackage{polyglossia}
+
+\hyphenation{LUDUS}
+\hyphenation{LEONIS}
+
+% --- page & basic text setup ------------------------------------------
+
+\usepackage[driver=none]{geometry}
+
+\geometry{% A5
+	a5paper,
+	textwidth=132mm,
+	textheight=190mm,
+	inner=8mm,
+	top=10mm,
+	columnsep=4mm,
+	footskip=2mm,
+}
+
+\setlength{\parindent}{1em}
+\setlength{\parskip}{0mm}
+
+\clubpenalty = 10000
+\widowpenalty = 10000
+\displaywidowpenalty = 10000
+\finalhyphendemerits = 10000
+\brokenpenalty = 7500
+\pretolerance 2500
+\tolerance 500
+\hyphenpenalty 250
+\exhyphenpenalty 100
+\doublehyphendemerits 7500
+\finalhyphendemerits 7500
+\lefthyphenmin 3
+\righthyphenmin 3
+\looseness 1
+
+\multicolpretolerance 2500
+\multicoltolerance 500
+\setcounter{collectmore}{-1}
+
+\usepackage[final]{microtype}
+
+% --- header and footer ------------------------------------------------
+
+\usepackage{fancyhdr}
+
+\pagestyle{fancy}
+\fancyhf{}
+\fancyfootoffset[RO,LE]{0mm}
+\fancyfoot[C]{\bf\color{primary}\fffancy\thepage}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% --- pdf tweaks -------------------------------------------------------
+
+% fix a transparent png rendering bug
+\makeatletter%
+\special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
+\makeatother%
+
+% some usefull default pdf settings
+\usepackage{hyperref}
+\hypersetup{
+	pdfpagelayout=TwoPageRight,
+	pdfstartview=Fit,
+	pdfpagemode=UseOutlines,
+	pdfprintscaling=None,
+	colorlinks=false,
+	hidelinks=true,
+	bookmarksnumbered=false,
+	bookmarksopen=false
+}
+
+\usepackage{ocgx} % for pdf layer support
+
+% --- fonts & symbols --------------------------------------------------
+
+\usepackage{fontspec}
+\usepackage{xltxtra}
+\usepackage{xunicode}
+
+\newcommand{\fsNormal}{\fontsize{10pt}{12pt plus 0.125pt minus 0.125pt}}
+\newcommand{\fsSmall}{\fontsize{9pt}{11pt plus 0.125pt minus 0.125pt}}
+\renewcommand{\normalsize}{%
+   \fsNormal\selectfont
+}
+\renewcommand{\small}{%
+   \fsSmall\selectfont
+}
+
+\newfontfamily{\fftext}[
+	Path=../fonts/sourcesanspro/,
+	Mapping=tex-text,
+	UprightFont={SourceSansPro-Light},
+	ItalicFont={SourceSansPro-LightItalic},
+	BoldFont={SourceSansPro-Semibold},
+	BoldItalicFont={SourceSansPro-SemiboldItalic}
+]{SourceSansPro}
+\newfontfamily{\ffextra}[
+	Path=../fonts/sourcesanspro/,
+	Mapping=tex-text
+]{SourceSansPro-Regular}
+\newfontfamily{\fffancy}[
+	Path=../fonts/sourcesanspro/,
+	Mapping=tex-text,
+	UprightFont={SourceSansPro-Black},
+	ItalicFont={SourceSansPro-BlackItalic},
+	BoldFont={SourceSansPro-Black},
+	BoldItalicFont={SourceSansPro-BlackItalic}
+]{SourceSansPro}
+
+\newcommand{\TN}{@}
+\newcommand{\book}{\textgreater}
+\newcommand{\HD}{WW}
+\newcommand{\AD}{AW}
+\newcommand{\RD}{RW}
+\newcommand{\PT}{VZ}
+\newcommand{\FT}{NWZ}
+
+\newcommand{\nipajin}{\href{http://ludus-leonis.com/nipajin}{NIP'AJIN}}
+\newcommand{\ludusleonis}{\href{http://ludus-leonis.com/}{LUDUS LEONIS}}
+
+% --- images & graphics ------------------------------------------------
+
+\usepackage{graphicx}
+
+\usepackage{tikz}
+\usetikzlibrary{decorations.pathmorphing}
+\usetikzlibrary{fadings}
+\usetikzlibrary{shadows}
+\usetikzlibrary{calc}
+
+% --- page references --------------------------------------------------
+
+\usepackage{zref-user,zref-titleref,zref-hyperref}
+\newcommand{\refPage}[1]{\book\,\zpageref{#1}}
+
+% --- common style items -----------------------------------------------
+
+\newcommand{\keyword}[1]{{\textbf{#1}}}
+\newcommand{\say}[1]{„\textit{#1}“}
+
+% --- tables -----------------------------------------------------------
+
+\usepackage{tabularx}
+\usepackage{colortbl}
+\usepackage{ragged2e}
+\usepackage{multirow}
+
+\renewcommand{\tabcolsep}{1mm}
+
+\newcolumntype{x}[1]{%
+>{\raggedright\hspace{0pt}}p{#1}%
+}
+\newcolumntype{y}[1]{%
+>{\centering\hspace{0pt}}p{#1}%
+}
+\newcolumntype{z}[1]{%
+>{\raggedleft\hspace{0pt}}p{#1}%
+}
+
+\newcommand{\thead}[1]{\textbf{\color{white}#1}}
+\newcommand{\tn}{\tabularnewline}
+
+\newcommand{\tabelle}[4][\ffextra\small]{\renewcommand{\arraystretch}{0.95}{
+{#1%
+\vspace{2pt plus 6pt}%
+\noindent%
+\rowcolors[]{1}{secondary}{}%
+\RaggedRight\setlength{\extrarowheight}{0.15\baselineskip}%
+\begin{tabularx}{\columnwidth}{#2}
+\hline
+\rowcolor{primary}
+#3
+\hline
+#4
+\hline
+\end{tabularx}\vspace{2pt plus 6pt}}}}
+
+% --- background images/gfx --------------------------------------------
+
+\newcommand{\background}{} % contains the background for each page
+\AddToShipoutPicture{\background}
+
+% --- rough-edged boxes/banners ----------------------------------------
+
+% This looks more complicated than it is. It creates the top and bottom
+% "rough" boxes. They default to 2mm each in the 'primary' color, but it
+% is easy to override the values on a per-page basis:
+%
+%   \backgroundtop{colorname}{height}
+%   \backgroundbottom{colorname}{height}
+%
+% What happens is that a few tikz boxes are created that are shifted
+% around so they appear finally at the right height on the top/ bottom
+% of the page, taking into account any page crop that might be enabled.
+
+\newcommand{\bgbox}{}
+\newcommand{\bgboxinjectonce}{}
+\newcommand{\bgboxverticalheight}{2mm}
+\newcommand{\bgboxtopcolor}{primary}
+\newcommand{\bgboxtopheight}{\bgboxverticalheight}
+\newcommand{\bgboxbottomcolor}{primary}
+\newcommand{\bgboxbottomheight}{\bgboxverticalheight}
+\newcommand{\backgroundbottom}[2]{%
+\grenewcommand{\bgboxbottomcolor}{#1}%
+\grenewcommand{\bgboxbottomheight}{#2}%
+}
+\newcommand{\backgroundtop}[2]{%
+\grenewcommand{\bgboxtopcolor}{#1}%
+\grenewcommand{\bgboxtopheight}{#2}%
+}
+
+\newcommand{\backgroundlayername}{Background}
+
+\newcommand{\backgroundpages}{%
+	\renewcommand{\background}{%
+		\begin{ocg}{\backgroundlayername}{oc1}{1}%
+			\begin{tikzpicture}[remember picture,overlay,shift={(current page.center)}]
+				\fill [
+					white,
+					xshift=-2\paperwidth,
+					yshift=-2\paperheight
+				] (0,0) rectangle (4\paperwidth,4\paperheight);% white bg
+				\fill [
+					\bgboxtopcolor,
+					decorate,
+					decoration={random steps,segment length=26pt,amplitude=0.5pt},
+					xshift=-0.75\paperwidth,
+					yshift=0.5\paperheight,
+					yshift=-\bgboxtopheight
+				] (0,0) rectangle (1.5\paperwidth,1.5\paperheight);% top box
+				\fill [
+					\bgboxbottomcolor,
+					decorate,
+					decoration={random steps,segment length=26pt,amplitude=0.5pt},
+					xshift=-0.75\paperwidth,
+					yshift=-2.0\paperheight,
+					yshift=\bgboxbottomheight
+				] (0,0) rectangle (1.5\paperwidth,1.5\paperheight);% top box
+			\end{tikzpicture}
+			\bgbox%
+			\grenewcommand{\bgboxtopcolor}{primary}%
+			\grenewcommand{\bgboxtopheight}{\bgboxverticalheight}%
+			\grenewcommand{\bgboxbottomcolor}{primary}%
+			\grenewcommand{\bgboxbottomheight}{\bgboxverticalheight}%
+			\grenewcommand{\bgboxinjectonce}{}%
+		\end{ocg}
+	}
+}
+
+\backgroundpages
+
+% --- headlindes -------------------------------------------------------
+
+\newcommand{\mybanner}[2]{% regular headlines: red banners across page, shadowed font
+\phantomsection\addcontentsline{toc}{section}{#2}{%
+	\centerline{\begin{tikzpicture}%
+		\begin{ocg}{\backgroundlayername}{oc1}{1}
+			\node [
+				fill=primary,
+				decorate,
+				decoration={random steps,segment length=26pt,amplitude=0.5pt},
+				minimum height=1.25cm,
+				text width=1.5\paperwidth
+			]{};
+		\end{ocg}
+		\node [
+			text height=19pt,
+			text depth=4pt,
+			xshift=1.25pt,
+			yshift=-1.25pt
+		]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{black}\addfontfeature{LetterSpace=-2.0}\uppercase{#1}}};
+		\node [
+			text height=19pt,
+			text depth=4pt
+		]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{white}\addfontfeature{LetterSpace=-2.0}\uppercase{#1}}};
+	\end{tikzpicture}}%
+}}
+
+\newcommand{\mybannersimple}[2]{% regular headlines: red banners across page
+\phantomsection\addcontentsline{toc}{section}{#2}{%
+	\centerline{\begin{tikzpicture}%
+		\node [
+			text width=1.5\paperwidth
+		]{};
+		\node [
+			text height=17pt
+		]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{primary}\addfontfeature{LetterSpace=-2.0}\uppercase{#1}}};
+	\end{tikzpicture}}%
+}}
+
+\newcommand{\mysection}[2][none]{% custom sections: with rough rose bars, and auto-toc
+\noindent\begin{tikzpicture}%
+\node [
+	minimum height=2\baselineskip,
+	minimum width=1cm
+]{};
+\node [
+	fill=secondary,
+	decorate,
+	decoration={random steps,segment length=15pt,amplitude=0.5pt},
+	minimum height=8pt,
+	minimum width=\columnwidth,
+	yshift=-2mm
+]{};
+\node [
+	fill=white,
+	text height=8pt,
+	anchor=east,
+	xshift=2.75cm,
+	yshift=-2mm
+] {\makebox{\it\fffancy\fontsize{12pt}{12pt}\selectfont\color{primary}{\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}}};
+\end{tikzpicture}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
+}
+
+\newcommand{\coverbanner}[3]{
+	\noindent
+	\parbox{\columnwidth}{
+		\color{white}
+
+		\vspace*{5mm}
+
+		\centerline{\fffancy\fontsize{42pt}{42pt}\selectfont\color{white}{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
+		\centerline{{\small\textbf{\copyright\ 2009--2015, Markus Leupold-Löwenthal}}}
+		\centerline{{\small#1}}
+		\expandafter\ifstrequal\expandafter{#2}{nobody}{}{\centerline{{\small#2}}}
+
+		\vspace*{5mm}
+
+		\centerline{%
+		%\parbox{2cm}{\includegraphics[width=2cm]{\image{common/cc-by-sa.pdf}}}%
+		\parbox{20mm}{\fontsize{11pt}{11pt}\selectfont\textbf{CC BY-SA 4.0}}%
+		\hspace{1mm}%
+		\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #3}%
+		}
+	}
+}
