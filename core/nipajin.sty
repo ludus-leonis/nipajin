@@ -117,12 +117,10 @@
 
 \newcommand{\fsNormal}{\fontsize{10pt}{12pt plus 0.125pt minus 0.125pt}}
 \newcommand{\fsSmall}{\fontsize{9pt}{11pt plus 0.125pt minus 0.125pt}}
-\renewcommand{\normalsize}{%
-   \fsNormal\selectfont
-}
-\renewcommand{\small}{%
-   \fsSmall\selectfont
-}
+\renewcommand{\normalsize}{\fsNormal\selectfont}
+\renewcommand{\small}{\fsSmall\selectfont}
+% note: those default sizes are usually overridden in the content.xx.tex file
+% to reflect languages that need more/less space
 
 \newfontfamily{\fftext}[
 	Path=../fonts/sourcesanspro/,

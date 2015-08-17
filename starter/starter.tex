@@ -1,0 +1,184 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\documentclass{article}
+
+\usepackage{starter}
+
+\hyphenation{Blatt-hälfte}
+
+% each language file has to re-define the following items:
+
+\newcommand{\versionScenario}{v0.0}
+\newcommand{\translation}{}
+\newcommand{\disclaimer}{}
+
+\newcommand{\tocCover}{}
+\newcommand{\titleCover}{}
+\newcommand{\versionCover}{}
+\newcommand{\creativecommonsA}{}
+\newcommand{\creativecommonsB}{}
+\newcommand{\titleImprint}{}
+\newcommand{\tocImprint}{}
+\newcommand{\textImprint}{}
+
+\newcommand{\tocAbout}{}
+\newcommand{\headlineAbout}{}
+\newcommand{\teaserAbout}{}
+\newcommand{\textAbout}{}
+\newcommand{\headlinePrologue}{}
+\newcommand{\teaserPrologue}{}
+\newcommand{\textPrologue}{}
+\newcommand{\tocPrologue}{}
+\newcommand{\tocGM}{}
+\newcommand{\headlineGM}{}
+\newcommand{\teaserGM}{}
+\newcommand{\textGM}{}
+\newcommand{\tocRulesPlayer}{}
+\newcommand{\headlineRulesPlayer}{}
+\newcommand{\teaserRulesPlayer}{}
+\newcommand{\tocRulesGM}{}
+\newcommand{\headlineRulesGM}{}
+\newcommand{\tocCharacters}{}
+\newcommand{\headlineCharacters}{}
+\newcommand{\teaserCharacters}{}
+
+\newcommand{\textCharacterA}{}
+\newcommand{\textCharacterB}{}
+
+\newcommand{\tocBackcover}{}
+\newcommand{\textBackcover}{}
+\newcommand{\urlBackcover}{}
+
+\newcommand{\nipajinVersion}{v0.0} % from nipajin core
+\newcommand{\nipajinTranslation}{} % from nipajin core
+\newcommand{\nipajinDisclaimer}{} % from nipajin core
+\newcommand{\nipajinTextIntro}{} % from nipajin core
+\newcommand{\nipajinHeadlinePlayer}{} % from nipajin core
+\newcommand{\nipajinTocPlayer}{} % from nipajin core
+\newcommand{\nipajinTextPlayer}{} % from nipajin core
+\newcommand{\nipajinHeadlineEffects}{} % from nipajin core
+\newcommand{\nipajinTocEffects}{} % from nipajin core
+\newcommand{\nipajinTextEffects}{} % from nipajin core
+\newcommand{\nipajinHeadlineGM}{} % from nipajin core
+\newcommand{\nipajinTocGM}{} % from nipajin core
+\newcommand{\nipajinTextGM}{} % from nipajin core
+
+\input{rules.tex}   % Makefile will map the current language into rules.txt
+\input{content.tex} % Makefile will map the current language into content.txt
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% --- cover -----------------------------------------------------------------
+\backgroundCover
+\begin{titlepage}
+\thispagestyle{empty}
+\begin{center}\addcontentsline{toc}{section}{\tocCover}
+\vspace*{40mm}
+{\fontsize{56pt}{50pt}\selectfont\textbf{\titleCover}}\\
+\vspace*{10mm}
+{\versionCover}
+\vfill
+\end{center}
+\end{titlepage}
+
+% --- imprint ---------------------------------------------------------------
+\backgroundPage
+\setcounter{page}{2}
+\begin{center}
+	\ffextra\small%
+	\parbox{0.80cm}{\includegraphics[height=0.80cm]{images/cc-cc.pdf}}\hspace{1mm}\parbox{0.80cm}{\includegraphics[height=0.80cm]{images/cc-by.pdf}}\hspace{1mm}\parbox{0.80cm}{\includegraphics[height=0.80cm]{images/cc-sa.pdf}}\hspace{2mm}\parbox{9cm}{%
+		\creativecommonsA \\
+		\textbf{\creativecommonsB}\\
+		(CC BY-SA 4.0) \href{http://creativecommons.org/licenses/by-sa/4.0/}{http://creativecommons.org/licenses/by-sa/4.0/}
+	}
+\end{center}
+\mybanner{\titleImprint}{\tocImprint}
+\begin{center}
+	\vspace{5mm}
+	\textImprint
+\end{center}
+\newpage
+
+% --- howto -----------------------------------------------------------------
+\backgroundPage
+\begin{center}
+	\noindent\emph{\teaserAbout}
+\end{center}
+\mybanner{\headlineAbout}{\tocAbout}
+\begin{multicols}{2}\raggedbottom
+	\noindent\textAbout
+\end{multicols}
+\vfill\newpage
+
+% --- prologue --------------------------------------------------------------
+\backgroundPage
+\begin{center}
+	\noindent\emph{\teaserPrologue}
+\end{center}
+\mybanner{\headlinePrologue}{\tocPrologue}
+\begin{multicols}{2}\raggedbottom
+	\noindent\textPrologue
+\end{multicols}
+\newpage
+
+% --- GM section ------------------------------------------------------------
+\backgroundPage
+\begin{center}
+	\noindent\emph{\teaserGM}
+\end{center}
+\mybanner{\headlineGM}{\tocGM}
+\begin{multicols}{2}\raggedbottom
+	\noindent\textGM
+\end{multicols}
+\newpage
+
+% --- NIP'AJIN Rules --------------------------------------------------------
+\backgroundPage
+\begin{center}
+	\noindent\emph{\teaserRulesPlayer}
+\end{center}
+\mybanner{\headlineRulesPlayer}{\tocRulesPlayer}\zlabel{labelRules}
+\begin{multicols}{2}\raggedbottom
+\noindent\nipajinTextPlayer
+\mysection{\nipajinHeadlineEffects}{\nipajinTocEffects}
+\nipajinTextEffects
+\end{multicols}
+\mybanner{\headlineRulesGM}{\tocRulesGM}
+\begin{multicols}{2}
+\nipajinTextGM
+\end{multicols}
+\mybanner{\headlineCharacters}{\tocCharacters}
+\begin{center}
+	\noindent\emph{\teaserCharacters}
+\end{center}
+\newpage
+
+% --- example characters ----------------------------------------------------
+\backgroundCharacter
+\thispagestyle{empty}
+\character{\textCharacterA}
+\thispagestyle{empty}
+\character{\textCharacterB}
+
+% --- backcover -------------------------------------------------------------
+\backgroundBack
+\thispagestyle{empty}
+\begin{center}\addcontentsline{toc}{section}{\tocBackcover}
+\color{white}
+\vspace*{30mm}
+\parbox{110mm}{
+	\bf\ffextra\large
+	\textBackcover
+}
+\vfill
+\urlBackcover
+\vspace*{5mm}
+\end{center}
+\newpage
+
+\end{document}

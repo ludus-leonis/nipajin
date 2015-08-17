@@ -1,0 +1,98 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\ProvidesFile{starter.sty}
+\ProvidesPackage{starter}
+
+% this style file takes the basic red layout and replaces various parts with the
+% blue'ish layout elements
+
+\usepackage{nipajin}
+
+% --- common packages --------------------------------------------------------
+
+\usepackage{lipsum} % filler text
+\usepackage{rotating} % for \begin{rotate}
+
+% --- colors -----------------------------------------------------------------
+
+\DefineNamedColor{named}{primary}{cmyk}{0.7187,0.5313,0.3750,0.2578}   % blue
+\DefineNamedColor{named}{secondary}{cmyk}{0.3203,0.1602,0.1172,0.0000} % light blue
+\DefineNamedColor{named}{trueBlack}{cmyk}{0.75,0.68,0.67,0.90}         % blacker than black
+
+% --- fonts & symbols --------------------------------------------------------
+
+\newfontfamily\fftext[
+	Path=../fonts/gentiumbookbasic/,
+	Mapping=tex-text,
+	BoldFont = GenBkBasB.ttf,
+	ItalicFont = GenBkBasI.ttf,
+	BoldItalicFont = GenBkBasBI.ttf,
+	Mapping = tex-text
+]{GenBkBasR.ttf}
+\renewcommand{\ffextra}{\fontfamily{lmss}\selectfont}
+\renewcommand{\fffancy}{\fontfamily{lmss}\selectfont}
+
+% --- backgrounds -----------------------------------------------------------
+
+\newcommand{\backgroundCover}{
+	\renewcommand{\background}{
+		\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics[
+		width=\paperwidth,height=\paperheight]{images/cover.jpg}\vfill}}
+	}
+}
+
+\newcommand{\backgroundPage}{
+	\renewcommand{\background}{
+		\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics[
+		width=\paperwidth,height=\paperheight]{images/page.jpg}\vfill}}
+	}
+}
+
+\newcommand{\backgroundCharacter}{
+	\renewcommand{\background}{
+		\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics[
+		width=\paperwidth,height=\paperheight]{images/character.jpg}\vfill}}
+	}
+}
+
+\newcommand{\backgroundBack}{
+	\renewcommand{\background}{
+		\put(0,0){\parbox[b][\paperheight]{\paperwidth}{\vfill\centering\includegraphics[
+		width=\paperwidth,height=\paperheight]{images/back.jpg}\vfill}}
+	}
+}
+
+% --- headlines -------------------------------------------------------------
+
+\usepackage{sectsty}
+\usepackage[abs]{overpic}
+
+\newcommand{\chapterfontsize}{\fontsize{20pt}{18pt plus 6pt minus 6pt}}
+\chapterfont{\color{primary}\sc\fffancy\chapterfontsize\selectfont\sectionrule{0ex}{0pt}{-1ex}{2pt}}
+\newcommand{\sectionfontsize}{\fontsize{12pt}{12pt plus 6pt minus 6pt}}
+\sectionfont{\color{primary}\raggedleft\fffancy\sectionfontsize\selectfont}
+\newcommand{\subsectionfontsize}{\fontsize{10pt}{10pt}}
+\subsectionfont{\color{primary}\raggedright\fffancy\subsectionfontsize\selectfont}
+
+\renewcommand{\mybanner}[2]{%
+\phantomsection\addcontentsline{toc}{section}{#2}%
+\vspace*{-4mm}{
+\noindent\hspace*{-11.6mm}
+\begin{overpic}[width=151mm]%
+	{images/headline.png}
+	\put(0,11.1){\parbox{\textwidth}{\hspace*{17mm}\bf\color{primary}\fffancy\chapterfontsize\selectfont\centering#1}}
+\end{overpic}
+}\vspace*{-9mm}}
+
+\renewcommand{\mysection}[2][none]{%
+\section*{..:: #2 ::}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
+}
+
+% --- more custom macros -----------------------------------------------------
+
+\newcommand{\character}[1]{%
+	\vspace*{182mm}
+	\begin{rotate}{90}\begin{minipage}[t]{80mm}#1\end{minipage}\end{rotate}
+	\newpage
+}
