@@ -16,7 +16,7 @@ de: setup
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de -output-directory out ${TEX_NAME}
 
 pl: setup
-	ln -sf content.pl.tex out/content.tex
+	ln -sf ../content.pl.tex out/content.tex
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-pl -output-directory out ${TEX_NAME}
 
 clean:

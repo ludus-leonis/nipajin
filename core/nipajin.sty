@@ -153,8 +153,8 @@
 \newcommand{\PT}{VZ}
 \newcommand{\FT}{NWZ}
 
-\newcommand{\nipajin}{\href{http://ludus-leonis.com/nipajin}{NIP'AJIN}}
-\newcommand{\ludusleonis}{\href{http://ludus-leonis.com/}{LUDUS LEONIS}}
+\newcommand{\nipajin}{\href{http://ludus-leonis.com/nipajin}{\makebox{NIP'AJIN}}}
+\newcommand{\ludusleonis}{\href{http://ludus-leonis.com/}{\makebox{LUDUS} \makebox{LEONIS}}}
 
 % --- images & graphics ------------------------------------------------
 
@@ -286,6 +286,14 @@
 }
 
 \backgroundpages
+
+% --- lists ------------------------------------------------------------
+
+\newcommand{\mylist}[1]{%
+    \begin{list}{
+        \color{primary}\textbullet}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
+    \end{list}
+}
 
 % --- headlindes -------------------------------------------------------
 
