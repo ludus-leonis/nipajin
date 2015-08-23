@@ -115,6 +115,8 @@
 \usepackage{xltxtra}
 \usepackage{xunicode}
 
+\ifdefined\fontsearchpath\else\newcommand{\fontsearchpath}{../fonts}\fi
+
 \newcommand{\fsNormal}{\fontsize{10pt}{12pt plus 0.125pt minus 0.125pt}}
 \newcommand{\fsSmall}{\fontsize{9pt}{11pt plus 0.125pt minus 0.125pt}}
 \renewcommand{\normalsize}{\fsNormal\selectfont}
@@ -123,7 +125,7 @@
 % to reflect languages that need more/less space
 
 \newfontfamily{\fftext}[
-	Path=../fonts/sourcesanspro/,
+	Path=\fontsearchpath/sourcesanspro/,
 	Mapping=tex-text,
 	UprightFont={SourceSansPro-Light},
 	ItalicFont={SourceSansPro-LightItalic},
@@ -131,11 +133,11 @@
 	BoldItalicFont={SourceSansPro-SemiboldItalic}
 ]{SourceSansPro}
 \newfontfamily{\ffextra}[
-	Path=../fonts/sourcesanspro/,
+	Path=\fontsearchpath/sourcesanspro/,
 	Mapping=tex-text
 ]{SourceSansPro-Regular}
 \newfontfamily{\fffancy}[
-	Path=../fonts/sourcesanspro/,
+	Path=\fontsearchpath/sourcesanspro/,
 	Mapping=tex-text,
 	UprightFont={SourceSansPro-Black},
 	ItalicFont={SourceSansPro-BlackItalic},
@@ -203,12 +205,9 @@
 \rowcolors[]{1}{secondary}{}%
 \RaggedRight\setlength{\extrarowheight}{0.15\baselineskip}%
 \begin{tabularx}{\columnwidth}{#2}
-\hline
 \rowcolor{primary}
 #3
-\hline
 #4
-\hline
 \end{tabularx}\vspace{2pt plus 6pt}}}}
 
 % --- background images/gfx --------------------------------------------
@@ -259,7 +258,7 @@
 				\fill [
 					\bgboxtopcolor,
 					decorate,
-					decoration={random steps,segment length=26pt,amplitude=0.5pt},
+					decoration={random steps,segment length=26pt,amplitude=0.33pt},
 					xshift=-0.75\paperwidth,
 					yshift=0.5\paperheight,
 					yshift=-\bgboxtopheight
@@ -267,7 +266,7 @@
 				\fill [
 					\bgboxbottomcolor,
 					decorate,
-					decoration={random steps,segment length=26pt,amplitude=0.5pt},
+					decoration={random steps,segment length=26pt,amplitude=0.33pt},
 					xshift=-0.75\paperwidth,
 					yshift=-2.0\paperheight,
 					yshift=\bgboxbottomheight
@@ -302,7 +301,7 @@
 			\node [
 				fill=primary,
 				decorate,
-				decoration={random steps,segment length=26pt,amplitude=0.5pt},
+				decoration={random steps,segment length=26pt,amplitude=0.33pt},
 				minimum height=1.25cm,
 				text width=1.5\paperwidth
 			]{};
@@ -341,7 +340,7 @@
 \node [
 	fill=secondary,
 	decorate,
-	decoration={random steps,segment length=15pt,amplitude=0.5pt},
+	decoration={random steps,segment length=15pt,amplitude=0.33pt},
 	minimum height=8pt,
 	minimum width=\columnwidth,
 	yshift=-2mm
