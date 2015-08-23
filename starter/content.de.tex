@@ -1,0 +1,241 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\renewcommand{\versionScenario}{v1.7-de}
+
+% CHANGELOG-de
+%
+% 1.2
+%   - rotes NIP'AJIN Layout
+%   - Migration GitHub
+% 1.1
+%   - Beginn des Changelogs
+
+% --- language dependent typography stuff ------------------------------
+
+\renewcommand{\say}[1]{„\textit{#1}“}
+\setdefaultlanguage[spelling=new]{german}
+
+\renewcommand{\fsNormal}{\fontsize{9.5pt}{10.75pt plus 0.125pt minus 0.125pt}}
+\renewcommand{\fsSmall}{\fontsize{8.0pt}{9.5pt plus 0.125pt minus 0.125pt}}
+
+\hyphenation{Rol-len-spiel}
+\hyphenation{Blatt-hälfte}
+
+% --- pdf metadata & stuff ---------------------------------------------
+
+\hypersetup{
+	pdftitle={NIP'AJIN Autorenpaket},
+	pdfauthor={Markus Leupold-Loewenthal},
+	pdfsubject={Ein leichtgewichtiges, freies Rollenspielsystem.},
+	pdfkeywords={nipajin, nip'ajin, Rollenspiel, System, frei, RSP, RPG}
+}
+\renewcommand{\translation}{nobody}
+
+\renewcommand{\backgroundlayername}{Hintergrund}
+
+% --- headlines --------------------------------------------------------
+
+\renewcommand{\disclaimer}{(Logos und Marken ausgenommen.)}
+
+% --- language macros --------------------------------------------------
+
+\newcommand{\uA}{u.\,a.}
+
+% --- main texts -------------------------------------------------------
+
+\renewcommand{\tocCover}{Titelblatt}
+\renewcommand{\titleCover}{%
+	\color{secondary}Das \color{primary}NIP'AJIN\\%
+	\color{primary}Autorenpaket%
+}
+\renewcommand{\versionCover}{\LaTeX~Edition, Version \versionScenario}
+
+\renewcommand{\creativecommonsA}{Dieses Werk untersteht folgender Lizenz:}
+\renewcommand{\creativecommonsB}{Namensnennung--Weitergabe unter gleichen Bedingungen 4.0}
+\renewcommand{\titleImprint}{Impressum}
+\renewcommand{\tocImprint}{Impressum}
+\renewcommand{\textImprint}{%
+
+	\copyright\ Jahr, Name
+
+	Version: Version x.y vom TT.MM.JJJJ
+
+	\bigskip
+	\fbox{\parbox{10cm}{
+		\ffextra\small
+		Dieses Werk nutzt das freie \nipajin-System von \textbf{Markus Leupold-Löwenthal (\ludusleonis)} im Rahmen einer Creative Commons Lizenz.
+		Das Werk spiegelt daher Meinungen und Ansichten des Lizenznehmers wider, die sich nicht mit jenen des Lizenzgebers decken müssen.\\
+		\href{http://ludus-leonis.com/nipajin}{\emph{http://ludus-leonis.com/nipajin}}
+	}}%
+
+	\vfill
+
+	Hier ist Platz für mehr Information vom Autor, Danksagungen, \\
+	Links zur Homepage, Soziale Netze usw.
+
+	\vfill
+
+	Die folgenden Schriftarten finden unter ihrer jeweiligen Lizenz Verwendung:
+
+	\textit{Gentium}, \href{http://scripts.sil.org/Gentium/}{http://scripts.sil.org/Gentium/}
+
+	\textit{Latin Modern Sans Serif}, \href{http://www.ctan.org/tex-archive/info/lmodern/}{http://www.ctan.org/tex-archive/info/lmodern/}
+
+}
+
+\renewcommand{\tocAbout}{Anleitung}
+\renewcommand{\headlineAbout}{Anleitung zum Autorenpaket}
+\renewcommand{\teaserAbout}{%
+	Dieser Abschnitt gibt ein paar Hilfestellungen, wie das \nipajin-Autorenpaket verwendet werden kann. Natürlich sollte dieser Abschnitt im finalen Dokument vom Autor entfernt werden ;)
+}
+\renewcommand{\textAbout}{%
+
+	\mysection{Einführung}
+
+		\noindent
+		Hallo! Schön, dass du dieses Autorenpaket verwenden möchtest. Es ermöglicht dir, mit relativ wenig Aufwand ein komplettes auf \nipajin\  basierendes Szenario oder Setting zu schreiben. Als Ausgangspunkt bekommst du eine vollständige Dokumentstruktur inkl. Cover, Layout und Regelanhang. Die folgenden Punkte gilt es dabei zu beachten:
+
+		\mylist{
+			\item Technische Details, wie man das Autorenpaket bedient, findest du in der README Datei.
+			\item Der hier enthaltene Dokumentaufbau ist nur als Vorschlag zu betrachten.
+			\item \nipajin~unterliegt der CC BY-SA. Bitte informiere dich auf der Creative Commons Webseite, was das bedeutet. Du musst nämlich diese Lizenz auf \emph{alles}, was du davon ableitest, wieder anwenden. Das gilt auch, wenn du nur Teile in andere Werke übernimmst, \zB~dir \say{nur das Layout abschaust}. Weiters musst du dein gesamtes entstehendes Werk unter die CC BY-SA stellen -- du kannst also nicht Teile (\zB~Bilder!) davon aussnehmen.
+			\item Bedenke auch, dass die CC BY-SA die kommerzielle Nutzung deiner Inhalte durch andere erlaubt und du daher auch selbst die nötigen Rechte haben musst, alles, was du integrierst (\zB~Bilder oder Texte aus anderen Quellen) unter diese Lizenz stellen zu dürfen.
+			\item Die CC BY-SA sagt \uA~aus, dass du dich zur Ableitung vom Original bekennen musst. Am einfachsten ist das, wenn du den Kasten im Impresssum \say{Dieses Werk nutzt das freie NIP’AJIN-System~\ldots} drinnen lässt. Damit bin ich \say{in der von mir festgelegten Weise} genannt und es ist leicht ersichtlich, wo das Original her kommt.
+			\item Beachte, dass das \nipajin~Logo nicht frei ist, d.\,h. dass du nur die textuelle Version \say{\nipajin} verwenden darfst. Ebenso ist das \ludusleonis-Logo (die Münze) nicht frei, bitte verzichte auf eine Verwendung und beachte die korrekte Groß-/Kleinschreibung dieser Namen.
+			\item Die im Autorenpaket enthaltenen Schriften unterliegen einer leicht anderen Lizenz, der Open Font License (OFL). Solange du die Schrift wie in der Vorlage und im PDF benutzt, ist das in Ordnung. Wenn du aber darüber hinaus mit der Schriftart etwas anstellst, befasse dich lieber mit dem Kleingedruckten der OFL.
+			\item Wenn du Änderungen am \nipajin-Regel\-werk vornimmst, darfst du das natürlich tun, mach aber bitte deutlich, dass und wo du dich vom Original entfernst. Verwende in diesem Fall nicht mehr \say{NIP'AJIN} als Namen, sondern gib der Abwandlung einen neuen Namen. Alternativ und für den Leser einfacher ist vermutlich, wenn du Settingregeln im Szenarioteil anführst und den Anhang intakt lässt.
+		}
+
+		\noindent\textbf{Du bist selbst dafür verantwortlich, dass dein abgeleitetes Werk mit der CC BY-SA verträglich ist!}
+
+	\mysection{Feedback}
+
+		\noindent
+		Ich lerne gerne dazu. Wenn dir am \LaTeX-Code etwas auffällt, was man besser machen kann, lass' es mich wissen!
+
+}
+
+\renewcommand{\tocPrologue}{Prolog}
+\renewcommand{\headlinePrologue}{Prolog \say{Mein Szenario}}
+\renewcommand{\teaserPrologue}{Der Spielleiter sollte folgenden Text zu Beginn des Szenarios vorlesen oder austeilen:}
+\renewcommand{\textPrologue}{\zlabel{labelPrologue}%
+
+	\noindent
+	Hier kommt der Prolog hin.
+
+	\lipsum[1-5]
+
+}
+
+\renewcommand{\tocGM}{Spielleiterinformationen}
+\renewcommand{\headlineGM}{Spielleiterinformationen}
+\renewcommand{\teaserGM}{Dieses Szenario benutzt das Rollenspielsystem \nipajin~aus dem Anhang (\refPage{labelRules}).}
+\renewcommand{\textGM}{%
+
+	\noindent
+	Der hier vorgeschlagene Aufbau eines Szenarios hat sich bei mir bewährt, ist aber natürlich nur eine Empfehlung~\ldots
+
+	\mysection{Überblick}
+
+		Hier kommt eine kurze Einführung hin, worum es in dem Szenario geht. Es sollen keine Details verraten, sondern dem SL geholfen werden, den Inhalt als (nicht) leitenswert zu beurteilen.
+
+		\lipsum[1]
+
+	\mysection{Setting}
+
+		Hier erklärt das Szenario das Umfeld, in dem es sich bewegt. Allgemeine Geographie, Geschichte usw. sind hier gut aufgehoben. Alles, was ein SL über den Prolog hinaus wissen muss, kann hier hinein. \say{Charakterwissen} sollte jedoch großteils schon im Prolog (\refPage{labelPrologue}) den Spielern nahegebracht worden sein.
+
+		\lipsum[2-4]
+
+	\mysection{Setting-Regeln}\zlabel{labelSetting}
+
+		Wenn es besondere Regeln für dein Setting gibt (\zB~Wahnsinn-Regeln für ein Horrorabenteuer), sind die besser hier als im settingunabhängigen Regelanhang aufgehoben.
+
+		\lipsum[18]
+
+	\mysection{Verlauf des Szenarios}
+
+		Hier passt der rote Faden des Szenarios gut hin, oder bei einem Sandbox-Abenteuer eben die Information, dass es den Faden nicht gibt.
+
+		\lipsum[5-9]
+
+	\mysection{Einstieg ins Szenario}
+
+		Wie werden die Charaktere mit dem Szenario zu Beginn konfrontiert und was sind die ersten, wahrscheinlichen Handlungsmöglichkeiten?
+
+		\lipsum[10-11]
+
+	\mysection{Spieltechnisches}
+
+		Einzelne Ortbeschreibungen, NSCs, Monster und Spielwerte passen hier gut hin, wenn sie über allgemeine Informationen vom Abschnitt \say{Setting} (\refPage{labelSetting}) hinaus gehen.
+
+		\lipsum[12-15]
+
+	\mysection{Ende gut, alles gut?}
+
+		Mögliche Enden des Szenarios oder ein Epilog, soweit vorhanden, gehören hier hin. Zudem passt hier noch gut ein Ausblick hin, wie ein SL das Szenario bei Gefallen selbst weiter gestalten könnte.
+
+		\lipsum[16-17]
+
+}
+
+\renewcommand{\tocRulesPlayer}{Regeln für Spieler}
+\renewcommand{\headlineRulesPlayer}{Anhang I -- Regeln für Spieler}
+\renewcommand{\teaserRulesPlayer}{Im folgenden Anhang findet sich das vollständige \nipajin~Regelwerk (Version~\nipajinVersion).}
+
+\renewcommand{\tocRulesGM}{Regeln für Spielleiter}
+\renewcommand{\headlineRulesGM}{Anhang II -- Regeln für Spielleiter}
+
+\renewcommand{\tocCharacters}{Beispielcharaktere}
+\renewcommand{\headlineCharacters}{Anhang III -- Beispielcharaktere}
+\renewcommand{\teaserCharacters}{Die folgenden Seiten enthalten schlüsselfertige Charaktere, mit denen sofort losgespielt werden kann.}
+
+\renewcommand{\textCharacterA}{
+
+	\mysection{Max Musterfrau}
+
+	\lipsum[1]
+
+	\subsection*{Eigenschaften}
+
+	Größe, Aussehen, usw.
+
+	\subsection*{Spielwerte}
+
+	\emph{Dieses+1, Jenes-2}
+
+}
+
+\renewcommand{\textCharacterB}{
+
+	\mysection{Helene Mustermann}
+
+	\lipsum[2]
+
+	\subsection*{Eigenschaften}
+
+	Größe, Aussehen, usw.
+
+	\subsection*{Spielwerte}
+
+	\emph{Dieses-1, Jenes-2, DafürDasDa+3}
+
+}
+
+\renewcommand{\tocBackcover}{Rückseite}
+\renewcommand{\textBackcover}{%
+
+	\noindent
+	Hier steht natürlich der ultimative Teaser-Text. Er soll geneigte Leser sofort davon überzeugen, wie toll doch der Inhalt dieses Heftchens ist. Nachdem nicht nur Spielleiter hier lesen, sondern auch Spieler, sollten aber keine Spoiler die Handlung verraten, sondern der Text nur Lust auf Mehr machen~\ldots
+
+	\vspace*{1em}
+
+	Es empfiehlt sich, hier darauf hinzuweisen, dass es sich um ein \nipajin-Szenario handelt und dass alle Regeln bereits enthalten sind. Das könnte etwa so aussehen:
+
+	\vspace*{1em}
+
+	Dieses Heft enthält die vollständigen, leicht zu erlernenden Regeln des \nipajin~Systems von \ludusleonis. Mit diesem Regelwerk, das auf lediglich vier Seiten Platz findet, können Szenarien in verschiedensten Genres umgesetzt werden.
+
+}
+\renewcommand{\urlBackcover}{(Hier passt \zB~ein Link gut hin.)}

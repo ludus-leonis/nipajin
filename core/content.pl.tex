@@ -2,7 +2,7 @@
 % Initial translation provided by Szymon Noobirus Piecha
 % This file is released under CC BY-SA 4.0.
 
-\renewcommand{\versionRules}{v1.5.1-pl}
+\renewcommand{\nipajinVersion}{v1.5.2-pl}
 
 % CHANGELOG-de
 %
@@ -26,15 +26,11 @@
 	pdfsubject={Nieskomplikowany, uniwersalny system RPG.},
 	pdfkeywords={nipajin, nip'ajin, system, uniwersalny, RPG}
 }
-\renewcommand{\translation}{Tłumaczenie: Szymon \say{Noobirus} Piecha}
-
+\renewcommand{\nipajinTranslation}{Tłumaczenie: Szymon \say{Noobirus} Piecha}
 
 % --- headlines --------------------------------------------------------
 
-\renewcommand{\disclaimer}{(Oprócz logo i~nazwy marek.)}
-\renewcommand{\headlinePlayer}{Zasady dla graczy}
-\renewcommand{\headlineGM}{Zasady dla prowadzących}
-\renewcommand{\headlineEffects}{Efekty}
+\renewcommand{\nipajinDisclaimer}{(Oprócz logo i~nazwy marek.)}
 
 % --- main texts -------------------------------------------------------
 
@@ -44,13 +40,13 @@
 \renewcommand{\PT}{PR}
 \renewcommand{\FT}{CD}
 
-\renewcommand{\textIntro}{%
+\renewcommand{\nipajinTextIntro}{%
 	Nieskomplikowany, uniwersalny system RPG od \ludusleonis.
 
 	\nipajin\ nadaje się na pojedyncze przygody i~krótkie kampanie. Ten niemiecki akronim wymawia się \say{nip-a-czin} i oznacza \say{nikt nie jest doskonały, lecz każdy przydatny}. Każdy gracz ma tutaj swoje 5 minut chwały i~nikt nie jest ograniczony mechaniką.
 }
 
-\newcommand{\tableModifier}{%
+\newcommand{\nipajinTableModifier}{%
 	\tabelle{X c}{
 	\thead{Znajomość} & \thead{Modyfik.} \\
 	}{
@@ -64,7 +60,7 @@
 	}
 }
 
-\newcommand{\tableTargets}{%
+\newcommand{\nipajinTableTargets}{%
 	\tabelle{l c X}{
 	\thead{Trudność} & \thead{\TN} & \thead{Przykład} \\
 	}{
@@ -78,7 +74,9 @@
 	}
 }
 
-\renewcommand{\textPlayer}{%
+\renewcommand{\nipajinHeadlinePlayer}{Zasady dla graczy}
+\renewcommand{\nipajinTocPlayer}{Zasady dla graczy}
+\renewcommand{\nipajinTextPlayer}{%
 	\noindent
 	Każda \keyword{postać} zaczyna jako pusta kartka A4. Ta \keyword{karta postaci} zostaje podzielona linią na dwie karty A5, później prawa strona na dwie kartki A6.
 
@@ -88,52 +86,54 @@
 
 	\mysection[labelTaskresolution]{Kostki}
 
-	\noindent
-	Dopóki nie ma wątpliwości, gracze i~mistrzowie spokojnie rozwijają akcję gry. Lecz jeśli w~czasie ważnej \keyword{akcji} narodzi się pytanie, czy postaci uda się coś zrobić, wtedy gracz wybiera \keyword{dostępną kość} z~górnej ćwiartki karty i~rzuca. Jeśli wypadnie jedynka, akcja kończy się \keyword{automatyczną porażką} w~innym przypadku, dodaje się do rzutu \keyword{modyfikator} ze \keyword{znajomości} bohatera. Znajomość jest ustalana przez MG, na podstawie tła postaci.
+		\noindent
+		Dopóki nie ma wątpliwości, gracze i~mistrzowie spokojnie rozwijają akcję gry. Lecz jeśli w~czasie ważnej \keyword{akcji} narodzi się pytanie, czy postaci uda się coś zrobić, wtedy gracz wybiera \keyword{dostępną kość} z~górnej ćwiartki karty i~rzuca. Jeśli wypadnie jedynka, akcja kończy się \keyword{automatyczną porażką} w~innym przypadku, dodaje się do rzutu \keyword{modyfikator} ze \keyword{znajomości} bohatera. Znajomość jest ustalana przez MG, na podstawie tła postaci.
 
-	\tableModifier
+		\nipajinTableModifier
 
-	\noindent
-	Akcja jest udana, jeśli wynik osiągnie lub przekroczy \keyword{cel}\,\TN\ wyznaczony przez prowadzącego. Wyliczona jedynka, w~przeciwieństwie do wyrzuconej jedynki, nie jest automatyczną porażką, ale rzadko wystarczy.
+		\noindent
+		Akcja jest udana, jeśli wynik osiągnie lub przekroczy \keyword{cel}\,\TN\ wyznaczony przez prowadzącego. Wyliczona jedynka, w~przeciwieństwie do wyrzuconej jedynki, nie jest automatyczną porażką, ale rzadko wystarczy.
 
-	\tableTargets
+		\nipajinTableTargets
 
-	\noindent
-	Po rzucie, \keyword{zużyta kostka} ląduje na dolnej ćwiartce karty postaci. Gdy \emph{wszystkie} zostaną zużyte -- i~tylko wtedy! -- gracz może dać swojej postaci \keyword{odsapnąć}, zanim kostki wylądują znowu na górę: musi przeczekać całą rundę w konflikcie.
+		\noindent
+		Po rzucie, \keyword{zużyta kostka} ląduje na dolnej ćwiartce karty postaci. Gdy \emph{wszystkie} zostaną zużyte -- i~tylko wtedy! -- gracz może dać swojej postaci \keyword{odsapnąć}, zanim kostki wylądują znowu na górę: musi przeczekać całą rundę w konflikcie.
 
-	Raz przydzielone modyfikatory zapisywane są na karcie postaci i o ile nie zajdą jakieś specjalne okoliczności, są one stałe.
+		Raz przydzielone modyfikatory zapisywane są na karcie postaci i o ile nie zajdą jakieś specjalne okoliczności, są one stałe.
 
-	Nie można używać kości, które nie mają szans by zaliczyć akcję. Cel \TN\ akcji zwiększa się o~1 z~każdą próbą, jeśli postać chce \keyword{powtórzyć} nieudany test współgracza.
+		Nie można używać kości, które nie mają szans by zaliczyć akcję. Cel \TN\ akcji zwiększa się o~1 z~każdą próbą, jeśli postać chce \keyword{powtórzyć} nieudany test współgracza.
 
 	\mysection[labelConflict]{Konflikty}
 
-	\noindent
-	Konflikty podzielone są na \keyword{rundy}, których długość określa prowadzący. W~każdej rundzie postać może wykonać jedną akcję, np. atakować i~może reagować na akcje wroga, np. parować. \HD\ przeciwników musi zostać pokonana. Za pomocą siły lub bez.
+		\noindent
+		Konflikty podzielone są na \keyword{rundy}, których długość określa prowadzący. W~każdej rundzie postać może wykonać jedną akcję, np. atakować i~może reagować na akcje wroga, np. parować. \HD\ przeciwników musi zostać pokonana. Za pomocą siły lub bez.
 
-	Na początku każdej rundy gracze wybierają jednocześnie \keyword{kość akcji} (\AD) i~jedną \keyword{kość reakcji} (\RD) z~puli dostępnych kości. Za ich pomocą, rozwiązują wszystkie akcje i~reakcje w~tej rundzie. Własnowolnie, lub gdy nie ma dość kości, można zrezygnować z~\AD\ lub \RD\ i~tym samym zrezygnować z~wykonywania akcji lub reakcji. Jeśli ktoś nie ma \emph{żadnych} dostępnych kości, musi przeczekać i~odsapnąć.
+		Na początku każdej rundy gracze wybierają jednocześnie \keyword{kość akcji} (\AD) i~jedną \keyword{kość reakcji} (\RD) z~puli dostępnych kości. Za ich pomocą, rozwiązują wszystkie akcje i~reakcje w~tej rundzie. Własnowolnie, lub gdy nie ma dość kości, można zrezygnować z~\AD\ lub \RD\ i~tym samym zrezygnować z~wykonywania akcji lub reakcji. Jeśli ktoś nie ma \emph{żadnych} dostępnych kości, musi przeczekać i~odsapnąć.
 
-	Wybrana \AD\ decyduje też o~\keyword{inicjatywie} w~rundzie. Mniejsze kości działają przed większymi (np. k6 przed k8) w~przypadku remisu, wykonuje się rzut kością.
+		Wybrana \AD\ decyduje też o~\keyword{inicjatywie} w~rundzie. Mniejsze kości działają przed większymi (np. k6 przed k8) w~przypadku remisu, wykonuje się rzut kością.
 
-	By atak się udał, wynik \AD\ musi być większy od \RD, wyrzucenie jedynki jest zawsze porażką. Przy udanym ataku, reagujący otrzymuje \keyword{ranę} i~podnosi swoją \HD\ w~górę. Nawet akcje bez użycia siły pomagają przełamać opór: powodują \keyword{traumę}, którą liczy się znacznikami lub za pomocą dodatkowej k20. Jeśli suma traumy i~obecnego wyniku \HD\ przekroczy \HD, przeciwnik jest pokonany (przestraszony, zirytowany,~\ldots).
+		By atak się udał, wynik \AD\ musi być większy od \RD, wyrzucenie jedynki jest zawsze porażką. Przy udanym ataku, reagujący otrzymuje \keyword{ranę} i~podnosi swoją \HD\ w~górę. Nawet akcje bez użycia siły pomagają przełamać opór: powodują \keyword{traumę}, którą liczy się znacznikami lub za pomocą dodatkowej k20. Jeśli suma traumy i~obecnego wyniku \HD\ przekroczy \HD, przeciwnik jest pokonany (przestraszony, zirytowany,~\ldots).
 
-	Za pomocą \keyword{ataku obszarowego} postać może zaatakować wielu wrogów (np. wir ciosów, zastraszenie grupy, kula ognia,~\ldots). Za każdy dodatkowy cel, wynik rzutu zostaje obniżony o~\makebox{-2}. Każdy przeciwnik może osobno zareagować.
+		Za pomocą \keyword{ataku obszarowego} postać może zaatakować wielu wrogów (np. wir ciosów, zastraszenie grupy, kula ognia,~\ldots). Za każdy dodatkowy cel, wynik rzutu zostaje obniżony o~\makebox{-2}. Każdy przeciwnik może osobno zareagować.
 
-	Postać może też kogoś \keyword{osłaniać}, jeśli nie wybierze w~tej rundzie \AD. Może przyjmować na siebie ataki wszystkich w~zasięgu, z~połową swojej \RD\, np. dwa w~k4 lub trzy przy k6. Osłaniający otrzymuje rany, jeśli nie uda mu się ta akcja.
+		Postać może też kogoś \keyword{osłaniać}, jeśli nie wybierze w~tej rundzie \AD. Może przyjmować na siebie ataki wszystkich w~zasięgu, z~połową swojej \RD\, np. dwa w~k4 lub trzy przy k6. Osłaniający otrzymuje rany, jeśli nie uda mu się ta akcja.
 
 	\mysection[labelEquipment]{Ekwipunek}
 
-	\noindent
-	Nie ma tabeli z~przedmiotami. Normalne bronie zadają jedną ranę przy celnym ataku, specjalne lub magiczne dwie a~ palne lub eksplodujące trzy do czterech. Improwizowane uzbrojenie dostaje \makebox{-1} do \AD. Zbroje, w~zależności od wykonania, zwiększają \RD\ o~+1 lub +2.
+		\noindent
+		Nie ma tabeli z~przedmiotami. Normalne bronie zadają jedną ranę przy celnym ataku, specjalne lub magiczne dwie a~ palne lub eksplodujące trzy do czterech. Improwizowane uzbrojenie dostaje \makebox{-1} do \AD. Zbroje, w~zależności od wykonania, zwiększają \RD\ o~+1 lub +2.
 
 	\mysection[labelHeal]{Leczenie}
 
-	\noindent
-	Po każdej \keyword{przespanej nocy} postacie \say{odsapują}. Dodatkowo można spróbować zmniejszyć rany na \HD. Gracz zapamiętuje wartość i~rzuca \HD. Jeśli wyrzuci mniej, jedna rana się leczy. Więc \HD\ zostaje odłożona z~wynikiem mniejszym o~jeden.
+		\noindent
+		Po każdej \keyword{przespanej nocy} postacie \say{odsapują}. Dodatkowo można spróbować zmniejszyć rany na \HD. Gracz zapamiętuje wartość i~rzuca \HD. Jeśli wyrzuci mniej, jedna rana się leczy. Więc \HD\ zostaje odłożona z~wynikiem mniejszym o~jeden.
 
-	Prowadzący decyduje, jak szybko leczą się \keyword{traumy}. Zastraszenia zostają zapomniane pod koniec sceny, fobie, klątwy, itp. nękają postać dniami a~nawet tygodniami.
+		Prowadzący decyduje, jak szybko leczą się \keyword{traumy}. Zastraszenia zostają zapomniane pod koniec sceny, fobie, klątwy, itp. nękają postać dniami a~nawet tygodniami.
 }
 
-\renewcommand{\textEffects}{\zlabel{labelEffects}%
+\renewcommand{\nipajinHeadlineEffects}{Efekty}
+\renewcommand{\nipajinTocEffects}{Efekty}
+\renewcommand{\nipajinTextEffects}{\zlabel{labelEffects}%
 	\noindent
 	Magia, cuda, supermoce czy też moce psioniczne są nazywane \keyword{efektami} i~postać może je już posiadać na początku gry. \nipajin opisuje moce tego typu następująco:
 
@@ -156,52 +156,54 @@
 	\keyword{Uzdrowienia} zamykają rany lub leczą choroby. \PT:~godzina na każdą ranę, dzień na każdą chorobę; \FT:~$\infty$
 }
 
-\renewcommand{\textGM}{%
+\renewcommand{\nipajinHeadlineGM}{Zasady dla prowadzących}
+\renewcommand{\nipajinTocGM}{Zasady dla prowadzących}
+\renewcommand{\nipajinTextGM}{%
 	\mysection[labelPCs]{Tła}
 
-	\noindent
-	Największy nacisk \nipajin\ kładzie na tła bohaterów graczy (BG). Dobre historie postaci obejmują dzieciństwo, wyszkolenie i~co BG robił przez ostatnie lata. Parę ważnych wydarzeń świetnie uzupełnia opis. Powinno się również zapisać wiek i~wygląd.
+		\noindent
+		Największy nacisk \nipajin\ kładzie na tła bohaterów graczy (BG). Dobre historie postaci obejmują dzieciństwo, wyszkolenie i~co BG robił przez ostatnie lata. Parę ważnych wydarzeń świetnie uzupełnia opis. Powinno się również zapisać wiek i~wygląd.
 
-	To jak ma wyglądać opis, zależy w~głównej mierze od stylu gry. Prowadzący musi tylko zadbać o~to, by z~opisów można było wyczytać jakie silne i~słabe strony ma postać, ponieważ na ich bazie będzie się później decydować, czy jakaś akcja będzie łatwa czy trudna. Luki w~opisach powinny być, przy wcześniejszej rozmowie z~graczem, natychmiast uzupełnione.
+		To jak ma wyglądać opis, zależy w~głównej mierze od stylu gry. Prowadzący musi tylko zadbać o~to, by z~opisów można było wyczytać jakie silne i~słabe strony ma postać, ponieważ na ich bazie będzie się później decydować, czy jakaś akcja będzie łatwa czy trudna. Luki w~opisach powinny być, przy wcześniejszej rozmowie z~graczem, natychmiast uzupełnione.
 
 	\mysection[labelGroups]{Testy grupowe}
 
-	\noindent
-	Jeśli więcej BG bierze udział w~jednej akcji, wykonuje się \keyword{test grupowy}. Każdy z~graczy wybiera sobie kostkę i~wybiera się przywódcę. Przywódca rzuca pierwszy i~decyduje, czy jego rzut liczy się za wszystkich. Jeśli nie, przekazuje przywództwo innemu graczowi itd. Każdy rzut \emph{zastępuje} poprzedni. Wyrzucenie jedynki udaremnia wszystkim próby. Tylko rzucone kości zostają zużyte.
+		\noindent
+		Jeśli więcej BG bierze udział w~jednej akcji, wykonuje się \keyword{test grupowy}. Każdy z~graczy wybiera sobie kostkę i~wybiera się przywódcę. Przywódca rzuca pierwszy i~decyduje, czy jego rzut liczy się za wszystkich. Jeśli nie, przekazuje przywództwo innemu graczowi itd. Każdy rzut \emph{zastępuje} poprzedni. Wyrzucenie jedynki udaremnia wszystkim próby. Tylko rzucone kości zostają zużyte.
 
-	W czasie wykonywania grupowego rzutu w~konflikcie, grupa dostaje najgorszą inicjatywę. Wróg odpiera wynik ataku swoją \RD\, jeśli atak się uda, dostaje tyle obrażeń, ile każda postać w~grupie mogłaby zadać osobno.
+		W czasie wykonywania grupowego rzutu w~konflikcie, grupa dostaje najgorszą inicjatywę. Wróg odpiera wynik ataku swoją \RD\, jeśli atak się uda, dostaje tyle obrażeń, ile każda postać w~grupie mogłaby zadać osobno.
 
-	\keyword{Złożone akcje} mają wysoką wartość celową, np. Naprawa\TN20. Zaangażowani BG pracują w~etapach -- pojedynczych rzutach grupowych, w~których się tylko \emph{zastępuje} -- ku tej sumie. Prowadzący decyduje, ile czasu mija po każdym etapie, np. jeden dzień. Wyrzucona jedynka udaremnia etap, ale nie całą akcję złożoną.
+		\keyword{Złożone akcje} mają wysoką wartość celową, np. Naprawa\TN20. Zaangażowani BG pracują w~etapach -- pojedynczych rzutach grupowych, w~których się tylko \emph{zastępuje} -- ku tej sumie. Prowadzący decyduje, ile czasu mija po każdym etapie, np. jeden dzień. Wyrzucona jedynka udaremnia etap, ale nie całą akcję złożoną.
 
 	\mysection[labelNSCs]{Bohaterowie niezależni}
 
-	\noindent
-	Prowadzący będzie przedstawiał graczom kolejnych wrogów jak i~przyjaciół. Można ich stworzyć na dwa sposoby.
+		\noindent
+		Prowadzący będzie przedstawiał graczom kolejnych wrogów jak i~przyjaciół. Można ich stworzyć na dwa sposoby.
 
-	\keyword{Główni bohaterowie niezależni} (BN) przygody mogą, tak jak postacie, posiadać tło fabularne, które zawiera słabe i~silne strony. Nie należy jednak z~tym przesadzać, nie dawaj więcej niż dwóm BN obszernej historii. Prowadzący korzysta z~zasad działu dla graczy, jeśli gracze mają konflikt z~taką postacią.
+		\keyword{Główni bohaterowie niezależni} (BN) przygody mogą, tak jak postacie, posiadać tło fabularne, które zawiera słabe i~silne strony. Nie należy jednak z~tym przesadzać, nie dawaj więcej niż dwóm BN obszernej historii. Prowadzący korzysta z~zasad działu dla graczy, jeśli gracze mają konflikt z~taką postacią.
 
-	Większość BN ma tylko \keyword{rolę poboczną}. Są to różni informatorzy, sprzedawcy na bazarze lub nieznośny potwór. By prowadzącemu było łatwiej, takie postacie buduje się na prostszych zasadach. Poza wyglądem i~zachowaniem, wystarczy określić jeszcze \HD, \emph{jedną} \AD\ i~\emph{jedną} \RD. Do tego zostaje zanotowanych kilka słabych i~silnych stron. Przy \HD\ można zapisać wszystko od 1 do $\infty$, przy \AD/\RD\ kostki k2, k3, k4, k5, k6, k8, k10, k12 i~k20. Traumy są liczone bezpośrednio na \HD\ a~nie osobno. Poboczne role mają tę przewagę, że nie muszą odsapnąć, ponieważ \AD/\RD\ się im nie kończy. By było uczciwie, nie powinny być za wysokie.
+		Większość BN ma tylko \keyword{rolę poboczną}. Są to różni informatorzy, sprzedawcy na bazarze lub nieznośny potwór. By prowadzącemu było łatwiej, takie postacie buduje się na prostszych zasadach. Poza wyglądem i~zachowaniem, wystarczy określić jeszcze \HD, \emph{jedną} \AD\ i~\emph{jedną} \RD. Do tego zostaje zanotowanych kilka słabych i~silnych stron. Przy \HD\ można zapisać wszystko od 1 do $\infty$, przy \AD/\RD\ kostki k2, k3, k4, k5, k6, k8, k10, k12 i~k20. Traumy są liczone bezpośrednio na \HD\ a~nie osobno. Poboczne role mają tę przewagę, że nie muszą odsapnąć, ponieważ \AD/\RD\ się im nie kończy. By było uczciwie, nie powinny być za wysokie.
 
 	\mysection[labelBestiary]{Bestiariusz}
 
-	\noindent
-	Poniższe kreatury są jedynie przykładem, nie sugerują, by prowadzić \nipajin\ w~tych klimatach.
+		\noindent
+		Poniższe kreatury są jedynie przykładem, nie sugerują, by prowadzić \nipajin\ w~tych klimatach.
 
-	\tabelle{p{1.2cm} c c c X}{
-		\thead{Potwór} & \thead{\HD} & \thead{\AD} & \thead{\RD} & \thead{Zdolności}  \\
-	}{
-		D. szczur &  1 &  2 &  3 & Bieg+4, Ukrywanie+2 \\
-		Goblin    &  3 &  4 &  4 & Percepcja+1 \\
-		Ork       &  6 &  6 &  6 & Zastraszanie+1, Walka+1, Umysł-1 \\
-		Troll     & 10 &  8 &  6 & Walka+2, regeneruje ranę/rundę \\
-		Gigant    & 20 &  8 &  8 & Walka+2, Siła+4 \\
-		Smok      & 40 & 12 & 10 & Zionięcie+4, odporny na nokautujące \\
-	}
+		\tabelle{p{1.2cm} c c c X}{
+			\thead{Potwór} & \thead{\HD} & \thead{\AD} & \thead{\RD} & \thead{Zdolności}  \\
+		}{
+			D. szczur &  1 &  2 &  3 & Bieg+4, Ukrywanie+2 \\
+			Goblin    &  3 &  4 &  4 & Percepcja+1 \\
+			Ork       &  6 &  6 &  6 & Zastraszanie+1, Walka+1, Umysł-1 \\
+			Troll     & 10 &  8 &  6 & Walka+2, regeneruje ranę/rundę \\
+			Gigant    & 20 &  8 &  8 & Walka+2, Siła+4 \\
+			Smok      & 40 & 12 & 10 & Zionięcie+4, odporny na nokautujące \\
+		}
 
 	\mysection[labelXP]{Doświadczenie}
 
-	\noindent
-	BG określają \say{poziom} otoczenia, jeśli są oni zwyczajnymi podróżnikami, to podane w~powyższej tabeli cechy są dobrymi wytycznymi dla \say{reszty}. Jeśli są goblinami, które odpierają stada \say{bohaterów} atakujących obóz, to \say{bohaterowie} są być może dla graczy silni jak trolle. Prowadzący powinien patrzeć na BG i~BN relatywnie.
+		\noindent
+		BG określają \say{poziom} otoczenia, jeśli są oni zwyczajnymi podróżnikami, to podane w~powyższej tabeli cechy są dobrymi wytycznymi dla \say{reszty}. Jeśli są goblinami, które odpierają stada \say{bohaterów} atakujących obóz, to \say{bohaterowie} są być może dla graczy silni jak trolle. Prowadzący powinien patrzeć na BG i~BN relatywnie.
 
-	\nipajin\ nie jest przeznaczony do tego, by rozwijać bohaterów w~długich kampaniach. Gdy w~czasie przygody postać długo trenowała, prowadzący może podnieść jedną znajomość postaci na wyższy poziom. Jeśli jednak BG dostaną supermoce, zaleca się nie polepszać \emph{postaci}, lecz osłabić \emph{świat} wokół nich!
+		\nipajin\ nie jest przeznaczony do tego, by rozwijać bohaterów w~długich kampaniach. Gdy w~czasie przygody postać długo trenowała, prowadzący może podnieść jedną znajomość postaci na wyższy poziom. Jeśli jednak BG dostaną supermoce, zaleca się nie polepszać \emph{postaci}, lecz osłabić \emph{świat} wokół nich!
 }

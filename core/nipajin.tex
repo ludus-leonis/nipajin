@@ -7,19 +7,19 @@
 
 % each language file has to re-define the following items:
 
-\newcommand{\versionRules}{v0.0}
-\newcommand{\translation}{}
-\newcommand{\disclaimer}{}
-\newcommand{\textIntro}{}
-\newcommand{\headlinePlayer}{}
-\newcommand{\tocPlayer}{}
-\newcommand{\textPlayer}{}
-\newcommand{\headlineEffects}{}
-\newcommand{\tocEffects}{}
-\newcommand{\textEffects}{}
-\newcommand{\headlineGM}{}
-\newcommand{\tocGM}{}
-\newcommand{\textGM}{}
+\newcommand{\nipajinVersion}{v0.0}
+\newcommand{\nipajinTranslation}{}
+\newcommand{\nipajinDisclaimer}{}
+\newcommand{\nipajinTextIntro}{}
+\newcommand{\nipajinHeadlinePlayer}{}
+\newcommand{\nipajinTocPlayer}{}
+\newcommand{\nipajinTextPlayer}{}
+\newcommand{\nipajinHeadlineEffects}{}
+\newcommand{\nipajinTocEffects}{}
+\newcommand{\nipajinTextEffects}{}
+\newcommand{\nipajinHeadlineGM}{}
+\newcommand{\nipajinTocGM}{}
+\newcommand{\nipajinTextGM}{}
 
 \input{content.tex} % Makefile will map the current language into content.txt
 
@@ -32,40 +32,33 @@
 % ### BANNER ################################################################
 
 \begin{multicols}{2}\raggedbottom
+	\vspace*{-12pt}\color{white}
+	\vfill\backgroundtop{trueBlack}{6cm}
+	\coverbanner{\nipajinVersion, \today}{\nipajinTranslation}{\nipajinDisclaimer}
 
-\vspace*{-12pt}\color{white}
-
-\vfill\backgroundtop{trueBlack}{6cm}
-
-\coverbanner{\versionRules, \today}{\translation}{\disclaimer}
-
-\noindent\textIntro
-
+	\noindent\textit{\nipajinTextIntro}
 \end{multicols}
 \vspace*{2mm}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\headlinePlayer}}{\headlinePlayer}
+\mybanner{\MakeUppercase{\nipajinHeadlinePlayer}}{\nipajinTocPlayer}
+
 \begin{multicols}{2}\raggedbottom
-
-\noindent\textPlayer
-
+	\noindent\nipajinTextPlayer
 \end{multicols}
 
 \newpage
 
 \backgroundtop{secondary}{14cm}
-\mybannersimple{\MakeUppercase{\headlineEffects}}{\headlineEffects}
+\mybannersimple{\MakeUppercase{\nipajinHeadlineEffects}}{\nipajinTocEffects}
 \begin{multicols}{2}
-\textEffects
+	\nipajinTextEffects
 \end{multicols}
 
-\mybanner{\MakeUppercase{\headlineGM}}{\headlineGM}
+\mybanner{\MakeUppercase{\nipajinHeadlineGM}}{\nipajinTocGM}
 \begin{multicols}{2}
-
-\textGM
-
+	\nipajinTextGM
 \end{multicols}
 
 \end{document}

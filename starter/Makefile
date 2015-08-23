@@ -1,23 +1,22 @@
 # (c) 2009-2015 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0.
 
-PDF_NAME="NIPAJIN"
-TEX_NAME="nipajin"
+PDF_NAME="NIPAJIN-Autorenpaket"
+TEX_NAME="starter"
 
 default: de
 
-all: de pl
+all: de
 
 setup:
 	mkdir -p out
+	ln -sf ../../core/nipajin.sty out/
+	ln -sf ../../core/ocgx.sty out/
 
 de: setup
 	ln -sf ../content.de.tex out/content.tex
+	ln -sf ../../core/content.de.tex out/rules.tex
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de -output-directory out ${TEX_NAME}
-
-pl: setup
-	ln -sf ../content.pl.tex out/content.tex
-	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-pl -output-directory out ${TEX_NAME}
 
 clean:
 	rm -rf out/*

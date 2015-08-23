@@ -1,4 +1,4 @@
-This instruction is available in: [German](README.md), [English](README.en.md).
+[Deutsch](README.md) | [English](README.en.md).
 
 Please also read the license information in the root folder.
 
