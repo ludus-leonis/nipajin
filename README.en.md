@@ -4,7 +4,7 @@
 
 ## Introduction
 
-NIP’AJIN is a pen-an-paper roleplaying game written by [LUDUS LEONIS](http://ludus-leois.com/), that fits on 4 pages. The system uses 5 dice (d4 to d12) that get exhausted after use. Only after all your dice got exhausted, they get available again. This forces characters to show weakness, as they do not always have good (larger) dice available. NIP’AJIN ...
+NIP’AJIN is a pen-an-paper roleplaying game written by [LUDUS LEONIS](http://ludus-leonis.com/nipajin), that fits on 4 pages. The system uses 5 dice (d4 to d12) that get exhausted after use. Only after all your dice got exhausted, they get available again. This forces characters to show weakness, as they do not always have good (larger) dice available. NIP’AJIN ...
 
 * is free,
 * does not need much preparation,
