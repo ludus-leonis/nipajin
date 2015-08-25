@@ -6,7 +6,7 @@ Bitte beachte die Lizenzinformationen im Hauptverzeichnis.
 
 ## Schnellanleitung
 
-Mit den Dateien in diesem Verzeichnis kannst du das Regelheft von NIP'AJIN generieren. Wenn alle Voraussetzungen erfüllt sind, kannst du mit
+Mit den Dateien in diesem Verzeichnis kannst du das Regelheft von [NIP'AJIN](http://ludus-leonis.com/nipajin) generieren. Wenn alle Voraussetzungen erfüllt sind, kannst du mit
 ```
 core$ make de
 ```
