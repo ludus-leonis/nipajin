@@ -294,6 +294,18 @@
 
 % --- headlindes -------------------------------------------------------
 
+\usepackage{sectsty}
+
+\setcounter{secnumdepth}{-1} % no headline numbers
+\setcounter{figure}{-1}      % no figure numbers
+
+\newcommand{\sectionfontsize}{\fontsize{15pt}{10pt plus 12pt minus 6pt}}
+\newcommand{\subsectionfontsize}{\fontsize{10pt}{10pt}}
+
+\sectionfont{\color{primary}\raggedleft\fffancy\sectionfontsize\selectfont}
+\subsectionfont{\color{primary}\raggedright\fffancy\subsectionfontsize\selectfont\itshape}
+\subsubsectionfont{\fffancy\raggedright\scshape}
+
 \newcommand{\mybanner}[2]{% regular headlines: red banners across page, shadowed font
 \phantomsection\addcontentsline{toc}{section}{#2}{%
 	\centerline{\begin{tikzpicture}%
