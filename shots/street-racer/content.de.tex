@@ -1,0 +1,114 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% Original version by André~Frenzer.
+% This file is released under CC BY-SA 4.0.
+
+\renewcommand{\streetracerVersion}{v1.0}
+
+% CHANGELOG-de
+%
+% 1.0
+%   - Lektorat Onno
+% 0.2
+%   - Lektorat Markus
+% 0.1
+%   - Erstfassung
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\say}[1]{„\textit{#1}“}
+\setdefaultlanguage[spelling=new]{german}
+
+\renewcommand{\fsNormal}{\fontsize{9.25pt}{11.25pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.5pt}{9.5pt plus 0.1pt minus 0pt}}
+
+\newcommand{\zB}{z.\,B.}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={Ein kurzes NIP'AJIN Szenario in der illegalen Straßenrennszene San Diegos.},
+	pdfkeywords={nipajin, nip'ajin, one-shot, oneshot, shots, Rollenspiel, System, frei, RSP, RPG},
+	pdfpagelayout=TwoPageLeft,
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\streetracerTranslation}{\tiny Text: André Frenzer, Lektorat: Onno Tasler, Markus Leupold-Löwenthal}
+\renewcommand{\streetracerDisclaimer}{(Logos und Marken ausgenommen.)}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\streetracerPlayers}{%
+	Ein Szenario von André~Frenzer für ein bis drei Charaktere.
+}
+\renewcommand{\streetracerSummary}{%
+	NIP'AJIN Shots sind kurze Pen-\&-Paper Rollenspielszenarien. Sie sind auf eine Spieldauer von etwa 2 Stunden ausgelegt.
+
+	Um das folgende Szenario spielen zu können, sind die NIP'AJIN Regeln nötig. Diese gibt es kostenlos unter~\ldots
+}
+\renewcommand{\streetracerHeadline}{Gib Gummi!}
+\renewcommand{\streetracerToc}{Szenario: Gib Gummi!}
+\renewcommand{\streetracerText}{%
+	\medskip
+	{\itshape
+		Es ist nur wenige Tage her, dass euer Vorgesetzter beim San Diego Police Department auf euch zugekommen ist, um euch einen speziellen Auftrag zu erteilen. Seit Monaten überschwemmen illegale Drogen die Stadt. So weit, so schlecht. Doch es gibt eine heiße Spur, denn eine anonyme Informantin hat der Polizei den Tipp zugespielt, dass die Drogen von einer Bande Desperados über die mexikanische Grenze geschleust werden, die ihre Zeit sonst in der illegalen Straßenrennszene San Diegos verbringen. Mit ihren hochgetunten Boliden beherrschen sie nicht nur die Rennen, sondern verteilen die Drogen über ein Netz aus Fahrern in die ganze USA.
+
+		Es ist nun euer Auftrag, die Straßenrennszene zu infiltrieren, euch das Vertrauen der anderen Fahrer zu erschleichen und herauszufinden, wer die angeblichen zwei Drogenkuriere sind bzw. wer die Informantin ist. Dafür habt ihr von eurem Vorgesetzten einen beschlagnahmten, hochgezüchteten Mazda RX-7 zur freien Verfügung erhalten. Der Bolide bringt solide 312 PS auf die Straße und sollte den Einstieg in die Szene deutlich erleichtern.
+
+		Bei euren Recherchen habt ihr sechs Hauptverdächtige ausgemacht. Heute Nacht soll wieder ein Rennen stattfinden, bei dem sie zusehen werden. Ihr hofft, durch einen ersten Platz bei ihnen Sympathiepunkte zu gewinnen.
+	}
+
+	\mysection{Setting}
+
+		\noindent
+		Nachts finden auf unbefahrenen Abschnitten der Highways -- aber auch in der Innenstadt San Diegos -- Rennen mit privaten Sportwagen statt. Meistens geht es um beachtliche Summen Bargeld, manchmal werden die Rennwagen selbst eingesetzt. Die Fahrzeuge sind allesamt hochgezüchtete Boliden, reich verziert, auffällig lackiert und mit illegalen Methoden getunt.
+
+		Um überhaupt Fuß in der Straßenrennszene fassen zu können, mussten die Undercover-Polizisten bei einigen Rennen mitfahren. Im Zuge ihrer Rennen haben sie die Verdächtigen auf folgende Personen einschränken können:
+
+		\keyword{Wayne Jackson:} Grüner Mitsubishi Eclipse. Harter Hund, Draufgänger und Angeber. \HD6, \AD8, \RD6, Fahren+2, Plappermaul-1.
+
+		\keyword{Vincent Jackson:} Blauer Toyota Supra. Bruder von Wayne, steht immer im Schatten seines Bruders. \HD6, \AD6, \RD6, Fahren+1, Eifersucht-1.
+
+		\keyword{Bob Marley:} Schwarzer Honda Civic. Stets gut gelaunter Jamaikaner, dessen wahren Namen niemand kennt. \HD6, \AD4, \RD10, Fahren+1, Soziales+1.
+
+		\keyword{Chris Evans:} Gelber Mitsubishi Lancer. Junger und vermögender Schnösel, neu in der Szene. \HD4, \AD8, \RD4, Soziales-1.
+
+		\keyword{Lizzy Brown:} Fahnenschwenkerin. Blonde und gut gebaute Freundin von Wayne Jackson. \HD6, \AD6, \RD6, Soziales+2, Gerechtigkeitssinn+1.
+
+		\keyword{Dayna:} Mechanikerin. Unnahbare, farbige Schönheit mit langem schwarzen Haar. \HD4, \AD6, \RD8, Mechanik+1, Soziales-1.
+
+		Es steht dem Spielleiter frei, zusätzliche NSCs einzuführen, die dem Verlauf der Handlung dienlich sind, zumal weitere Fahrer die Rennen besuchen.
+
+	\mysection{Charaktere}
+
+		\noindent
+		Im Szenario sind folgende Charaktere spielbar:
+
+		\keyword{John Vice:} Ein Sunnyboy mit blondem Haar und gewinnendem Lächeln. Autonarr und Bruder von Sam. \HD8, Fahren+2, Hitzkopf-1.
+
+		\keyword{Sam Vice:} Ein Computer-Nerd und Mechaniker mit Nickelbrille. Bruder Johns. \HD6, Mechanik+2, Soziales-1.
+
+		\keyword{Rosa Martinez:} Eine Undercover-Polizistin aus Mexiko. Langjährige Kollegin von Sam \& John. \HD6, Soziales+1, Beobachten+1 Autos-1.
+
+	\mysection{Ablauf}
+
+		\noindent
+		Der SL bestimmt zufällig und geheim die zwei Drogenkuriere sind und die Informantin. Das Szenario öffnet dann mit einem Straßenrennen gegen drei weitere, namenlose NSCs. Wenn die SC es gewinnen, haben sie in der Szene genügend Halt gefunden, um die Verdächtigen weiter zu untersuchen. Ansonsten müssen sie erst weitere Rennen fahren.
+
+		Wird die Informantin ausgeforscht (überwunden), verlieren automatisch alle anderen Verdächtigen einen Punkt am \HD. Sie hat aber nicht genug Beweise, um die Kuriere alleine zu überführen. Sind die Kuriere überwunden und haben das Gefängnis in Aussicht, werden sie sich in ihre Fahrzeuge werfen und den SCs ein letztes, heißes Rennen liefern (ihr \HD\ wird dazu wieder auf das Maximum gesetzt).
+
+		\keyword{Alternative:} Wenn mehr Spielzeit zur Verfügung steht, können zwischen den Recherchen weitere Rennen gefahren werden, um das Vertrauen der Sechs aufrecht zu erhalten: Die Ermittlungen zwischen den Rennen werden dann -- individuell pro SC -- von Mal zu Mal schwerer (+1 auf die erste, +0 auf die zweite, -1 auf die dritte usw.), um die SC in weitere Rennen zu zwingen.
+
+	\mysection{Szenarioregeln}
+
+		\noindent
+		Die SC \keyword{recherchieren} und sammeln Beweise, indem sie außerhalb der Rennen die Sechs beobachten, beeindrucken, oder Hinweisen nachgehen. Mit jeder erfolgreichen Aktion\TN4 gegen einen Verdächtigen sinkt sein \HD. Investigative \emph{Rundumschläge} sind ebenso möglich. Ist ein NSC überwunden, ist die Person durchschaut und ihr Motiv klar. Automatische Fehlschläge machen eine zufällige Person skeptisch, die bis zum nächsten Rennen nicht weiter überwunden werden kann.
+
+		\keyword{Straßenrennen} werden wie Konflikte abgehandelt, jede Runde steht für einen Streckenabschnitt. Ziel ist es, die \HD\ der Gegner zu überwinden, um zu gewinnen. Drei bis vier Fahrer nehmen an einem Rennen teil. Einfache, namenlose Gegner haben \HD4, \AD6, \RD4. Alle SC sitzen im RX-7 und können gemeinsam einen \emph{Gruppenwurf} versuchen -- einer fährt vermutlich, die anderen können aber durch Navigieren, Beobachten usw. mithelfen. Mit einem \emph{Rundumschlag} lassen sich mehrere andere Fahrer gleichzeitig angreifen (rammen, abdrängen, usw.). Wer in einer Runde in der Initiative vorne liegt, führt auch im Rennen, und ist zumeist die Zielscheibe der NSCs -- führt ein NSC, nimmt er pauschal 1 Schaden durch Rammversuche der anderen, statt das langwierig auszuwürfeln. Außerdem gibt es Hindernisse wie enge Kurven oder sich öffnende Zugbrücken, die der SL in spannenden Momenten einsetzen kann. Diese Hindernisse gefahrlos zu umfahren kostet 1 Punkt am \HD. Risikobereite Fahrer rasen jedoch durch das Hindernis und machen einen Wurf\TN4. Dies negiert bei Erfolg den Schaden, verdoppelt ihn bei einem Misserfolg jedoch und wirft den Wagen bei einem automatischen Fehlschlag ganz aus dem Rennen. Einmal pro Rennen darf jeder Fahrer einen \keyword{Nitro-Boost} aktivieren, um einen Wurf zu wiederholen. Ein Rennen gilt als beendet, wenn nur noch ein Fahrer \HD\ übrig hat.
+
+	\mysection{Ende gut, alles gut?}
+
+		\noindent
+		Sind die Kuriere überführt und verhaftet, endet auch das Szenario.
+
+}

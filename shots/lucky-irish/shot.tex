@@ -1,0 +1,46 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\documentclass{article}
+
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\luckyirishVersion}{v0.0}
+\newcommand{\luckyirishTranslation}{}
+\newcommand{\luckyirishDisclaimer}{}
+\newcommand{\luckyirishImprint}{}
+\newcommand{\luckyirishSummary}{}
+\newcommand{\luckyirishHeadline}{}
+\newcommand{\luckyirishToc}{}
+\newcommand{\luckyirishPlayers}{}
+\newcommand{\luckyirishText}{}
+
+\input{content.tex} % Makefile will map the current language into content.txt
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\luckyirishVersion, \today}{\luckyirishTranslation}{\luckyirishDisclaimer}{\luckyirishSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\luckyirishHeadline}}{\luckyirishToc}
+
+\begin{multicols}{2}%
+\noindent\luckyirishPlayers
+
+\bigskip
+
+\luckyirishText
+\end{multicols}
+
+\end{document}

@@ -1,0 +1,44 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\documentclass{article}
+
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\dwarvesVersion}{v0.0}
+\newcommand{\dwarvesTranslation}{}
+\newcommand{\dwarvesDisclaimer}{}
+\newcommand{\dwarvesImprint}{}
+\newcommand{\dwarvesSummary}{}
+\newcommand{\dwarvesHeadline}{}
+\newcommand{\dwarvesToc}{}
+\newcommand{\dwarvesPlayers}{}
+\newcommand{\dwarvesText}{}
+
+\input{content.tex} % Makefile will map the current language into content.txt
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\dwarvesVersion, \today}{\dwarvesTranslation}{\dwarvesDisclaimer}{\dwarvesSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\dwarvesHeadline}}{\dwarvesToc}
+
+\begin{multicols}{2}%
+\noindent\dwarvesPlayers
+
+\dwarvesText
+\end{multicols}
+
+\end{document}
