@@ -1,0 +1,44 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\documentclass{article}
+
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\celebritiesVersion}{v0.0}
+\newcommand{\celebritiesTranslation}{}
+\newcommand{\celebritiesDisclaimer}{}
+\newcommand{\celebritiesImprint}{}
+\newcommand{\celebritiesSummary}{}
+\newcommand{\celebritiesHeadline}{}
+\newcommand{\celebritiesToc}{}
+\newcommand{\celebritiesPlayers}{}
+\newcommand{\celebritiesText}{}
+
+\input{content.tex} % Makefile will map the current language into content.txt
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\celebritiesVersion, \today}{\celebritiesTranslation}{\celebritiesDisclaimer}{\celebritiesSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\celebritiesHeadline}}{\celebritiesToc}
+
+\begin{multicols}{2}%
+\noindent\celebritiesPlayers
+
+\celebritiesText
+\end{multicols}
+
+\end{document}

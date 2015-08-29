@@ -1,0 +1,128 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\renewcommand{\archaeaVersion}{v1.0}
+
+% CHANGELOG-de
+%
+% 1.0
+%   - Lektorat Onno und Andre
+% 0.2
+%   - Tippfehlerkorrekturen
+% 0.1
+%   - Erstfassung
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\say}[1]{„\textit{#1}“}
+\setdefaultlanguage[spelling=new]{german}
+
+\renewcommand{\fsNormal}{\fontsize{9pt}{11.25pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.5pt}{9.5pt plus 0.1pt minus 0pt}}
+
+\newcommand{\zB}{z.\,B.}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={Ein kurzes NIP'AJIN Szenario rund um ein Alien auf einer Raumstation.},
+	pdfkeywords={nipajin, nip'ajin, one-shot, oneshot, shots, Rollenspiel, System, frei, RSP, RPG},
+	pdfpagelayout=TwoPageLeft,
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\archaeaTranslation}{Lektorat: Onno Tasler, André Frenzer}
+\renewcommand{\archaeaDisclaimer}{(Logos und Marken ausgenommen.)}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\archaeaPlayers}{%
+	Ein Szenario für drei bis fünf Charaktere.
+}
+\renewcommand{\archaeaSummary}{%
+	NIP'AJIN Shots sind kurze Pen-\&-Paper Rollenspielszenarien. Sie sind auf eine Spieldauer von etwa 2 Stunden ausgelegt.
+
+	Um das folgende Szenario spielen zu können, sind die NIP'AJIN Regeln nötig. Diese gibt es kostenlos unter~\ldots
+}
+\renewcommand{\archaeaHeadline}{Stress auf Archaea-12}
+\renewcommand{\archaeaToc}{Szenario: Stress auf Archaea-12}
+\renewcommand{\archaeaText}{%
+	{\itshape
+		Wir schreiben das Jahr 2184. Die Menschheit brach Dank der Erfindung der Sprungtriebwerke zu den Sternen auf. Anderen Sternenfahrern ist sie bisher nicht begegnet.
+
+		Im Placebo-Subsektor, selbst mit Raumsprüngen immer noch Monate von der Erde entfernt, umrundet die ringförmige, mobile Raumstation Archaea-12 mit ihrem 20-köpfigen Forscherteam den kürzlich entdeckten Planeten Heures-3. Der erinnert an die Erde vor 100 Millionen Jahren und die ersten außerirdischen Reptilien wurden hier gefunden. Die Wissenschaftler bringen entgegen strenger Quarantänevorschriften laufend Pflanzen, Echsen und Reptilieneier auf die Station.
+
+		Vor wenigen Tagen schlüpfte aus einem der fußballgroßen Eier in Labor II ein Wesen, machte sich über die anderen Echsen her und wuchs in Rekordgeschwindigkeit. Das Labor wurde abgeschottet, die Situation schien unter Kontrolle. Doch das außerordentlich intelligente Tier fand einen Weg über die Luftschächte und fiel über die überraschten Stationsbewohner her. Es attackierte einzelne Wissenschaftler in halbdunklen Ecken der Raumstation und hinterließ jedes Mal ein Blutbad. Noch schlimmer, das Wesen kann sich alleine fortpflanzen und hat begonnen, Eier zu legen.
+
+		Von der Besatzung der Archaea-12 sind nur mehr eine Handvoll Personen übrig -- ihr. Einige sind mit dem Shuttle geflohen, die anderen tot. Ihr sitzt auf der Station fest. Eure einzige Chance: das Wesen zu finden und unschädlich zu machen~\ldots
+	}
+
+	\mysection{Setting}
+
+		\noindent
+		Das Szenario spielt in einer großen, ringförmigen Raumbasis. Der Ring enthält sechs Stationen, die jeweils etwa 100~m² groß und durch 10~m lange, gebogene Gänge verbunden sind. Jede zweite Station ist mit dem im Zentrum des Rings befindlichen Maschinenraum verbunden. Eine künstliche Schwerkraft wirkt in Richtung Zentrum des Rings.
+
+		\keyword{Maschinenraum}: Hier befinden sich in Schwerelosigkeit der Antrieb der Archaea-12, Lebenserhaltung und andere, voluminöse Gerätschaften.
+
+		\keyword{Kommandostation}: Die Brücke. Steuerkonsolen für alle Funktionen der Raumbasis sowie Funkgeräte finden sich hier.
+
+		\keyword{Labor I}: Forschungslabor und Glashaus zur Analyse von Pflanzen.
+
+		\keyword{Labor II}: Forschungslabor und Menagerie zur Analyse von Tieren.
+
+		\keyword{Hangar}: Bietet Platz für 2 Shuttles (derzeit ausgeflogen), Laderampen und 1W6 Raumanzüge.
+
+		\keyword{Lager}: Hier werden Utensilien und Rationen in großen Kisten sowie Werkzeug in einer kleinen Werkstatt gelagert.
+
+		\keyword{Wohntrakt}: Aufenthaltsraum/Messe, eine Reihe kleiner Zimmer für je 1 bis 2 Mitarbeiter, eine kleine medizinische Station sowie Sanitäreinrichtungen.
+
+		Die Stationen enthalten, was SL und Spieler für angemessen befinden. Im Zweifel darf ein Würfel entscheiden. Jede Station wird bei Druckabfall bis zur Reparatur versiegelt.
+
+	\mysection{Charaktere}
+
+		\noindent
+		Beispiele für Raumstationpersonal wären:
+
+		\tabelle{l c X}{
+		\thead{SC} & \thead{\HD} & \thead{Beschreibung} \\
+		}{
+			Android    & 10 & Kraft+2, Soziales-1, Agilität-1 \\
+			Koch       &  6 & Ernährung+2, Wissen-1, Technik-1\\
+			Mechaniker &  6 & Technik+2, Wissen-1, Soziales-1 \\
+			Mediziner  &  6 & Medizin+2, Agilität-1, Kämpfen-1 \\
+			Psychologe &  4 & Soziales+2, Kraft-1, Technik-1 \\
+			Sergeant   &  8 & Schießen+2, Wissen-1, Technik-1 \\
+		}
+
+		\noindent
+		Nur der Sergeant hat eine Schusswaffe. Sollten die Spieler das Szenario mit PSI-Kräfen spielen wollen, dürfen sie ihren Vorteil+2 auf +1 senken und dafür einen \emph{Effekt} aus der Kategorie Unterstützung, Veränderung, Illusion oder Heileffekt wählen.
+
+	\mysection{Das Wesen}
+
+		\noindent
+		Das Wesen (\HD6, \AD8, \RD8) ist nicht schön anzusehen. Es ist so groß wie ein Tiger, schwarz, gepanzert und läuft auf vier Krabbenbeinen. Der Kopf, der fast nur aus einem Maul mit Hauern besteht, hat verkümmerte Augen, da es die Umgebung mit Ultraschall wahrnimmt. Am Schwanz befindet sich eine Öffnung zum Eierlegen. Zwei Arme, ähnlich denen einer Gottesanbeterin, sind feinmotorisch genug, dass das Wesen damit Schalter und Gegenstände bedienen kann.
+
+		Zum Leidwesen der Wissenschaftler ist das Wesen intelligent. Wie sehr, darf der SL entscheiden. Es ist flink, kann an Decken laufen und ist damit schneller/agiler als alle SC. Es bewegt sich bevorzugt in Hohlräumen in den Böden/Decken der Archaea-12. In Schwerelosigkeit kann es mit seinen Beinen selbst an Metallplatten Halt finden. Da es nicht atmet, überlebt es sogar im All.
+
+		Die blassgelben, länglichen Eier sind für den Ausgang dieses Szenarios nicht wichtig -- sie schlüpfen erst nach ein paar Tagen, bis dahin hätte das Wesen die SC schon längst besiegt. Allerdings entwickelt das Wesen einen starken Mutterinstinkt und kann mit den Eiern \zB~in Fallen gelockt werden.
+
+	\mysection{Ablauf}
+
+		\noindent
+		Der SL sollte zu Spielbeginn eine Karte der Archaea-12 skizzieren. Im Spiel wechseln sich dann Panikphasen und Ruhephasen ab.
+
+		In \keyword{Panikphasen} wird das Geschehen in Konfliktrunden abgehandelt. Eilig von einer Station zur anderen zu laufen erfordert einen \AD~und einen Agilität-Wurf (\TN4). Ein Erfolg erlaubt, zwei Felder weit zu gehen, ein Misserfolg nur eines. Jede Station zählt als Feld, ebenso jedes verbindende Gangsegment.
+
+		Das Wesen kann nur mit besonderen Vorkehrungen bezwungen werden. Normale Angriffe, auch mit der Pistole des Searganten, reduzieren zwar den Wert am \HD, aber wenn es so überwunden wird, gilt das als \keyword{nicht nachhaltig} und vertreibt es bloß kurzzeitig.
+
+		In den \keyword{Ruhephasen} lässt das Wesen die SC für eine Stunde in Ruhe, regeneriert einen Punkt am \HD\ pro 10 Minuten und legt Eier. In dieser Zeit können die SC mit \emph{langfristigen Aktionen} (\TN Spielerzahl*3, 10min/Etappe) \zB\ eine Falle oder einen Feuerwerfer entwickeln. Nur mit solchen Ideen kann das Wesen \keyword{nachhaltig} überwunden werden. Das tötet das Wesen zwar auch nicht sofort, aber sein \HD\ wird permanent zu einem W4. Wird das Wesen zum ersten Mal nachhaltig überwunden, kann es trotzdem fliehen. Es läuft \zB\ brennend und kreischend davon, klammert sich im Vakuum an der Außenwand fest, usw. -- erst wenn es ein zweites Mal nachhaltig überwunden wurde, ist es endgültig besiegt.
+
+		Das Spiel startet in einer Panik-Situation. Die \HD\ aller Charaktere werden auf die Karte gelegt, um ihren Aufenthaltsort festzuhalten. Die SC beginnen verteilt an zufällig bestimmten Orten der Archaea-12. Das Wesen taucht bei einem der SC auf und verwickelt diesen in einen Kampf, nachdem er über Bordfunk um Hilfe rufen konnte.
+
+	\mysection{Ende gut, alles gut?}
+
+		\noindent
+		Die Spieler gewinnen, wenn sie das Wesen zwei Mal nachhaltig überwinden können. Sie verlieren, wenn alle SC überwunden wurden oder Archaea-12 zerstört wird.
+
+}

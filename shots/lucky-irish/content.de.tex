@@ -1,0 +1,119 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% Original version by Dennis Filipiak.
+% This file is released under CC BY-SA 4.0.
+
+\renewcommand{\luckyirishVersion}{v1.0}
+
+\newcommand{\scenarioVersionTaverne}{v0.2}
+
+% CHANGELOG-de
+%
+% 1.0
+%   - Erstveröffentlichung
+% 0.2
+%   - Lektorat Markus
+% 0.1
+%   - Erstfassung
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\say}[1]{„\textit{#1}“}
+\setdefaultlanguage[spelling=new]{german}
+
+\renewcommand{\fsNormal}{\fontsize{10pt}{12pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{9pt}{11pt plus 0.1pt minus 0pt}}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={Ein kurzes NIP'AJIN Szenario rund um eine Tavernenprügelei.},
+	pdfkeywords={nipajin, nip'ajin, one-shot, oneshot, shots, Rollenspiel, System, frei, RSP, RPG},
+	pdfpagelayout=TwoPageLeft,
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\luckyirishTranslation}{\tiny Text: Dennis Filipiak, Lektorat: Markus Leupold-Löwenthal}
+\renewcommand{\luckyirishDisclaimer}{(Logos und Marken ausgenommen.)}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\luckyirishPlayers}{%
+	Ein handgreifliches Szenario von Dennis~Filipiak für drei bis sechs Charaktere. Nutze einen W6, um die zufälligen Elemente zu bestimmen.
+}
+\renewcommand{\luckyirishSummary}{%
+	NIP'AJIN Shots sind kurze Pen-\&-Paper Rollenspielszenarien. Sie sind auf eine Spieldauer von etwa 2 Stunden ausgelegt.
+
+	Um das folgende Szenario spielen zu können, sind die NIP'AJIN Regeln nötig. Diese gibt es kostenlos unter~\ldots
+}
+\renewcommand{\luckyirishHeadline}{Lucky Irish}
+\renewcommand{\luckyirishToc}{Szenario: Lucky Irish}
+\renewcommand{\luckyirishText}{%
+	{
+		\textit{Einer dieser Abende in Darcey’s Pub auf der grünen Insel. Ihr wollt gerade die nächste Runde Guinness bestellen, als die Tür auffliegt. Im strömenden Regen steht~\ldots}
+
+		\tabelle{c X}{
+		\thead{W6} & \thead{Störenfriede} \\
+		}{
+			1 & eine Bande Engländer \\
+			2 & ein Trupp Marsmenschen \\
+			3 & ein Teil vom Rugby-Nationalteam \\
+			4 & eine japanische Girlband \\
+			5 & eine Gruppe Vampire \\
+			6 & ein Haufen Typen in Anzügen \\
+		}
+
+		\textit{\ldots~die sagen, sie wollen~\ldots}
+
+		\tabelle{c X}{
+		\thead{W6} & \thead{Motivation} \\
+		}{
+			1 & den Pub schließen. \\
+			2 & das Commonwealth wiederherstellen. \\
+			3 & nur das Klo benutzen. \\
+			4 & euch den Titel im Fässerrollen streitig machen. \\
+			5 & Cousine Sally mitnehmen. \\
+			6 & den Pub als geheime Basis nutzen. \\
+		}
+
+		\textit{Ganz klar, die Störenfriede müssen raus. Krempelt die Ärmel hoch, schnappt euch einen Barhocker und erledigt die Angelegenheit!}
+	}
+
+	\mysection{Charaktere}
+
+		\noindent
+		In diesem Szenario haben die Charaktere keine besonderen Fähigkeiten und verwenden einen \HD8. Sie sind einfach nur~\ldots
+
+		\tabelle{c l l X}{
+		\thead{W6} & \thead{Vorname} & \thead{Nachname} & \thead{Merkmal} \\
+		}{
+			1 & Alhan & McDonald & kleinwüchsig \\
+			2 & Deegan & Robinson & grün angezogen \\
+			3 & Tavin & Shanahan & schmutzig \\
+			4 & Ungus & Callee & tätowiert \\
+			5 & Pearse & O'Leary & rothaarig \\
+			6 & Cowan & O'Toole & poetisch \\
+		}
+
+	\mysection{Ablauf}
+
+		\noindent
+		Dieses Szenario spielt in einer Bar an der Hauptstraße in einem kleinen Dorf. Aber eigentlich ist das nicht wichtig.
+
+		\subsection{Die müssen raus!}
+
+		Die Charaktere sind aufgefordert, die Störenfriede aus dem Lokal zu werfen und den Pub dabei nach Herzenslust zu verwüsten (Darcey ist versichert und baut den Laden sowieso alle paar Wochen neu auf). Überwundene Ankömmlinge fliehen. \keyword{Störenfriede:} \HD4, \AD6, \RD6, Anzahl: wie SC.
+
+		\subsection{Haben die noch nicht genug?}
+
+		Nach mehreren erholsamen Bieren -- die Charaktere dürfen jeweils zwei Mal versuchen, wie bei einer Nachtruhe zu heilen -- sind die Charaktere auf dem Weg nach Hause. Sie geraten in einen Hinterhalt: Die Geflohenen wollen sich doch tatsächlich wegen der kleinen Prügelei rächen! Hier geht es vor allem darum, sich aus dem Hinterhalt herauszuspielen, ob mit Worten oder Fäusten. Die angeheiterten Charaktere haben -2 auf alle Würfe. \keyword{Störenfriede:} \HD2, \AD6, \RD6, Anzahl: SC-1.
+
+		\subsection{Da fehlte doch wer~\ldots}
+
+		Beim Hinterhalt war einer der Ankömmlinge nicht anwesend. Die Charaktere sehen ihn gerade noch über die Hügel verschwinden, unter dem Arm den eigentlichen Grund für das Erscheinen: die Kasse von Darcey’s Pub. Auf in die Hills, dem Lump hinterher! Spurensuche und die Frage, wie man bei diesem Matschwetter möglichst schnell im Gelände voran kommt, bestimmen die Szene (\emph{langfristige Aktion}\TN15, 10min/Runde). Die frische Luft tut gut -- nur mehr -1 auf alle Aktionen.
+
+		\subsection{Showdown}
+
+		Ups, damit hätten wir nicht gerechnet, die eigentlichen Drahtzieher sind~\ldots~(nochmal auf Tabelle 1 würfeln). Auf der Spitze eines Hügels kommt es zum Showdown samt Ansprache des Oberfieslings! Die Charaktere haben jetzt keine Abzüge mehr. \keyword{Oberfiesling und Konsorten:} \HD6, \AD8, \RD6, Anzahl: SC-2.
+
+}

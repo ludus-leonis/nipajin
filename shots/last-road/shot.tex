@@ -1,0 +1,44 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\documentclass{article}
+
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\lastroadVersion}{v0.0}
+\newcommand{\lastroadTranslation}{}
+\newcommand{\lastroadDisclaimer}{}
+\newcommand{\lastroadImprint}{}
+\newcommand{\lastroadSummary}{}
+\newcommand{\lastroadHeadline}{}
+\newcommand{\lastroadToc}{}
+\newcommand{\lastroadPlayers}{}
+\newcommand{\lastroadText}{}
+
+\input{content.tex} % Makefile will map the current language into content.txt
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\lastroadVersion, \today}{\lastroadTranslation}{\lastroadDisclaimer}{\lastroadSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\lastroadHeadline}}{\lastroadToc}
+
+\begin{multicols}{2}%
+\noindent\lastroadPlayers
+
+\lastroadText
+\end{multicols}
+
+\end{document}
