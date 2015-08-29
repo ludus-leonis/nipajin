@@ -20,6 +20,7 @@ In diesem GIT-Repository findest du LaTeX-Quellen, um NIP'AJIN als Basis für ei
 * `core` enthält das komplette, vierseitige Grundregelwerk.
 * `fonts` enthält die für die PDFs benutzten Schriftarten.
 * `scenario` enthält eine Layout-Vorlage für ein komplettes Szenario/Abenteuer/Modul, die ihrerseits die Regeln aus `core` benutzt.
+* `shots` enthält mehrere kurze NIP'AJIN-Szenarien ([NIP'AJIN Shots](http://ludus-leonis.com/nipajin/shots) genannt). Mit der Vorlage können auch eigene Shots verfasst und in PDFs verwandelt werden.
 
 Bitte beachte das `README.md` im jeweiligen Ordner für Details.
 

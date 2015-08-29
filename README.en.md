@@ -22,8 +22,9 @@ This repository contains all LaTeX-files needed to build upon NIP'AJIN in own wo
 * `core` contains the core rulebooklet
 * `fonts` contains all necessary fonts
 * `scenario` contains a template for scenarios/modules, that incorporates the stuff from `core`
+* `shots` contain multiple short NIP'AJIN-Scenarios (a.k.a. [NIP'AJIN Shots](http://ludus-leonis.com/nipajin/shots)). Using them as template allows writing own Shots and converting them to PDF.
 
-Please read the READMY.md in each folder.
+Please read the README.md in each folder.
 
 ## Dependencies
 
