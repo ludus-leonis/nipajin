@@ -1,0 +1,46 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+
+\ProvidesFile{nipajin-basic.sty}
+\ProvidesPackage{nipajin-basic}
+
+% this style file is the basic red layout
+
+\newcommand{\fontsearchpath}{../../fonts}
+\usepackage{nipajin}
+
+% ------------------------------------------------------------------------------
+
+\newcommand{\shotsbanner}[4]{
+	\backgroundtop{trueBlack}{6cm}
+	\begin{multicols}{2}\raggedbottom\color{white}
+		\noindent
+		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
+
+			\centerline{\fffancy\fontsize{42pt}{48pt}\selectfont\color{white}{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
+			\vspace{4pt}
+			\centerline{\fontsize{24pt}{24pt}\selectfont\color{white}{\addfontfeature{LetterSpace=31pt}S•H•O•T•S}}
+			\centerline{{\small\textbf{\copyright\ 2009--2015, Markus Leupold-Löwenthal}}}
+			\centerline{{\small#1}}
+			\expandafter\ifstrequal\expandafter{#2}{nobody}{}{\centerline{{\small#2}}}
+
+			\vspace*{5mm}
+
+			\centerline{%
+				\parbox{20mm}{\fontsize{11pt}{11pt}\selectfont\textbf{CC BY-SA 4.0}}%
+				\hspace{1mm}%
+				\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #3}%
+			}
+		}
+
+		\noindent
+		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
+			\textit{\noindent#4}
+
+			\vspace*{6pt}
+			
+			\centerline{\href{http://ludus-leonis.com/nipajin}{\textbf{ludus-leonis.com/nipajin}}}
+		}
+
+	\end{multicols}
+	\vspace*{2mm}
+}

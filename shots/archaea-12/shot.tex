@@ -1,0 +1,44 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\documentclass{article}
+
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\archaeaVersion}{v0.0}
+\newcommand{\archaeaTranslation}{}
+\newcommand{\archaeaDisclaimer}{}
+\newcommand{\archaeaImprint}{}
+\newcommand{\archaeaSummary}{}
+\newcommand{\archaeaHeadline}{}
+\newcommand{\archaeaToc}{}
+\newcommand{\archaeaPlayers}{}
+\newcommand{\archaeaText}{}
+
+\input{content.tex} % Makefile will map the current language into content.txt
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\archaeaVersion, \today}{\archaeaTranslation}{\archaeaDisclaimer}{\archaeaSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\archaeaHeadline}}{\archaeaToc}
+
+\begin{multicols}{2}%
+\noindent\archaeaPlayers
+
+\archaeaText
+\end{multicols}
+
+\end{document}
