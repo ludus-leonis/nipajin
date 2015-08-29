@@ -1,0 +1,44 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\documentclass{article}
+
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\xmasVersion}{v0.0}
+\newcommand{\xmasTranslation}{}
+\newcommand{\xmasDisclaimer}{}
+\newcommand{\xmasImprint}{}
+\newcommand{\xmasSummary}{}
+\newcommand{\xmasHeadline}{}
+\newcommand{\xmasToc}{}
+\newcommand{\xmasPlayers}{}
+\newcommand{\xmasText}{}
+
+\input{content.tex} % Makefile will map the current language into content.txt
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\xmasVersion, \today}{\xmasTranslation}{\xmasDisclaimer}{\xmasSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\xmasHeadline}}{\xmasToc}
+
+\begin{multicols}{2}%
+\noindent\xmasPlayers
+
+\xmasText
+\end{multicols}
+
+\end{document}

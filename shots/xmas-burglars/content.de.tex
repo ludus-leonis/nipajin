@@ -1,0 +1,107 @@
+\renewcommand{\xmasVersion}{v1.2}
+
+% CHANGELOG-de
+%
+% 1.2
+%   - Lektorat Onno
+% 1.1
+%   - CC BY-SA 4.0
+%   - Impressumzeile
+% 1.0
+%   - Tippfehlerkorrekturen
+% 0.1
+%   - Erstfassung
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\say}[1]{„\textit{#1}“}
+\setdefaultlanguage[spelling=new]{german}
+
+\renewcommand{\fsNormal}{\fontsize{9.5pt}{11.5pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.5pt}{9.5pt plus 0.1pt minus 0pt}}
+
+\newcommand{\zB}{z.\,B.}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={Ein kurzes NIP'AJIN Szenario rund um Kinder und Ganoven zur Weihnachtszeit.},
+	pdfkeywords={nipajin, nip'ajin, one-shot, oneshot, shots, Rollenspiel, System, frei, RSP, RPG},
+	pdfpagelayout=TwoPageLeft
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\xmasTranslation}{Lektorat: Onno Tasler}
+\renewcommand{\xmasDisclaimer}{(Logos und Marken ausgenommen.)}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\xmasPlayers}{%
+	Ein Szenario für ein bis sechs Charaktere.
+}
+\renewcommand{\xmasSummary}{%
+	NIP'AJIN Shots sind kurze Pen-\&-Paper Rollenspielszenarien. Sie sind auf eine Spieldauer von etwa 2 Stunden ausgelegt.
+
+	Um das folgende Szenario spielen zu können, sind die NIP'AJIN Regeln nötig. Diese gibt es kostenlos unter~\ldots
+}
+\renewcommand{\xmasHeadline}{Mit NIP'AJIN allein daheim}
+\renewcommand{\xmasToc}{Szenario: Mit NIP'AJIN allein daheim}
+\renewcommand{\xmasText}{%
+	{\itshape
+		Es ist der 22. Dezember. Ihr seid 9 bis 12 Jahre alte Kinder zweier verwandter Familien und ohne eure Eltern auf dem Weg zum Haus einer reichen Tante in einem Vorort New Yorks. Dort sollt ihr die Tage vor Weihnachten verbringen, damit eure überlasteten Eltern zu Hause alles für die Bescherung vorbereiten können. Als euch das Taxi mittags im Schneetreiben an der Einfahrt absetzt, meint der Fahrer noch, dass das seine letzte Fahrt für heute sei -- die Straßen würden wegen des Wintereinbruchs gesperrt.
+
+		Bei der Haustüre angekommen dann die Überraschung: Niemand ist da! Dank des im Garten versteckten Zweitschlüssels könnt ihr zumindest ins Haus gelangen und die Eltern anrufen: Ja, da gab es wohl ein Missverständnis mit der Tante, und ihr möget brav bis morgen früh warten -- im Gefrierschrank seien Tiefkühlpizzen.
+
+		Auf euch allein gestellt hat der Spaß ein Ende, als ihr bei einer Schneeballschlacht einen scheinbar korrupten Polizisten belauscht, der vom Streifenfahrzeug per Funk mit einem Freund spricht: Die Nachbarschaft hier sei wie ausgestorben und reif, heute Nacht ausgeraubt zu werden! Er vereinbart mit seinem Gesprächspartner, dass sie sich heute nach Einbruch der Dunkelheit -- vor eurem Haus -- zum Streifzug treffen würden.
+
+		Nachdem zur Polizei gehen wohl keine Alternative ist, und eure Eltern euch nach einem erneuten Anruf nur beschwichtigen, ist klar, was zu tun ist: Ihr müsst das Haus vor den Ganoven schützen und sie daran hindern, einzudringen und die schönen Sachen der Tante zu stehlen!
+	}
+
+	\mysection{Setting}
+
+		\noindent
+		Das Szenario spielt in einer verschneiten, menschenleeren Villengegend in einem Vorort New Yorks. Die Villa, ein neo-georgianischer Ziegelbau, besitzt folgende Räume (OG=Obergeschoß, EG=Erdgeschoß, K=Keller):
+
+		\keyword{OG/Schlafzimmer}: Zwei Fenster zum Garten, Türe zum Gang. \keyword{OG/Gästezimmer}: Zwei Fenster zum Vorgarten, Türe zum Gang, Türe zum Kinderzimmer. \keyword{OG/Kinderzimmer}: Zwei Fenster zum Vorgarten, Türe zum Gang, Türe zum Gästezimmer. \keyword{OG/Extrazimmer}: Fenster zum Garten, Türe zum Gang. \keyword{OG/Stauraum}: Beengter Raum im Dachgipfel, erreichbar über eine Faltleiter an der Decke im Extrazimmer. Zwei Dachluken. \keyword{OG/Bad}: Milchglasfenster zum Garten, Türe zum Gang. \keyword{OG/Toilette}: Fensterlos, Türe zum Gang. \keyword{EG/Vorzimmer}: Türen zu Vorgarten, Esszimmer, Wohnzimmer und Bad. Breite Treppe zum Obergeschoß. \keyword{EG/Esszimmer}: Breites Fenster zum Vorgarten, Türen zu Vorzimmer und Küche. \keyword{EG/Küche}: Zwei Fenster zum Garten, Türen zu Esszimmer und Wohnzimmer. \keyword{EG/Bad}: Fensterlos, Tür zum Vorzimmer. \keyword{EG/Wohnzimmer}: Großer Raum mit zwei Fenstern und Tür zum Garten sowie zwei Fenstern zum Vorgarten. \keyword{K/Heizraum}: Schmale Treppe zur Küche, Türen zu Stauraum, Hobbyraum und zur Gartentreppe. \keyword{K/Stauraum}: Zwei kleine Fenster zum Garten, Türen zu Heiz- und Hobbyraum. \keyword{K/Hobbyraum}: Werkstatt und Bastelraum, drei kleine Fenster zum Vorgarten, Türen zu Heiz- und Stauraum. \keyword{Garten}: 4.000m², Pool, Geräteschuppen, Terrasse mit Tür zum Wohnzimmer und Treppe zum Heizraum. \keyword{Vorgarten}: 200m², überdachter Parkplatz, Tür zum Vorzimmer.
+
+		In jedem Raum finden sich 1W2 bis 1W6 Wertsachen. Die weitere Ausstattung dürfen die Spieler bestimmen, bei ungewöhnlichen Wünschen sollte ein Würfel entscheiden.
+
+	\mysection{Charaktere}
+
+		\noindent
+		In diesem Szenario verkörpern die Spieler Kinder im Alter von 1W4+8 Jahren, \zB:
+
+		\tabelle{l c X}{
+		\thead{SC} & \thead{\HD} & \thead{Beschreibung} \\
+		}{
+			Austin &  8 & Sportler der Gruppe. Sportlich+1, Technik-1. \\
+			Cody   &  6 & Übergewichtiger Bücherwurm. Wissen+1, Sportlich-1. \\
+			Grace  &  6 & Meisterin im Verstecken. Heimlichkeit+1, Soziales-1. \\
+			Katie  &  4 & Die Süße mit den Sommersprossen. Soziales+1, Ängstlich-1. \\
+			Riley  &  6 & Chaotische Bastlerin. Handwerk+1, Heimlichkeit-1. \\
+			Victor & 10 & Kühner Haudrauf. Mut+1, Schlau-1. \\
+		}
+
+	\mysection{Ablauf}
+
+		\noindent
+		Der SL sollte zu Spielbeginn eine Karte des Hauses mit allen Fenstern und Türen skizzieren. Das Spiel beginnt um 14:00, wenn die Kinder erkennen, dass etwas getan werden muss. Sie haben wenige Stunden Zeit, sich auf die Ganoven vorzubereiten und das Haus mit Abschreckmitteln und Fallen zu versehen. Der SL muss jetzt auf die Zeit in der Spielwelt genau achten. Für jede Vorkehrung legt der SL einen Zielwert fest, den die beteiligten Kinder als \emph{langfristige Aktion} gemeinsam erreichen müssen. Jede \emph{Etappe} kostet etwa 30 Minuten.
+
+		Gegen 16:30 geht die Sonne unter, um 18:00 starten die Ganoven ihre Tour. Ihre Anzahl entspricht der Zahl der Kinder plus 1 (\keyword{Ganove}: \HD10, \AD6, \RD6, Raufen+2, Schlau-1). Sollten die Kinder bis dahin die Illusion eines  bevölkerten Hauses geschaffen haben (\zB~indem sie eine Weihnachtsfeier vortäuschen), werden die Ganoven erst ein benachbartes Haus ausrauben und den Kindern so mehr Zeit zur Vorbereitung geben. Spätestens um 21:00 kommt es ihnen aber komisch vor, dass keine Autos beim Haus parken und sie untersuchen dieses genauer.
+
+		Die Ganoven werden sich aufteilen und in folgender Reihenfolge versuchen, in das Haus einzudringen: Vordertüre, Hintertüre, Kellertreppe, Küchenfenster, Esszimmerfenster, Hobbyraumfenster, Extrazimmer (via Baum), Gästezimmer (via Regenrinne), Wohnzimmerfenster, Schlafzimmer (via Leiter), Dachluke (via Leiter). Um sich vor einer Vorkehrung der Kinder zu schützen, steht den Ganoven ein Wurf gegen einen, der Falle entsprechenden und vom SL festgelegten, Zielwert zu. Misslingt er, ist der Ganove abgewehrt, nimmt je nach Falle 1 bis 2 Schaden und versucht, anderswo einzudringen. Gelingt er, können die Kinder versuchen, spontan mit weiteren Aktionen noch nachzuhelfen, sonst ist der Ganove im Haus und jagt ihnen hinterher (und evtl. in die nächste Falle). Jede Vorkehrung ist nur einmal wirksam, danach sind die Ganoven gewarnt.
+
+		Ein Ganove bleibt in einem Raum, bis ihm ungestört so viele Suchaktionen (\TN4) gelingen, wie Wertgegenstände vorliegen.
+
+	\mysection{Szenarioregeln}
+
+		\noindent
+		Jeder Spieler erhält zu Spielbeginn zwei Bonbons. Wedelt er im Spiel wild mit den Armen und ruft \say{Whaaaahaa}, darf er eines davon ausgegeben, um einen Wurf zu wiederholen. Nicht benutzte Bonbons dürfen nach dem Spiel verzehrt werden.
+
+	\mysection{Ende gut, alles gut?}
+
+		\noindent
+		Die Ganoven verlieren, wenn sie in Summe die Hälfte aller ihrer \HD-Punkte verloren haben, egal wer wieviel abbekommen hat. Die Spieler verlieren, wenn die \HD\ ihrer Kinder aufgebraucht sind, oder die Ganoven mit 16 Wertsachen fliehen können.
+
+}
