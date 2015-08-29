@@ -1,0 +1,129 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\renewcommand{\dwarvesVersion}{v1.0.1}
+
+
+% CHANGELOG-de
+%
+% 1.0.1
+%   - Typos, Anordnung Setting & Charaktere
+% 1.0
+%   - Lektorat Onno & Andre
+% 0.2
+%   - Tippfehlerkorrekturen
+% 0.1
+%   - Erstfassung
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\say}[1]{„\textit{#1}“}
+\setdefaultlanguage[spelling=new]{german}
+
+\renewcommand{\fsNormal}{\fontsize{9pt}{11.25pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.5pt}{9.5pt plus 0.1pt minus 0pt}}
+
+\newcommand{\zB}{z.\,B.}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={Ein kurzes NIP'AJIN Szenario rund um nasse Zwerge.},
+	pdfkeywords={nipajin, nip'ajin, one-shot, oneshot, shots, Rollenspiel, System, frei, RSP, RPG},
+	pdfpagelayout=TwoPageLeft,
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\dwarvesTranslation}{Lektorat: Onno Tasler, André Frenzer}
+\renewcommand{\dwarvesDisclaimer}{(Logos und Marken ausgenommen.)}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\dwarvesPlayers}{%
+Ein Szenario für drei bis sechs Charaktere.
+}
+\renewcommand{\dwarvesSummary}{%
+	NIP'AJIN Shots sind kurze Pen-\&-Paper Rollenspielszenarien. Sie sind auf eine Spieldauer von etwa 2 Stunden ausgelegt.
+
+	Um das folgende Szenario spielen zu können, sind die NIP'AJIN Regeln nötig. Diese gibt es kostenlos unter~\ldots
+}
+\renewcommand{\dwarvesHeadline}{Nasse Zwerge}
+\renewcommand{\dwarvesToc}{Szenario: Nasse Zwerge}
+\renewcommand{\dwarvesText}{%
+	{\itshape
+		Tief unter einer verschneiten Bergkette im Zentrum der Welt leben die Grubenzwerge -- kleinwüchsige, leicht dickliche Humanoide mit runden Gesichtern, Knollennasen und Rauschebärten. Nur wenige von ihnen haben jemals das Tageslicht gesehen, denn ihre Leidenschaft sind die Höhlen und Tunnel, die Steine und Felsen, die Minerale und Erze.
+
+		Ihr seid solche Zwerge und Mitglieder der Quarzer, ein Klan, der sein Glück im Abbau der weißen, rosa oder gelben Kristalle gefunden hat. In Tvurdu, eurer Wohnhöhle, die über die Jahrhunderte zu einer prächtigen Halle erweitert wurde, genügen wenige Fackeln und Laternen, um mit Hilfe glitzernder und reflektierender Säulen jeden Winkel und jede Ecke zu erhellen. Als die Elite Tvurdus seid ihr selbst nicht in den Minen beschäftigt, sondern schreitet nur ein, wenn es zu Auseinandersetzungen mit euren Nachbarn kommt. Immer wieder verirren sich Höhlenmonster in eure Stollen, Goblinstämme werden unruhig, oder eure Erzfeinde, die Dunkelelfen, machen euch das Leben schwer.
+
+		Während ihr ein paar Stunden Ruhe in Tvurdu genießt, wird das leise „Tik-Di-Tik“ der Steinmetze von einem fernen Rumpeln übertönt. \say{Tunneleinbruch! Wasser! Unsere Kumpel benötigen Hilfe!} ruft der Aufseher. Ihr schnappt hastig eure Sachen und eilt in die Mine. Dort sind alle Hände dabei, euren Freunden zu helfen. Der überlastete Aufseher lenkt euch mit \say{Da hinten werden noch drei vermisst!} in einen Gang, in dem schon knöchelhoch das Wasser steht.
+	}
+
+	\mysection{Setting}
+
+		\noindent
+		Das Szenario spielt in einer Zwergenmine. Die Zwerge entsprechen dem Fantasy-Klischee, die Mine besteht aus einem Netz von Gängen, die von Holzbalken gestützt werden und in denen Gleise von Höhle zu Höhle führen. Überall glänzt und funkelt es -- in den Stollen finden sich kieselsteingroße Kristalle in den Wänden, in den Höhlen überragen manche die Zwerge um das Doppelte. In regelmäßigen Abständen hängen Laternen und das Funkeln der Kristalle tut ihr Übriges, um das Licht noch weiter in die Gänge zu tragen.
+
+	\mysection{Charaktere}
+
+		\noindent
+		Alle Spieler verkörpern Zwerge aus nachfolgender Tabelle. Jeder SC hat Angst vor Wasser (Schwim\-men-4), erhält von seinem Spieler zwei weitere Nachteile -1 und einen besonderen Gegenstand, \zB\ eine Waffe mit 2 statt 1 Schaden, eine Rüstung (+1 auf \RD) oder etwas, das +1 auf bestimmte Proben gibt. Jeder SC hat zudem eine Laterne, da Zwerge nicht im Dunkeln sehen können.
+
+		\tabelle{l c X}{
+		\thead{SC} & \thead{\HD} & \thead{Vorteile} \\
+		}{
+			Dieb        &  6 & Schleichen+1, Agilität+1 \\
+			Schürfer    &  8 & Tunnelwissen+1, Spitzhacke+1 \\
+			Kämpfer     & 10 & Axt+2 \\
+			Magier      &  4 & zwei Effekte zweier Kategorien \\
+			Priester    &  6 & Effekt:Frosthand+1, Effekt:Heilen \\
+			Schütze     &  6 & Armbrust+2 \\
+		}
+
+		\noindent
+		Magier und Priester können jeden Effekt fünf Mal anwenden.
+
+	\mysection{Ablauf}
+
+		\noindent
+		Der Einsturz ist von Dunkelelfen verursacht worden, um die Gänge zu fluten. Im Chaos der Rettungsaktionen greifen sie die Zwerge an, um zu verhindern, dass diese den Zufluss stoppen können, ehe das Wasser Tvurdu erreicht.
+
+		\subsection{Teil I -- Elfen im Dunkeln}
+
+		\noindent
+		Die SC laufen den überfluteten Stollen entlang. Wenn sie sich vorsichtig verhalten, dürfen sie in einer Gruppenaktion\TN6 versuchen, Dunkelelfen zu bemerken, die sich in einem kniehoch gefluteten, breiteren Gangsegment hinter hohen Kristallen verstecken. Bei einem Misserfolg werden sie von den Elfen überrascht. Es steht der Gruppe frei, wie sie die Elfen überwinden wollen, allerdings sind jene nicht zu Verhandlungen bereit. Das Wasser erschwert alle körperlichen Aktionen um -1.
+
+		\keyword{Dunkelelf:} \HD4, \AD6, \RD6, Krummschwert+1. Dunkelsicht. Anzahl: SC/2.
+
+		Als Alternative zum Schwert versuchen die Dunkelelfen zumindest einmal im Kampf, die Zwerge einzuschüchtern, indem sie rufen \say{Ihr elendigen Haarballen! Ihr werdet alle ersaufen!}
+
+		\subsection{Teil II -- Der Weg ist das Ziel}
+
+		Nach der Konfrontation gilt es, die vermissten Kumpel (Teil III) oder den Wasserzulauf (Teil IV) zu finden -- je nachdem, wofür sich die Spieler zuerst einsetzen. Da das Stollensystem unübersichtlich ist, muss der Gruppe dazu eine \emph{langfristige Aktion} gelingen (\TN20), um an ihr Ziel zu kommen. Jede \emph{Etappe} stellt 15 Minuten Suchen, Lauschen, Graben und Laufen dar, in der mehr und mehr Wasser eindringt. Daher erhalten Agierende ab der zweiten Etappe -1 auf alle Würfe, ab der vierten -2. Bei automatischen Fehlschlägen stoßen die SC auf fliehendes Getier, \zB\ Tunnelratten (\HD2, \AD4, \RD4; Anzahl: wie SC) oder Hundertfüßler (\HD4, \AD4, \RD4; Anzahl: SC/2).
+
+		\subsection{Teil III -- Nichtschwimmer}
+
+		Die Zwerge hören Rufe ihrer Kumpel, die sie durch einen Nebentunnel zu einer gefluteten Höhle führen. Nur wenige der riesigen Kristalle ragen aus dem Wasser, auf dreien warten Zwerge auf Rettung.
+
+		Wenn die Zwerge sich noch nicht um Teil IV gekümmert haben, besteht Zeitdruck: In etwa 30 Minuten wird das Wasser zu hoch gestiegen sein und die Zwerge ertrinken. Um sie zu retten, kann \zB\ ein Floß oder anderer Schwimmbehelf gebastelt werden (\emph{langfristige Aktion}\TN15, 10min/Runde). Wenn die Spieler nicht selbst auf die Idee kommen, werden die geretteten drei Zwerge sie darauf hinweisen, dass das Wasser gestoppt werden muss.
+
+		Haben die SC schon den Zulauf gestoppt, genügt mangels Zeitdruck eine \emph{Gruppenaktion}\TN8 statt der langfristigen Aktion, um zu helfen.
+
+		\subsection{Teil IV -- Wasser}
+
+		Die SC finden in einem der Gänge ein riesiges Loch in der Decke, das die Dunkelelfen verursacht haben. Die nassen Wände ohne Hilfsmittel hinaufzuklettern erfordert Agilität\TN6. Einen Stock höher finden die Zwerge eine Höhle vor, in der ein Staudamm errichtet wurde, dessen Schleusen weit geöffnet sind. Die Dunkelelfen beabsichtigen, nach erfolgreicher Flutung die Höhlen wieder trocken zu legen.
+
+		Der Staudamm wird von einem Trupp Dunkelelfen-Elite bewacht, der entschlossen ist, jeden Zwerg aufzuhalten, der es bis hierher schafft.
+
+		\keyword{Dunkelelf (Elite):} \HD6, \AD8, \RD8, Schwert+1, Rüstung+1. Dunkelsicht. Anzahl: SC.
+
+	\mysection{Szenarioregeln}
+
+		\noindent
+		Heileffekte wirken in diesem Szenario anders: pro Anwendung wirft der zu Heilende seinen \HD\ und darf den alten Wert durch den neuen ersetzen, wenn er besser ist.
+
+	\mysection{Ende gut, alles gut?}
+
+		\noindent
+		Die Spieler müssen zwei Probleme erfolgreich lösen, um das Szenario positiv abzuschließen: die drei Zwerge retten und den Wasserzulauf stoppen.
+}
