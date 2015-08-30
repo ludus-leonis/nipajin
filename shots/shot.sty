@@ -27,7 +27,17 @@
 
 			\centerline{\fffancy\fontsize{42pt}{48pt}\selectfont{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
 			\vspace{4pt}
-			\centerline{\fontsize{24pt}{24pt}\selectfont{\addfontfeature{LetterSpace=31pt}S•H•O•T•S}}
+			\centerline{\fontsize{24pt}{24pt}\selectfont%
+				\color{primary}S%
+				\hspace{7.5pt}\color{white}•\hspace{7.5pt}%
+				\color{primary}H%
+				\hspace{7.5pt}\color{white}•\hspace{7.5pt}%
+				\color{primary}O%
+				\hspace{7.5pt}\color{white}•\hspace{7.5pt}%
+				\color{primary}T%
+				\hspace{7.5pt}\color{white}•\hspace{7.5pt}%
+				\color{primary}S%
+			}
 			\centerline{\small\textbf{#1}}
 			\centerline{\small#2\expandafter\ifstrequal\expandafter{#3}{nobody}{}{; #3}}
 
