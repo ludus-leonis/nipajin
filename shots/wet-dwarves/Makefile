@@ -6,7 +6,7 @@ TEX_NAME="shot"
 
 default: de
 
-all: de
+all: de en
 
 setup:
 	mkdir -p out
@@ -17,6 +17,10 @@ setup:
 de: setup
 	ln -sf ../content.de.tex out/content.tex
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de -output-directory out ${TEX_NAME}
+
+en: setup
+	ln -sf ../content.en.tex out/content.tex
+	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-en -output-directory out ${TEX_NAME}
 
 clean:
 	rm -rf out/*
