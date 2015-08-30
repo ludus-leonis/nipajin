@@ -14,7 +14,12 @@
 
 % This produces the black box at the top of the first page. Features the shots
 % logo, copyright stuff, plus some intro text.
-\newcommand{\shotsbanner}[4]{
+% 1 = copyright |\copyright\ 2009--2015, Markus Leupold-Löwenthal
+% 2 = version
+% 3 = translation & co | nobody
+% 4 = cc-disclaimer
+% 5 = side text
+\newcommand{\shotsbanner}[5]{
 	\backgroundtop{trueBlack}{6cm}
 	\begin{multicols}{2}\raggedbottom\color{white}
 		\noindent
@@ -23,22 +28,21 @@
 			\centerline{\fffancy\fontsize{42pt}{48pt}\selectfont{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
 			\vspace{4pt}
 			\centerline{\fontsize{24pt}{24pt}\selectfont{\addfontfeature{LetterSpace=31pt}S•H•O•T•S}}
-			\centerline{{\small\textbf{\copyright\ 2009--2015, Markus Leupold-Löwenthal}}}
-			\centerline{{\small#1}}
-			\expandafter\ifstrequal\expandafter{#2}{nobody}{}{\centerline{{\small#2}}}
+			\centerline{\small\textbf{#1}}
+			\centerline{\small#2\expandafter\ifstrequal\expandafter{#3}{nobody}{}{; #3}}
 
 			\vspace*{5mm}
 
 			\centerline{%
 				\parbox{20mm}{\fontsize{11pt}{11pt}\selectfont\textbf{CC BY-SA 4.0}}%
 				\hspace{1mm}%
-				\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #3}%
+				\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #4}%
 			}
 		}
 
 		\noindent
 		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
-			\noindent\textit{#4}
+			\noindent\textit{#5}
 
 			\vspace*{6pt}
 

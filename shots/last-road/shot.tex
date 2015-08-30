@@ -7,17 +7,20 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
+\newcommand{\shotSummary}{}
+
 \newcommand{\lastroadVersion}{v0.0}
-\newcommand{\lastroadTranslation}{}
-\newcommand{\lastroadDisclaimer}{}
-\newcommand{\lastroadImprint}{}
-\newcommand{\lastroadSummary}{}
+\newcommand{\lastroadCredits}{}
 \newcommand{\lastroadHeadline}{}
 \newcommand{\lastroadToc}{}
 \newcommand{\lastroadPlayers}{}
 \newcommand{\lastroadText}{}
 
-\input{content.tex} % Makefile will map the current language into content.txt
+% Makefile will map the current language into those files
+\input{content.tex}
+\input{shot.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -29,7 +32,7 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\lastroadVersion, \today}{\lastroadTranslation}{\lastroadDisclaimer}{\lastroadSummary}
+\shotsbanner{\shotCopyright}{\lastroadVersion}{\lastroadCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 

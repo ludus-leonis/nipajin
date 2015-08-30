@@ -7,12 +7,12 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
 \newcommand{\shotSummary}{}
-\newcommand{\shotDisclaimer}{}
 
 \newcommand{\streetracerVersion}{v0.0}
-\newcommand{\streetracerTranslation}{}
-\newcommand{\streetracerImprint}{}
+\newcommand{\streetracerCredits}{}
 \newcommand{\streetracerHeadline}{}
 \newcommand{\streetracerToc}{}
 \newcommand{\streetracerPlayers}{}
@@ -32,7 +32,8 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\streetracerVersion, \today}{\streetracerTranslation}{\shotDisclaimer}{\shotSummary}
+\shotsbanner{\shotCopyright}{\streetracerVersion}{\streetracerCredits}{\shotFineprint}{\shotSummary}
+
 
 % ### CONTENT #################################################################
 

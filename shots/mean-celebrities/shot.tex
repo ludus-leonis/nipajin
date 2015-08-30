@@ -7,12 +7,12 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
 \newcommand{\shotSummary}{}
-\newcommand{\shotDisclaimer}{}
 
 \newcommand{\celebritiesVersion}{v0.0}
-\newcommand{\celebritiesTranslation}{}
-\newcommand{\celebritiesImprint}{}
+\newcommand{\celebritiesCredits}{}
 \newcommand{\celebritiesHeadline}{}
 \newcommand{\celebritiesToc}{}
 \newcommand{\celebritiesPlayers}{}
@@ -32,7 +32,7 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\celebritiesVersion, \today}{\celebritiesTranslation}{\shotDisclaimer}{\shotSummary}
+\shotsbanner{\shotCopyright}{\celebritiesVersion}{\celebritiesCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 

@@ -7,12 +7,12 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
 \newcommand{\shotSummary}{}
-\newcommand{\shotDisclaimer}{}
 
 \newcommand{\dwarvesVersion}{v0.0}
-\newcommand{\dwarvesTranslation}{}
-\newcommand{\dwarvesImprint}{}
+\newcommand{\dwarvesCredits}{}
 \newcommand{\dwarvesHeadline}{}
 \newcommand{\dwarvesToc}{}
 \newcommand{\dwarvesPlayers}{}
@@ -32,7 +32,7 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\dwarvesVersion, \today}{\dwarvesTranslation}{\shotDisclaimer}{\shotSummary}
+\shotsbanner{\shotCopyright}{\dwarvesVersion}{\dwarvesCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 

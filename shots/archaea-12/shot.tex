@@ -7,12 +7,12 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
 \newcommand{\shotSummary}{}
-\newcommand{\shotDisclaimer}{}
 
 \newcommand{\archaeaVersion}{v0.0}
-\newcommand{\archaeaTranslation}{}
-\newcommand{\archaeaImprint}{}
+\newcommand{\archaeaCredits}{}
 \newcommand{\archaeaHeadline}{}
 \newcommand{\archaeaToc}{}
 \newcommand{\archaeaPlayers}{}
@@ -32,7 +32,7 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\archaeaVersion, \today}{\archaeaTranslation}{\shotDisclaimer}{\shotSummary}
+\shotsbanner{\shotCopyright}{\archaeaVersion}{\archaeaCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 

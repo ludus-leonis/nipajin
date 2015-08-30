@@ -7,12 +7,12 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
 \newcommand{\shotSummary}{}
-\newcommand{\shotDisclaimer}{}
 
 \newcommand{\luckyirishVersion}{v0.0}
-\newcommand{\luckyirishTranslation}{}
-\newcommand{\luckyirishImprint}{}
+\newcommand{\luckyirishCredits}{}
 \newcommand{\luckyirishHeadline}{}
 \newcommand{\luckyirishToc}{}
 \newcommand{\luckyirishPlayers}{}
@@ -32,7 +32,7 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\luckyirishVersion, \today}{\luckyirishTranslation}{\shotDisclaimer}{\shotSummary}
+\shotsbanner{\shotCopyright}{\luckyirishVersion}{\luckyirishCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 
