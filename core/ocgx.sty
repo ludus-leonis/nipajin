@@ -35,17 +35,17 @@
 \fi
 }
 
- \AtEndDocument{\immediate\write\ocgHandle{
- \string\special{pdf:put @catalog <<
-	 /OCProperties <<
-		 /OCGs [\the\ocglisttoks]
-		 /D <</BaseState/ON /Order [\the\ocglisttoks]>>
-	 >>
- >>}}}
+\AtEndDocument{\immediate\write\ocgHandle{
+\string\special{pdf:put @catalog <<
+	/OCProperties <<
+		/OCGs [\the\ocglisttoks]
+		/D <</BaseState/ON /Order [\the\ocglisttoks]>>
+	>>
+>>}}}
 
 \AtEndDocument{\immediate\write\ocgHandle{\string\AddToShipoutPicture{\string\makeatletter
- \special{pdf: put @resources <<
-	 /Properties << ^^J%
-		 \the\ocgproptoks
-	 >>
- >>}\string\makeatother}}}
+\special{pdf: put @resources <<
+	/Properties << ^^J%
+		\the\ocgproptoks
+	>>
+>>}\string\makeatother}}}
