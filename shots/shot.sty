@@ -1,15 +1,19 @@
 % (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
 
-\ProvidesFile{nipajin-basic.sty}
-\ProvidesPackage{nipajin-basic}
+% This is the style file for NIP'AJIN Shots. The main work is done by nipajin.sty,
+% which gets called here.
 
-% this style file is the basic red layout
+\ProvidesFile{shots.sty}
+\ProvidesPackage{shots}
 
 \newcommand{\fontsearchpath}{../../fonts}
-\usepackage{nipajin}
+\usepackage{nipajin} % this style file is the basic red layout
 
 % ------------------------------------------------------------------------------
 
+% This produces the black box at the top of the first page. Features the shots
+% logo, copyright stuff, plus some intro text.
 \newcommand{\shotsbanner}[4]{
 	\backgroundtop{trueBlack}{6cm}
 	\begin{multicols}{2}\raggedbottom\color{white}

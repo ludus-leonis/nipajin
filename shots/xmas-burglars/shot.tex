@@ -7,17 +7,20 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotSummary}{}
+\newcommand{\shotDisclaimer}{}
+
 \newcommand{\xmasVersion}{v0.0}
 \newcommand{\xmasTranslation}{}
-\newcommand{\xmasDisclaimer}{}
 \newcommand{\xmasImprint}{}
-\newcommand{\xmasSummary}{}
 \newcommand{\xmasHeadline}{}
 \newcommand{\xmasToc}{}
 \newcommand{\xmasPlayers}{}
 \newcommand{\xmasText}{}
 
-\input{content.tex} % Makefile will map the current language into content.txt
+% Makefile will map the current language into those files
+\input{content.tex} 
+\input{shot.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -29,7 +32,7 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\xmasVersion, \today}{\xmasTranslation}{\xmasDisclaimer}{\xmasSummary}
+\shotsbanner{\xmasVersion, \today}{\xmasTranslation}{\shotDisclaimer}{\shotSummary}
 
 % ### CONTENT #################################################################
 
