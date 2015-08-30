@@ -7,17 +7,20 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
+\newcommand{\shotSummary}{}
+
 \newcommand{\streetracerVersion}{v0.0}
-\newcommand{\streetracerTranslation}{}
-\newcommand{\streetracerDisclaimer}{}
-\newcommand{\streetracerImprint}{}
-\newcommand{\streetracerSummary}{}
+\newcommand{\streetracerCredits}{}
 \newcommand{\streetracerHeadline}{}
 \newcommand{\streetracerToc}{}
 \newcommand{\streetracerPlayers}{}
 \newcommand{\streetracerText}{}
 
-\input{content.tex} % Makefile will map the current language into content.txt
+% Makefile will map the current language into those files
+\input{content.tex}
+\input{shot.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -29,7 +32,8 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\streetracerVersion, \today}{\streetracerTranslation}{\streetracerDisclaimer}{\streetracerSummary}
+\shotsbanner{\shotCopyright}{\streetracerVersion}{\streetracerCredits}{\shotFineprint}{\shotSummary}
+
 
 % ### CONTENT #################################################################
 

@@ -7,17 +7,20 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
+\newcommand{\shotSummary}{}
+
 \newcommand{\luckyirishVersion}{v0.0}
-\newcommand{\luckyirishTranslation}{}
-\newcommand{\luckyirishDisclaimer}{}
-\newcommand{\luckyirishImprint}{}
-\newcommand{\luckyirishSummary}{}
+\newcommand{\luckyirishCredits}{}
 \newcommand{\luckyirishHeadline}{}
 \newcommand{\luckyirishToc}{}
 \newcommand{\luckyirishPlayers}{}
 \newcommand{\luckyirishText}{}
 
-\input{content.tex} % Makefile will map the current language into content.txt
+% Makefile will map the current language into those files
+\input{content.tex}
+\input{shot.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -29,7 +32,7 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\luckyirishVersion, \today}{\luckyirishTranslation}{\luckyirishDisclaimer}{\luckyirishSummary}
+\shotsbanner{\shotCopyright}{\luckyirishVersion}{\luckyirishCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 

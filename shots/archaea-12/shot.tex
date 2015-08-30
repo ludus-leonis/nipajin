@@ -7,17 +7,20 @@
 
 % each language file has to re-define the following items:
 
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
+\newcommand{\shotSummary}{}
+
 \newcommand{\archaeaVersion}{v0.0}
-\newcommand{\archaeaTranslation}{}
-\newcommand{\archaeaDisclaimer}{}
-\newcommand{\archaeaImprint}{}
-\newcommand{\archaeaSummary}{}
+\newcommand{\archaeaCredits}{}
 \newcommand{\archaeaHeadline}{}
 \newcommand{\archaeaToc}{}
 \newcommand{\archaeaPlayers}{}
 \newcommand{\archaeaText}{}
 
-\input{content.tex} % Makefile will map the current language into content.txt
+% Makefile will map the current language into those files
+\input{content.tex}
+\input{shot.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -29,7 +32,7 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\archaeaVersion, \today}{\archaeaTranslation}{\archaeaDisclaimer}{\archaeaSummary}
+\shotsbanner{\shotCopyright}{\archaeaVersion}{\archaeaCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 

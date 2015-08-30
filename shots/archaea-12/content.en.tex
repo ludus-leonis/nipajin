@@ -1,0 +1,113 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0.
+
+\renewcommand{\archaeaVersion}{v0.1}
+
+% CHANGELOG-de
+%
+% 0.1
+%   - first translation, based on de-v1.0
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\fsNormal}{\fontsize{9.5pt}{11.25pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8pt}{9.5pt plus 0.1pt minus 0pt}}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={A short NIP'AJIN scenario featuring an alien on a space station.},
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\archaeaCredits}{nobody}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\archaeaPlayers}{%
+	A scenario for three to five characters.
+}
+\renewcommand{\archaeaHeadline}{Panic on Archaea-12}
+\renewcommand{\archaeaToc}{Szenario: Panic on Archaea-12}
+\renewcommand{\archaeaText}{%
+	{\itshape
+		It is the year 2184. After inventing the jump drive, mankind has reached for the stars. But for a long time it seemed like we will stay alone in our vast galaxy.
+
+		In the Placebo sub-sector, months of jumping from Earth, the ring-shaped mobile space station Archaea-12 and its team of 20 scientists float above newly discovered Heures-3. This planet, the first discovered with a flora and fauna, resembles Earth 100 million years ago. Even reptiles were found living down there! Though prohibited by strong quarantine rules, scientists bring samples of plants, lizards and reptile eggs on board to study them.
+
+		A few days ago, a creature hatched from one of the football-sized eggs in Lab II. It showed an astonishing hunger for fellow test subjects and grew rapidly. Lab II was sealed off to bring the situation under control. But the clever beast found its way through air vents into the rest of the station, where it developed a taste for yummy humans. In shady corners of the space station it attacked isolated scientists, always leaving a bloodbath. Even worse, it seems that this creature can reproduce itself. It started laying eggs.
+
+		The crew of Archaea-12 is reduced to a few people by now -- you. Some of your colleges fled, using the only shuttle. The others are dead. You are trapped on board, your only chance: find that creature and dispose of it~\ldots
+	}
+
+	\mysection{Setting}
+
+		\noindent
+		This scenario is set in a large, ring-shaped space station. The ring consists of six stations of 100~m² each. They are connected via 10~m long, bent corridors. Every second station is also connected to a spherical engine room in the center of the ring. Artificial gravity pulls everything towards the station's center.
+
+		\keyword{Engine room}: In zero gravity, Archaea's engines, life support, and other bulky equipment can be found here.
+
+		\keyword{Bridge}: The entire station can be controlled from here. Radio equipment is also found here.
+
+		\keyword{Lab I}: A greenhouse to grow food and analyze plants.
+
+		\keyword{Lab II}: A menagerie, full of cages with dead specimens and equipment to analyze animals.
+
+		\keyword{Hangar}: A loading platform could host 2 shuttles, but none are there. 1d6 space suits.
+
+		\keyword{Warehouse}: Miscellaneous equipment and rations are stored here in large crates. There is also a small workshop with tools.
+
+		\keyword{Housing unit}: Contains the mass, a comfy living room, multiple smaller rooms with beds for 1 or 2 scientists, a small medical station, as well as the bathrooms.
+
+		Each station contains what GM and players consider appropriate. If in doubt, ask a die. In case of pressure loss, each station is automatically sealed until repaired.
+
+	\mysection{Characters}
+
+		\noindent
+		Examples for player characters are:
+
+		\tabelle{l c X}{
+		\thead{PC} & \thead{\HD} & \thead{Description} \\
+		}{
+			Android   & 10 & Strength+2, Social-1, Agility-1 \\
+			Cook      &  6 & Food+2, Knowledge-1, Tech-1\\
+			Counselor &  4 & Social+2, Strength-1, Tech-1 \\
+			Engineer  &  6 & Tech+2, Knowledge-1, Social-1 \\
+			Medic     &  6 & Heal+2, Agility-1, Fight-1 \\
+			Sergeant  &  8 & Shoot+2, Knowledge-1, Tech-1 \\
+		}
+
+		\noindent
+		Only the Sergeant owns a gun, there are no other weapons on board. Should players like to use PSI powers, they can decrease their +2 modifier to +1 and gain a \emph{Support power}, \emph{Transformation}, \emph{Illusion} or \emph{Healing power} instead.
+
+	\mysection{The creature}
+
+		\noindent
+		The creature (\HD6, \AD8, \RD8) is not very pretty. Roughly the size of a tiger, it has a black, scaled body and runs on four crab legs. Its head, which seems at first to consist only of a mouth with long, sharp teeth, also features two stunted eyes the creature does not need -- it relies on sonic vision instead. It lays eggs through an opening in its tail. Using insectoid arms, like a mantis, it can even operate buttons, doors, or other equipment.
+
+		Unfortunately, the creature is also intelligent. How much is up to the GM. It is quick, can run on the ceiling, and is faster and more agile than PCs. It prefers to move through vents and shafts of Archaea-12. If lacking gravity, its legs can find foothold even on bare metal. It does not breathe and can survive in outer space.
+
+		The pale yellow, football-shaped eggs are not overly important for this scenario -- they will hatch in a few days, but by then the PCs would already be dead. However the eggs can be used for suspense, and the creature has a strong maternal instinct to protect them, which might be used to its disadvantage.
+
+	\mysection{Development}
+
+		\noindent
+		The GM should start by sketching out Archaea-12 on a piece of paper. During game, panic phases and calm phases alternate.
+
+		\keyword{Panic phases} are resolved like conflicts, while the creature attacks the PCs. Moving around the station requires an \AD~and Agility\TN4. A success allows to move two spaces, a failure only one. Each station as well as each corridor in between is counted as a space.
+
+		The creature can only be beaten using special arrangements. Regular attacks, even with the Sergeant's gun, reduce its \HD\ as usual, but when the creature drops below 1 it is only \keyword{temporarily overcome} and flees.
+
+		During \keyword{calm phases} the creature rests somewhere for an hour, regenerates one point of its \HD\ every 10 minutes, and lays more eggs. During that time the PCs can try to complete a \emph{long-term task} (\TN~Players*3, 10min/round) to build traps, deadly devices and such.
+
+		Only by using clever traps, the creature can be \keyword{overcome permanently}. But even this takes two different attempts, as the creature will learn from failure. After the first successful attempt, the creature's \HD~becomes a d4, but it can flee once more (run away screaming, cramp onto the hull if tossed into space, ...), just to trigger another panic phase. If the creature is overcome a second time with a long-term task, it is beaten.
+
+		The game starts with a panic phase. Use the \HD\ of the characters to indicate their position on the map. PCs start distributed in random stations. Also randomly determine which single PC is the first target of the creature and place its \HD\ next to him. The scenario opens with that PC using the station's radio to call for help.
+
+	\mysection{All's well that ends well}
+
+		\noindent
+		The players win, if they can beat the creature two times. They loose, if all PCs are dead or Archaea-12 is destroyed.
+
+}

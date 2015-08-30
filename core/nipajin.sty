@@ -323,11 +323,13 @@
 			text depth=4pt,
 			xshift=1.25pt,
 			yshift=-1.25pt
-		]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{black}\addfontfeature{LetterSpace=-2.0}\uppercase{#1}}};
-		\node [
-			text height=19pt,
-			text depth=4pt
-		]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{white}\addfontfeature{LetterSpace=-2.0}\uppercase{#1}}};
+		]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{black}\addfontfeature{LetterSpace=0.0}\uppercase{#1}}};
+		\begin{ocg}{\backgroundlayername}{oc1}{1}
+			\node [
+				text height=19pt,
+				text depth=4pt
+			]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{white}\addfontfeature{LetterSpace=0.0}\uppercase{#1}}};
+		\end{ocg}
 	\end{tikzpicture}}%
 }}
 
