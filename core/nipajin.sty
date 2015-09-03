@@ -271,7 +271,7 @@
 					yshift=-2.0\paperheight,
 					yshift=\bgboxbottomheight
 				] (0,0) rectangle (1.5\paperwidth,1.5\paperheight);% top box
-			\end{tikzpicture}
+			\end{tikzpicture}\bgboxinjectonce%
 			\bgbox%
 			\grenewcommand{\bgboxtopcolor}{primary}%
 			\grenewcommand{\bgboxtopheight}{\bgboxverticalheight}%
@@ -306,8 +306,8 @@
 \subsectionfont{\color{primary}\raggedright\fffancy\subsectionfontsize\selectfont\itshape}
 \subsubsectionfont{\fffancy\raggedright\scshape}
 
-\newcommand{\mybanner}[2]{% regular headlines: red banners across page, shadowed font
-\phantomsection\addcontentsline{toc}{section}{#2}{%
+\newcommand{\mybanner}[3][none]{% regular headlines: red banners across page, shadowed font
+\phantomsection\addcontentsline{toc}{section}{#3}{%
 	\centerline{\begin{tikzpicture}%
 		\begin{ocg}{\backgroundlayername}{oc1}{1}
 			\node [
@@ -323,26 +323,47 @@
 			text depth=4pt,
 			xshift=1.25pt,
 			yshift=-1.25pt
-		]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{black}\addfontfeature{LetterSpace=0.0}\uppercase{#1}}};
+		]{{\itshape\fffancy\fontsize{24pt}{32pt}\selectfont\color{black}\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}};
 		\begin{ocg}{\backgroundlayername}{oc1}{1}
 			\node [
 				text height=19pt,
 				text depth=4pt
-			]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{white}\addfontfeature{LetterSpace=0.0}\uppercase{#1}}};
+			]{{\itshape\fffancy\fontsize{24pt}{32pt}\selectfont\color{white}\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}};
 		\end{ocg}
-	\end{tikzpicture}}%
+	\end{tikzpicture}}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
 }}
 
-\newcommand{\mybannersimple}[2]{% regular headlines: red banners across page
-\phantomsection\addcontentsline{toc}{section}{#2}{%
+\newcommand{\mybannersimple}[3][none]{% headline without red banners
+\phantomsection\addcontentsline{toc}{section}{#3}{%
 	\centerline{\begin{tikzpicture}%
 		\node [
 			text width=1.5\paperwidth
 		]{};
 		\node [
 			text height=17pt
-		]{{\it\fffancy\fontsize{24pt}{32pt}\selectfont\color{primary}\addfontfeature{LetterSpace=-2.0}\uppercase{#1}}};
-	\end{tikzpicture}}%
+		]{{\itshape\fffancy\fontsize{24pt}{32pt}\selectfont\color{primary}\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}};
+	\end{tikzpicture}}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
+}}
+
+\newcommand{\mybannertop}[3][none]{% a red banner that integrates to the page top
+\backgroundtop{primary}{20mm}
+\phantomsection\addcontentsline{toc}{section}{#3}{%
+    \vspace*{-8mm}%
+	\centerline{\begin{tikzpicture}%
+		\node [
+			text width=1.5\paperwidth
+		]{};
+        \node [
+        	text height=19pt,
+        	text depth=4pt,
+        	xshift=1.25pt,
+        	yshift=-1.25pt
+        ]{{\itshape\fffancy\fontsize{24pt}{32pt}\selectfont\color{black}\addfontfeature{LetterSpace=0.0}\uppercase{#2}}};
+        \node [
+        	text height=19pt,
+        	text depth=4pt
+        ]{{\itshape\fffancy\fontsize{24pt}{32pt}\selectfont\color{white}\addfontfeature{LetterSpace=0.0}\uppercase{#2}}};
+	\end{tikzpicture}}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
 }}
 
 \newcommand{\mysection}[2][none]{% custom sections: with rough rose bars, and auto-toc
@@ -365,7 +386,7 @@
 	anchor=east,
 	xshift=2.75cm,
 	yshift=-2mm
-] {\makebox{\it\fffancy\fontsize{12pt}{12pt}\selectfont\color{primary}{\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}}};
+] {\makebox{\itshape\fffancy\fontsize{12pt}{12pt}\selectfont\color{primary}{\addfontfeature{LetterSpace=-2.0}\uppercase{#2}}}};
 \end{tikzpicture}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
 }
 
