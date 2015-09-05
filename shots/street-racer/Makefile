@@ -15,7 +15,8 @@ setup:
 	ln -sf ../../shot.sty out/
 
 de: setup
-	ln -sf ../content.de.tex out/content.tex
+	ln -sf ../content.de.tex out/shot.tex
+	ln -sf ../../content.de.tex out/content.tex
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de -output-directory out ${TEX_NAME}
 
 clean:
