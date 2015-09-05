@@ -390,7 +390,11 @@
 \end{tikzpicture}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
 }
 
-\newcommand{\coverbanner}[3]{
+% 1 = copyright
+% 2 = verion
+% 3 = credits
+% 4 = fine print
+\newcommand{\coverbanner}[4]{
 	\noindent
 	\parbox{\columnwidth}{
 		\color{white}
@@ -398,9 +402,9 @@
 		\vspace*{5mm}
 
 		\centerline{\fffancy\fontsize{42pt}{42pt}\selectfont\color{white}{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
-		\centerline{{\small\textbf{\copyright\ 2009--2015, Markus Leupold-Löwenthal}}}
-		\centerline{{\small#1}}
-		\expandafter\ifstrequal\expandafter{#2}{nobody}{}{\centerline{{\small#2}}}
+		\centerline{\small\textbf{#1}}
+		\centerline{\small#2\expandafter\ifstrequal\expandafter{#3}{nobody}{}{; #3}}
+
 
 		\vspace*{5mm}
 
@@ -408,7 +412,7 @@
 		%\parbox{2cm}{\includegraphics[width=2cm]{\image{common/cc-by-sa.pdf}}}%
 		\parbox{20mm}{\fontsize{11pt}{11pt}\selectfont\textbf{CC BY-SA 4.0}}%
 		\hspace{1mm}%
-		\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #3}%
+		\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #4}%
 		}
 	}
 }
