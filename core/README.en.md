@@ -8,9 +8,9 @@ Please also read the license information in the root folder.
 
 Using the files in this directory you can generate the rules booklet for [NIP'AJIN](http://ludus-leonis.com/nipajin). Given all prerequisites are fulfilled, do
 ```
-core$ make de
+core$ make en
 ```
-to create the German version of the PDF. An `out` folder will be created and the PDF can be found in there.
+to create the English version of the PDF. An `out` folder will be created and the PDF can be found in there.
 
 Look into the `Makefile` to see what other languages are available yet.
 

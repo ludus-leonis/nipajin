@@ -26,7 +26,7 @@ Bitte beachte das `README.md` im jeweiligen Ordner für Details.
 
 ## System-Voraussetzungen
 
-Dieses Repository benötigt [LaTeX](www.latex-project.org), ein Textsatzsystem, in dem alle Texte und Layoutinformationen als Textdateien vorliegen. Mittels einem Compiler können diese Texte in z.B. PDFs übersetzt werden. NIP'AJIN nutzt als Compiler `xelatex` und ist mit TeX Live unter Ubuntu 12.04 und 14.04 getestet. Die Makefiles und Scripts setzen ein unix-oides Betriebsystem voraus, lassen sich aber mit ein wenig gutem Zureden wohl auch unter Windows nutzen.
+Dieses Repository benötigt [LaTeX](www.latex-project.org), ein Textsatzsystem, in dem alle Texte und Layoutinformationen als Textdateien vorliegen. Mittels einem Compiler können diese Texte in z.B. PDFs übersetzt werden. NIP'AJIN nutzt als Compiler `xelatex` und ist mit TeX Live unter Ubuntu 12.04, Ubuntu 14.04 und Cygwin getestet. Die Makefiles und Scripts setzen ein unix-oides Betriebsystem voraus, lassen sich aber mit ein wenig gutem Zureden wohl auch unter Windows nutzen.
 
 ## Mithilfe
 

@@ -13,8 +13,6 @@ NIP’AJIN is a pen-an-paper roleplaying game written by [LUDUS LEONIS](http://l
 * is designed for one-shots and short campaigns, and
 * allows use in own works due a Creative Commons license.
 
-Please note that NIP'AJIN is not yet available in English.
-
 ## About the repository
 
 This repository contains all LaTeX-files needed to build upon NIP'AJIN in own work.
@@ -28,7 +26,7 @@ Please read the README.md in each folder.
 
 ## Dependencies
 
-You will need [LaTeX](www.latex-project.org), a typographic system that is based on text files. Using a compiler they will get converted to PDF. NIP'AJIN uses `xelatex` and is tested using TeX Live under Ubuntu 12.04 and 14.04. Makefiles and scripts require some kind of Unix. With a little effort those scripts should also work on Windows.
+You will need [LaTeX](www.latex-project.org), a typographic system that is based on text files. Using a compiler they will get converted to PDF. NIP'AJIN uses `xelatex` and is tested using TeX Live under Ubuntu 12.04, Ubuntu 14.04 and Cygwin. Makefiles and scripts require some kind of Unix. With a little effort those scripts should also work on Windows.
 
 ## Contributing
 
