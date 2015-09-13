@@ -144,14 +144,18 @@
 	BoldFont={SourceSansPro-Black},
 	BoldItalicFont={SourceSansPro-BlackItalic}
 ]{SourceSansPro}
+\newfontfamily{\ffdings}[
+	Path=\fontsearchpath/nipajin-dingbats/,
+	Mapping=tex-text
+]{NIPAJIN-Dingbats}
 
-\newcommand{\TN}{@}
-\newcommand{\book}{\textgreater}
-\newcommand{\HD}{WW}
-\newcommand{\AD}{AW}
-\newcommand{\RD}{RW}
-\newcommand{\PT}{VZ}
-\newcommand{\FT}{NWZ}
+\newcommand{\TN}{{\ffdings t}}
+\newcommand{\book}{{\ffdings B}}
+\newcommand{\HD}{{\ffdings h}}
+\newcommand{\AD}{{\ffdings f}}
+\newcommand{\RD}{{\ffdings s}}
+\newcommand{\PT}{{\ffdings b}}
+\newcommand{\FT}{{\ffdings a}}
 
 \newcommand{\nipajin}{\href{http://ludus-leonis.com/nipajin}{\makebox{NIP'AJIN}}}
 \newcommand{\ludusleonis}{\href{http://ludus-leonis.com/}{\makebox{LUDUS} \makebox{LEONIS}}}
@@ -390,29 +394,41 @@
 \end{tikzpicture}\expandafter\ifstrequal\expandafter{#1}{none}{}{\zlabel{#1}}%
 }
 
+% This produces the black box at the top of the first page. Features the
+% logo, copyright stuff, plus some intro text.
 % 1 = copyright
-% 2 = verion
-% 3 = credits
-% 4 = fine print
-\newcommand{\coverbanner}[4]{
-	\noindent
-	\parbox{\columnwidth}{
-		\color{white}
+% 2 = version
+% 3 = translation & co | nobody
+% 4 = cc-disclaimer
+% 5 = side text
+\newcommand{\coverbanner}[5]{
+	\backgroundtop{trueBlack}{6cm}
+	\begin{multicols}{2}\raggedbottom\color{white}
+		\noindent
+		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
 
-		\vspace*{5mm}
+			\centerline{\fffancy\fontsize{42pt}{42pt}\selectfont\color{white}{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
+			\centerline{\small\textbf{#1}}
+			\centerline{\small#2\expandafter\ifstrequal\expandafter{#3}{nobody}{}{; #3}}
 
-		\centerline{\fffancy\fontsize{42pt}{42pt}\selectfont\color{white}{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
-		\centerline{\small\textbf{#1}}
-		\centerline{\small#2\expandafter\ifstrequal\expandafter{#3}{nobody}{}{; #3}}
+			\vspace*{5mm}
 
-
-		\vspace*{5mm}
-
-		\centerline{%
-		%\parbox{2cm}{\includegraphics[width=2cm]{\image{common/cc-by-sa.pdf}}}%
-		\parbox{20mm}{\fontsize{11pt}{11pt}\selectfont\textbf{CC BY-SA 4.0}}%
-		\hspace{1mm}%
-		\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #4}%
+			\centerline{%
+				\parbox{20mm}{\fontsize{11pt}{11pt}\selectfont\textbf{CC BY-SA 4.0}}%
+				\hspace{1mm}%
+				\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #4}%
+			}
 		}
-	}
+
+		\noindent
+		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
+			\noindent\textit{#5}
+
+			\vspace*{6pt}
+
+			\centerline{\href{http://ludus-leonis.com/nipajin}{\textbf{ludus-leonis.com/nipajin}}}
+		}
+
+	\end{multicols}
+	\vspace*{2mm}
 }
