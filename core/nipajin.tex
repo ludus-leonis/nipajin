@@ -8,9 +8,11 @@
 % each language file has to re-define the following items:
 
 \newcommand{\nipajinVersion}{v0.0}
-\newcommand{\nipajinTranslation}{}
-\newcommand{\nipajinDisclaimer}{}
-\newcommand{\nipajinTextIntro}{}
+\newcommand{\nipajinCopyright}{}
+\newcommand{\nipajinCredits}{}
+\newcommand{\nipajinFineprint}{}
+\newcommand{\nipajinSummary}{}
+
 \newcommand{\nipajinHeadlinePlayer}{}
 \newcommand{\nipajinTocPlayer}{}
 \newcommand{\nipajinTextPlayer}{}
@@ -31,14 +33,7 @@
 
 % ### BANNER ################################################################
 
-\begin{multicols}{2}\raggedbottom
-	\vspace*{-12pt}\color{white}
-	\vfill\backgroundtop{trueBlack}{6cm}
-	\coverbanner{\nipajinVersion, \today}{\nipajinTranslation}{\nipajinDisclaimer}
-
-	\noindent\textit{\nipajinTextIntro}
-\end{multicols}
-\vspace*{2mm}
+\coverbanner{\nipajinCopyright}{\nipajinVersion}{\nipajinCredits}{\nipajinFineprint}{\nipajinSummary}
 
 % ### CONTENT #################################################################
 
