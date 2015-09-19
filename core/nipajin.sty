@@ -146,16 +146,19 @@
 ]{SourceSansPro}
 \newfontfamily{\ffdings}[
 	Path=\fontsearchpath/nipajin-dingbats/,
-	Mapping=tex-text
+	Mapping=tex-text,
+	UprightFont={NIPAJIN-Dingbats},
+	ItalicFont={NIPAJIN-Dingbats-Italic},
+	BoldFont={NIPAJIN-Dingbats-Bold}
 ]{NIPAJIN-Dingbats}
 
-\newcommand{\TN}{{\ffdings t}}
-\newcommand{\book}{{\ffdings B}}
-\newcommand{\HD}{{\ffdings h}}
-\newcommand{\AD}{{\ffdings f}}
-\newcommand{\RD}{{\ffdings s}}
-\newcommand{\PT}{{\ffdings b}}
-\newcommand{\FT}{{\ffdings a}}
+\newcommand{\TN}{{\ffdings \textit{t}}}
+\newcommand{\book}{{\ffdings \textup{p}}}
+\newcommand{\HD}{{\ffdings \textbf{h}}}
+\newcommand{\AD}{{\ffdings \textbf{f}}}
+\newcommand{\RD}{{\ffdings \textbf{s}}}
+\newcommand{\PT}{{\ffdings \textup{b}}}
+\newcommand{\FT}{{\ffdings \textup{a}}}
 
 \newcommand{\nipajin}{\href{http://ludus-leonis.com/nipajin}{\makebox{NIP'AJIN}}}
 \newcommand{\ludusleonis}{\href{http://ludus-leonis.com/}{\makebox{LUDUS} \makebox{LEONIS}}}
@@ -199,7 +202,7 @@
 >{\raggedleft\hspace{0pt}}p{#1}%
 }
 
-\newcommand{\thead}[1]{\textbf{\color{white}#1}}
+\newcommand{\thead}[1]{\textup{\color{white}#1}}
 \newcommand{\tn}{\tabularnewline}
 
 \newcommand{\tabelle}[4][\ffextra\small]{\renewcommand{\arraystretch}{0.95}{
