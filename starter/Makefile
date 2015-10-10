@@ -1,5 +1,5 @@
 # (c) 2009-2015 by Markus Leupold-Löwenthal
-# This file is released under CC BY-SA 4.0.
+# This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 PDF_NAME="NIPAJIN-Autorenpaket"
 TEX_NAME="starter"
