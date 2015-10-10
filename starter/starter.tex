@@ -1,5 +1,5 @@
 % (c) 2009-2015 by Markus Leupold-Löwenthal
-% This file is released under CC BY-SA 4.0.
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 \documentclass{article}
 
@@ -18,6 +18,7 @@
 \newcommand{\versionCover}{}
 \newcommand{\creativecommonsA}{}
 \newcommand{\creativecommonsB}{}
+\newcommand{\creativecommonsC}{}
 \newcommand{\titleImprint}{}
 \newcommand{\tocImprint}{}
 \newcommand{\textImprint}{}
@@ -50,19 +51,21 @@
 \newcommand{\textBackcover}{}
 \newcommand{\urlBackcover}{}
 
-\newcommand{\nipajinVersion}{v0.0} % from nipajin core
-\newcommand{\nipajinTranslation}{} % from nipajin core
-\newcommand{\nipajinDisclaimer}{} % from nipajin core
-\newcommand{\nipajinTextIntro}{} % from nipajin core
-\newcommand{\nipajinHeadlinePlayer}{} % from nipajin core
-\newcommand{\nipajinTocPlayer}{} % from nipajin core
-\newcommand{\nipajinTextPlayer}{} % from nipajin core
-\newcommand{\nipajinHeadlineEffects}{} % from nipajin core
-\newcommand{\nipajinTocEffects}{} % from nipajin core
-\newcommand{\nipajinTextEffects}{} % from nipajin core
-\newcommand{\nipajinHeadlineGM}{} % from nipajin core
-\newcommand{\nipajinTocGM}{} % from nipajin core
-\newcommand{\nipajinTextGM}{} % from nipajin core
+% from nipajin core
+\newcommand{\nipajinVersion}{v0.0}
+\newcommand{\nipajinCopyright}{}
+\newcommand{\nipajinCredits}{}
+\newcommand{\nipajinFineprint}{}
+\newcommand{\nipajinSummary}{}
+\newcommand{\nipajinHeadlinePlayer}{}
+\newcommand{\nipajinTocPlayer}{}
+\newcommand{\nipajinTextPlayer}{}
+\newcommand{\nipajinHeadlineEffects}{}
+\newcommand{\nipajinTocEffects}{}
+\newcommand{\nipajinTextEffects}{}
+\newcommand{\nipajinHeadlineGM}{}
+\newcommand{\nipajinTocGM}{}
+\newcommand{\nipajinTextGM}{}
 
 \input{rules.tex}   % Makefile will map the current language into rules.txt
 \input{content.tex} % Makefile will map the current language into content.txt
@@ -94,7 +97,8 @@
 	\parbox{0.80cm}{\includegraphics[height=0.80cm]{images/cc-cc.pdf}}\hspace{1mm}\parbox{0.80cm}{\includegraphics[height=0.80cm]{images/cc-by.pdf}}\hspace{1mm}\parbox{0.80cm}{\includegraphics[height=0.80cm]{images/cc-sa.pdf}}\hspace{2mm}\parbox{9cm}{%
 		\creativecommonsA \\
 		\textbf{\creativecommonsB}\\
-		(CC BY-SA 4.0) \href{http://creativecommons.org/licenses/by-sa/4.0/}{http://creativecommons.org/licenses/by-sa/4.0/}
+		(CC BY-SA 4.0) \href{http://creativecommons.org/licenses/by-sa/4.0/}{http://creativecommons.org/licenses/by-sa/4.0/}\\
+		\creativecommonsC
 	}
 \end{center}
 \mybanner{\titleImprint}{\tocImprint}
