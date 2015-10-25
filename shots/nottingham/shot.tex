@@ -1,0 +1,48 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+
+\documentclass{article}
+
+\newcommand{\fontsearchpath}{../../fonts}
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
+\newcommand{\shotSummary}{}
+
+\newcommand{\robinVersion}{v0.0}
+\newcommand{\robinCredits}{}
+\newcommand{\robinHeadline}{}
+\newcommand{\robinToc}{}
+\newcommand{\robinPlayers}{}
+\newcommand{\robinText}{}
+
+% Makefile will map the current language into those files
+\input{content.tex}
+\input{shot.tex}
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\shotCopyright}{\robinVersion}{\robinCredits}{\shotFineprint}{\shotSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\robinHeadline}}{\robinToc}
+
+\begin{multicols}{2}%
+\noindent\robinPlayers
+
+\robinText
+\end{multicols}
+
+\end{document}
