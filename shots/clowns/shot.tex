@@ -1,0 +1,49 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+
+\documentclass{article}
+
+\newcommand{\fontsearchpath}{../../fonts}
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
+\newcommand{\shotSummary}{}
+\newcommand{\shotURL}{}
+
+\newcommand{\clownsVersion}{v0.0}
+\newcommand{\clownsCredits}{}
+\newcommand{\clownsHeadline}{}
+\newcommand{\clownsToc}{}
+\newcommand{\clownsPlayers}{}
+\newcommand{\clownsText}{}
+
+% Makefile will map the current language into those files
+\input{content.tex}
+\input{shot.tex}
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\shotCopyright}{\clownsVersion}{\clownsCredits}{\shotFineprint}{\shotSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\clownsHeadline}}{\clownsToc}
+
+\begin{multicols}{2}%
+\noindent\clownsPlayers
+
+\clownsText
+\end{multicols}
+
+\end{document}
