@@ -1,8 +1,9 @@
 # (c) 2009-2015 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
-PDF_NAME="SHOT"
+PDF_NAME="NIPAJIN-Shots-Caribs"
 TEX_NAME="shot"
+VERSION=`grep Version}{ content.de.tex | sed -e "s/.*{//;s/}.*//"`
 
 default: de
 
@@ -17,7 +18,7 @@ setup:
 de: setup
 	ln -sf ../content.de.tex out/shot.tex
 	ln -sf ../../content.de.tex out/content.tex
-	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de -output-directory out ${TEX_NAME}
+	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de-${VERSION} -output-directory out ${TEX_NAME}
 
 clean:
 	rm -rf out/*

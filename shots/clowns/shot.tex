@@ -13,12 +13,12 @@
 \newcommand{\shotSummary}{}
 \newcommand{\shotURL}{}
 
-\newcommand{\luckyirishVersion}{v0.0}
-\newcommand{\luckyirishCredits}{}
-\newcommand{\luckyirishHeadline}{}
-\newcommand{\luckyirishToc}{}
-\newcommand{\luckyirishPlayers}{}
-\newcommand{\luckyirishText}{}
+\newcommand{\clownsVersion}{v0.0}
+\newcommand{\clownsCredits}{}
+\newcommand{\clownsHeadline}{}
+\newcommand{\clownsToc}{}
+\newcommand{\clownsPlayers}{}
+\newcommand{\clownsText}{}
 
 % Makefile will map the current language into those files
 \input{content.tex}
@@ -34,18 +34,16 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\shotCopyright}{\luckyirishVersion}{\luckyirishCredits}{\shotFineprint}{\shotSummary}
+\shotsbanner{\shotCopyright}{\clownsVersion}{\clownsCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\luckyirishHeadline}}{\luckyirishToc}
+\mybanner{\MakeUppercase{\clownsHeadline}}{\clownsToc}
 
 \begin{multicols}{2}%
-\noindent\luckyirishPlayers
+\noindent\clownsPlayers
 
-\bigskip
-
-\luckyirishText
+\clownsText
 \end{multicols}
 
 \end{document}
