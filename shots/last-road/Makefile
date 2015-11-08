@@ -3,7 +3,6 @@
 
 PDF_NAME="NIPAJIN-Shots-Last-Road"
 TEX_NAME="shot"
-VERSION=`grep Version}{ content.de.tex | sed -e "s/.*{//;s/}.*//"`
 
 default: de
 
@@ -18,7 +17,7 @@ setup:
 de: setup
 	ln -sf ../content.de.tex out/shot.tex
 	ln -sf ../../content.de.tex out/content.tex
-	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de-${VERSION} -output-directory out ${TEX_NAME}
+	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de-`grep Version}{ content.de.tex | sed -e "s/.*{//;s/}.*//"` -output-directory out ${TEX_NAME}
 
 clean:
 	rm -rf out/*
