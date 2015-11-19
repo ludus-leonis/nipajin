@@ -1,0 +1,64 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+
+% This is the style file for NIP'AJIN Solos. The main work is done by nipajin.sty,
+% which gets called here.
+
+\ProvidesFile{solo.sty}
+\ProvidesPackage{solo}
+
+\usepackage{nipajin} % this style file is the basic red layout
+\usepackage{lettrine} % for large numbers
+
+% ------------------------------------------------------------------------------
+
+% This produces the black box at the top of the first page. Features the shots
+% logo, copyright stuff, plus some intro text.
+% 1 = copyright |\copyright\ 2009--2015, Markus Leupold-Löwenthal
+% 2 = version
+% 3 = credits: translation & co | nobody
+% 4 = cc-disclaimer
+% 5 = side text
+\newcommand{\solosbanner}[5]{
+	\backgroundtop{trueBlack}{6cm}
+	\begin{multicols}{2}\raggedbottom\color{white}
+		\noindent
+		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
+
+			\centerline{\fffancy\fontsize{42pt}{48pt}\selectfont{\addfontfeature{LetterSpace=-2.0}NIP'AJIN}}
+			\vspace{4pt}
+			\centerline{\fontsize{24pt}{24pt}\selectfont%
+				\color{primary}S%
+				\hspace{7.5pt}\color{white}•\hspace{7.5pt}%
+				\color{primary}O%
+				\hspace{7.5pt}\color{white}•\hspace{7.5pt}%
+				\color{primary}L%
+				\hspace{7.5pt}\color{white}•\hspace{7.5pt}%
+				\color{primary}O%
+				\hspace{7.5pt}\color{white}•\hspace{7.5pt}%
+				\color{primary}S%
+			}
+			\centerline{\small\textbf{#1}}
+			\centerline{\small#2\expandafter\ifstrequal\expandafter{#3}{nobody}{}{; #3}}
+
+			\vspace*{5mm}
+
+			\centerline{%
+				\parbox{20mm}{\fontsize{11pt}{11pt}\selectfont\textbf{CC BY-SA 4.0}}%
+				\hspace{1mm}%
+				\parbox{3cm}{\tiny\href{http://creativecommons.org/licenses/by-sa/4.0/}{\color{white}creativecommons.org/licenses/by-sa/4.0/} #4}%
+			}
+		}
+
+		\noindent
+		\parbox[c][40mm][c]{\columnwidth}{\setlength{\parindent}{1em}
+			\noindent\textit{#5}
+
+			\vspace*{6pt}
+
+			\centerline{\href{http://\soloURL}{\textbf{\soloURL}}}
+		}
+
+	\end{multicols}
+	\vspace*{2mm}
+}

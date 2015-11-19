@@ -1,0 +1,48 @@
+digraph plot {
+	// &#9829; &#9830; &#9824; &#9827;
+
+	rankdir=TD;
+	node [shape=none]
+
+	Start -> Hotel
+
+	Hotel [ label="vor\nHotel", color=blue ]
+	Hotel -> Vordereingang
+	Hotel -> Hintereingang
+	Hotel -> Garagenrampe
+
+	Garagenrampe [label="Garagen-\nrampe"]
+	Garagenrampe -> Vordereingang
+	Garagenrampe -> Hintereingang
+
+	Garage -> Lift
+	Garage -> Lobby
+
+	Vordereingang [ label="Vorder-\neingang" ]
+	Vordereingang -> Lobby
+	Vordereingang -> Hintereingang
+	Vordereingang -> Garage
+
+	Lobby [ color=blue ]
+	Lobby -> Portier
+	Lobby -> Lift
+	Lobby -> Bar
+
+	Portier [ fontcolor=pink ]
+	Portier -> Lobby
+
+	Lift [ color=blue ]
+	Lift -> Lobby
+	Lift -> Garage
+	Lift -> Penthouse
+
+	Penthouse -> Selfie
+
+	Blumenshop -> Hotel
+
+	Tankstelle -> Hotel
+
+}
+
+// Restaurant: 30 Euro für Kaffee+Kuchen, Infos vom Kellner
+// Bar: Der Typ aus der Band. Verrät gegen einen Drink, dass STAR Blumen mag.
