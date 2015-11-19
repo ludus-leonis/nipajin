@@ -1,0 +1,235 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% Translated by Daniel Fernandez Garcia
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+
+\renewcommand{\nipajinVersion}{v1.7-rc1}
+
+% CHANGELOG-es
+%
+% 1.7
+%   - primera traducción
+
+% --- language dependent typography stuff ------------------------------
+
+\renewcommand{\say}[1]{«\textit{#1}»}
+\setdefaultlanguage{spanish}
+
+\renewcommand{\fsNormal}{\fontsize{9.25pt}{11.25pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.5pt}{10.0pt plus 0.1pt minus 0pt}}
+
+% --- pdf metadata & stuff ---------------------------------------------
+
+\hypersetup{
+	pdftitle={NIP'AJIN},
+	pdfauthor={Markus Leupold-Loewenthal},
+	pdfsubject={Un juego de rol gratuito y sencillo.},
+	pdfkeywords={nipajin, nip'ajin, juego de rol, sistema, gratuito, JDR, RPG}
+}
+
+\renewcommand{\backgroundlayername}{Background}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\nipajinCopyright}{\copyright\ 2009--2015, Markus Leupold-Löwenthal}
+\renewcommand{\nipajinCredits}{Traducción: Daniel Fernández García}
+\renewcommand{\nipajinFineprint}{(logos and brands excluded; please don't re-license one-way)}
+
+% --- language macros --------------------------------------------------
+
+\newcommand{\eg}{e.\,g.}
+
+% --- main texts -------------------------------------------------------
+
+\renewcommand{\nipajinSummary}{%
+	Un juego de rol gratuito y ligero creado por \ludusleonis.
+
+	\nipajin\ ha sido diseñado para jugar campañas cortas o one-shots, se pronuncia \say{nip-a-dshin} y es un acrónimo de una frase alemana que se traduce como \say{Nadie es perfecto, pero todo el mundo puede contribuir}. Permite compartir la escena entre los personajes sin forzarlos con un conjunto de reglas estricto.
+}
+
+\newcommand{\nipajinTableModifier}{%
+	\tabelle{X c}{
+		\thead{El transfondo sugiere} & \thead{+/-} \\
+	}{
+		carencia total                       & -4 \\
+		inexperto, torpe                     & -2 \\
+		sin entrenamiento                    & -1 \\
+		normal                               &  0 \\
+		entrenado, aficionado                & +1 \\
+		unos años de práctica, profesional   & +2 \\
+		vasta experiencia, veterano          & +4 \\
+	}
+}
+
+\newcommand{\nipajinTableTargets}{%
+	\tabelle{l c X}{
+		\thead{Dificultad} & \thead{\TN} & \thead{Ejemplo} \\
+	}{
+		simple                   &  2 & -- \\
+		circunstancias favorables&  3 & utensilios buenos \\
+		normal                   &  4 & -- \\
+		circunstancias difíciles &  5 & oscuridad \\
+		difícil                  &  6 & malabares con dagas \\
+		magistral                &  8 & caminar por una cuerda \\
+		legendaria               & 12 & -- \\
+	}
+}
+
+\renewcommand{\nipajinHeadlinePlayer}{Reglas para el Jugador}
+\renewcommand{\nipajinTocPlayer}{Reglas para el Jugador}
+\renewcommand{\nipajinTextPlayer}{%
+	\noindent
+	Cada \keyword{personaje} comienza como una hoja en blanco en formato A4, o una folio apaisado tamaño carta. Divide esta \keyword{hoja de personaje} con una línea en dos mitades, izquierda y derecha. La mitad derecha se subdivide en un área superior y otra inferior.
+
+	Los jugadores escriben una descripción básica de su personaje en la parte izquierda: nombre, etnia y apariencia, seguida por un \keyword{transfondo}. No importa si se escribe en forma de lista o en prosa. Sin embargo, la descripción debería centrarse en la historia del personaje, no en lo que puede hacer bien -- el director de juego decidirá más adelante. El transfondo debería indicar que \say{trabajó como estibador} en lugar de \say{es fuerte}. Jugadores y Director de Juego han de acordar el \keyword{equipo} (\refPage{labelEquipment}) y \keyword{poderes} (\refPage{labelEffects}) como consideren oportuno.
+
+	Ahora se coloca un d4, d6, d8, d10 y d12 en la parte superior derecha de la hoja de personaje. El jugador elige uno como \keyword{dado de golpe} (\HD) y lo mueve, con el número más alto hacia arriba, hacia el área izquierda. Si este dado queda reducido a 1 en algún momento, el personaje sale de la partida.
+
+	\mysection[labelTaskresolution]{Resolución de tareas}
+
+		\noindent
+		Mientras todo el mundo esté de acuerdo con el resultado, la trama avanza libremente entre los jugadores y el Director de Juego. Cuando el resultado de una \keyword{tarea} es incierto, el jugador coge un \keyword{dado disponible} de la zona superior derecha de su hoja de personaje y lo lanza. Si sale un uno natural, el intento es un \keyword{fallo automático}. En cualquier otro caso, se añade un \keyword{modificador}, determinado por el Director de Juego a partir del transfondo del personaje.
+
+		\nipajinTableModifier
+
+		\noindent
+		La tarea tiene éxito si el total iguala o supera un \keyword{número objetivo} (\TN), fijado por el Director de Juego basándose en la dificultad de la tarea. No hay fallo automático si el resultado total es uno, pero esto rara vez será suficiente.
+
+		\nipajinTableTargets
+
+		\noindent
+		Tras la tirada, el \keyword{dado agotado} se coloca en la parte inferior derecha de la hoja de personaje. Si el Director de Juego determinó un modificador, debería anotarse para evitar tener que hacerlo de nuevo, p. ej. \say{Correr+1}.
+
+		Los dados sin ninguna probabilidad de éxito no deben usarse, de manera que no quedan agotados. Un personaje puede repetir una tarea fallida propia o ajena, pero el \TN~se eleva en 1 por cada intento.
+
+		Cuando todos los dados de un personaje quedan agotados, éste no puede realizar más tareas. El personaje tiene que \keyword{respirar hondo} y tomarse una pausa durante un corto periodo de tiempo. Tras esto, los dados quedan disponibles de nuevo y se colocan de nuevo en la parte superior derecha.
+
+	\mysection[labelConflict]{Conflictos}
+
+		\noindent
+		Los conflictos transcurren en \keyword{asaltos}, su duración la determina el Director de Juego. Cada asalto, todos los personajes pueden realizar una acción, p. ej. atacar, y pueden reaccionar a las acciones de cada enemigo, p. ej. esquivar. Los enemigos pueden ser derrotados reduciendo su \HD\ por debajo de 1, ya sea con o sin violencia.
+
+		Al comienzo de cada asalto, todos los jugadores eligen simultáneamente un \keyword{dado de acción} (\AD) y un \keyword{dado de reacción} (\RD) de entre sus dados disponibles. Estos dados se usan para resolver todas las acciones y reacciones durante el asalto actual. Los jugadores pueden elegir renunciar a cualquiera de los dados si lo desean. Los personajes sorprendidos no obtienen un \AD\ durante el primer asalto. Solo los jugadores sin dados disponibles pueden omitir un asalto para dejar a sus personajes respirar hondo.
+
+		El \AD\ también define el \keyword{orden} dentro de un asalto. Los dados con menos caras actúan primero (p. ej. un d6 actúa antes que un d8), los empates se resuelven al azar.
+
+		Los ataques tienen éxito si el \AD\ del agresor supera el \RD\ del defensor. Con un uno natural, el ataque o la defensa falla automáticamente. Un ataque con éxito produce una \keyword{herida} y reduce el \HD\ del enemigo en 1. Las acciones no violentas también ayudan a vencer enemigos. Si se tiene éxito, se traducen en \keyword{trauma}, que se representa como marcadores colocados en la hoja de personaje.
+
+		Los personajes pueden omitir su defensa no escogiendo un \RD. En ese caso, se les permite anunciar \keyword{acciones múltiples}, hasta la mitad del valor máximo de su \AD~(dos para un d4, tres para un d6,~\ldots). Esto incluye, entre otras: ataques con dos armas, disparos dobles, ataques de área como un ataque de barrido o bolas de fuego, intimidar grupos de enemigos o una secuencia de otras tareas. \emph{Todas} las tareas reciben un \makebox{-2} por acción adicional u objetivo por encima del primero. Cada acción desencadena su propia reacción.
+
+		Finalmente, los personajes pueden \keyword{defender a otros} si no escogieron un \AD\, y reaccionan en nombre de otros, hasta la mitad del valor máximo de su \RD. El personaje protegido tiene que estar dentro del alcance y el personaje defensor arriesga todo el daño en caso de fallo.
+
+		Si el \HD~de un personaje cae por debajo de 1, o si el número de marcadores de trauma iguala su valor actual, el personaje es vencido (muerto, intimidado, ~\ldots).
+
+	\mysection[labelEquipment]{Equipo}
+
+		\noindent
+		No hay lista de equipo. Las armas ordinarias causan una herida por golpe, las armas mágicas o especiales causan dos, fuegos y explosiones causan de tres a cuatro. El equipo improvisado otorga un \makebox{-1} cuando se lanza el \AD. La armadura ofrece un \makebox{+1} o \makebox{+2} al \RD.
+
+	\mysection[labelHeal]{Curación}
+
+		\noindent
+		Tras una \keyword{noche de descanso completa} todos los dados de un jugador pasan a estar disponibles de nuevo. Las heridas del personaje también pueden sanar. Los jugadores lanzan el \HD\ -- si el resultado es mayor que el valor actual, este se convierte en el nuevo valor, en cualquier otro caso el \HD\ no cambia.
+
+		El Director de Juego decide cómo y cuándo sanan los \keyword{traumas}. El daño psicológico por haber sido amenazado o intimidado puede no durar más que el final de un encuentro. Las fobias, maldiciones y demás podrían atormentar a los personajes durante días o incluso semanas.
+}
+
+\renewcommand{\nipajinHeadlineEffects}{Poderes}
+\renewcommand{\nipajinTocEffects}{Poderes}
+\renewcommand{\nipajinTextEffects}{\zlabel{labelEffects}%
+
+	\noindent
+	Conjuros, milagros, psiónica, superpoderes u otras habilidades sobrenaturales reciben el nombre de \keyword{poderes}. Los jugadores definen los poderes de sus personajes durante la creación. Normalmente, cada escenario que incluya lo sobrenatural tendrá sus propias reglas, pero podría emplearse la siguiente mecánica predeterminada de \nipajin:
+
+	Para desatar un poder, un personaje necesita concentrarse o gesticular durante un \keyword{tiempo de preparación} (\PT). Si el \PT\ es \keyword{variable}, el jugador puede determinarlo justo antes de usar un poder, p. ej. \say{un minuto}. Al final del \PT\ el jugador realiza la tirada, asumiendo el \makebox{-2} habitual por cada enemigo a tener en cuenta. Cada víctima puede reaccionar para evitar el poder por completo. Para objetos y poderes sin víctimas el Director de Juego define el \TN. Si tiene éxito, el poder dura lo que indica su \keyword{duración} (\FT).
+
+	Los \keyword{poderes de ataque a melé} se comportan como armas ordinarias, p. ej. \emph{toque helado} o \emph{espada fantasmal}. Cada golpe se traduce en una herida. \PT:~1~asalto; \FT:~permanente
+
+	Los \keyword{poderes de ataque a distancia} se comportan como armas a distancia ordinarias y consumen un recurso físico de algún tipo por uso, p. ej. un \emph{misil mágico} podría requerir polvo o una gema pequeña, \emph{bola de fuego} una granada alquímica. \PT:~1~asalto; \FT:~permanente
+
+	Los \keyword{poderes incapacitantes} impiden que la víctima actúe, p. ej. \emph{dormir}, \emph{petrificación}, \emph{miedo} o \emph{desterrar}. \PT:~variable; \FT:~\PT~empleado
+
+	Los \keyword{poderes de apoyo} ayudan a un ser vivo o mejora un objeto en un aspecto, p. ej. \emph{resistir fuego}, \emph{caída de pluma}, \emph{barrera} o \emph{luz}. \PT:~variable; \FT:~\PT~empleado
+
+	Las \keyword{transformaciones} cambian lentamente o desplazan materia inerte o emociones, p. ej. \emph{transmutar agua en vino}, \emph{encantar} o \emph{telequinesis}. \PT:~variable; \FT:~\PT~empleado
+
+	Las \keyword{ilusiones} engañan a un único sentido en un detalle específico, p. ej. \emph{oro de los tontos}, \emph{sonido fantasmal} o \emph{invisibilidad}. \PT:~variable; \FT:~\PT~empleado
+
+	Las \keyword{adivinaciones} descubren hechos ocultos, p. ej. \emph{detectar magia}, \emph{clarividencia} o \emph{percibir peligro}. \PT:~un minuto para el presente, una hora para el pasado, un día para el futuro; \FT:~--
+
+	Los \keyword{poderes curativos} sanan enfermedades, venenos o cierran heridas. \PT:~una hora por herida, un día por dolencia; \FT:~permanente
+}
+
+\newcommand{\nipajinTableNSC}{%
+	\tabelle{c X}{
+	\thead{\AD/\RD} & \thead{Nivel de peligro}  \\
+	}{
+		 d2 & peligroso en grandes números \\
+		 d3 & soldado raso \\
+		 d4 & novicio \\
+		 d6 & normal \\
+		 d8 & veterano \\
+		d10 & peligroso \\
+		d12 & muy peligroso \\
+		d20 & épico \\
+	}
+}
+
+\newcommand{\nipajinTableBestiary}{%
+	\tabelle{p{1.1cm} c c c X}{
+	\thead{Creature} & \thead{\HD} & \thead{\AD} & \thead{\RD} & \thead{Habilidades}  \\
+	}{
+		Rata    &  1 &  2 &  3 & Correr+4, Ocultarse+2 \\
+		Goblin  &  3 &  4 &  4 & Percepción+1 \\
+		Orko    &  6 &  6 &  6 & Intimidar+1, Combate+1, Inteligencia-1 \\
+		Troll   & 10 &  8 &  6 & Combate+1, regenera una herida/asalto \\
+		Gigante & 20 &  8 &  8 & Combate+2, Fuerza+4 \\
+		Dragón  & 40 & 12 & 10 & Aliento de Dragón+4, no puede ser incapacitado \\
+	}
+}
+
+\renewcommand{\nipajinHeadlineGM}{Reglas para el Director de Juego}
+\renewcommand{\nipajinTocGM}{Reglas para el Director de Juego}
+\renewcommand{\nipajinTextGM}{%
+	\mysection[labelPCs]{Transfondos}
+
+		\noindent
+		El transfondo de un personaje jugador (PJ) es de especial importancia en \nipajin. Un buen transfondo incluye infancia, educación y qué hizo el personaje durante los últimos años de su vida. Una experiencia vital dramática o dos completan el paisaje. La edad del personaje y su aspecto físico también deberían ser anotados.
+
+		Tu grupo decide cuán formal deber ser la descripción del transfondo. En cualquier caso, debería ofrecer suficiente información para determinar las fuerzas y debilidades de un personaje, ya que el Director de Juego tiene que basar la decisión, de la dificultad de una tarea, en eso. Las lagunas en el transfondo deberían ser rellenadas tan pronto como sea posible, preferiblemente durante la generación del personaje. Las situaciones normalmente sugieren unos cuantos modificadores para los personajes –- por supuesto, éstos pueden alterarse.
+
+	\mysection[labelGroups]{Trabajo en Equipo}
+
+		\noindent
+		A veces, algunos o todos los personajes tratarán de \keyword{trabajar en equipo} equipo para aumentar sus posibilidades de éxito en una tarea. Los jugadores pueden elegir un \AD. Entonces escogen un líder. El líder realizará la tirada y decide si su resultado es bueno para el grupo. Si el líder decide que otro jugador puede obtener un resultado mejor, cede el liderazgo al siguiente jugador, que tira de nuevo, y así sucesivamente. Cada tirada sustituye a la anterior. Una tirada de uno natural en cualquier momento significa que el intento del grupo ha terminado en fracaso. Solo los dados que han sido lanzados quedan agotados.
+
+		Si los personajes trabajan en equipo durante un conflicto, su orden de actuación conjunto durante un asalto es la de su miembro más lento. Cualquier oponente tiene que defenderse del resultado final con una sola tirada de su \RD. Si fracasa, recibe las heridas que cada miembro del grupo hubiera infligido individualmente. No puedes combinar trabajo en equipo y acciones múltiples.
+
+		Las \keyword{tareas a largo plazo} requieren números objetivos mayores, p. ej. \say{reparar\TN20}. Los personajes tienen que trabajar múltiples asaltos para alcanzar ese número. Cada asalto, que tiene una duración determinada por el Director de Juego, p. ej. \say{un día}, todos los personajes participantes trabajan en equipo como se describe anteriormente. El resultado se suma, asalto tras asalto, hasta que se alcanza el \TN. Una tirada de uno natural frustra un solo asalto, no la tarea a largo plazo en sí.
+
+	\mysection[labelNSCs]{Personajes no Jugadores}
+
+		\noindent
+		El Director de Juego representará a amigos y enemigos con los que el grupo va a interactuar. Estos personajes no jugadores (PNJs) emplean reglas simplificadas. Además de su apariencia y motivación para interactuar con los personajes, reciben solo un \HD, un único \AD, y un único \RD, basados en su nivel de peligro. Esos dados pueden incluir medios dados como d2 o d3.
+
+		\nipajinTableNSC
+
+		\noindent
+		Además, cada criatura podría obtener modificadores predefinidos, p. ej. \say{Combate+1} or \say{Agilidad-2}. Sin embargo, no mezcles dados buenos con modificadores altos o los PNJs serán demasiado duros.
+
+		Los PNJs tienen la ventaja de nunca quedarse sin \AD/\RD\ y nunca tienen que respirar hondo. A cambio, deberían ser creados ligeramente menos poderosos. Asimismo, los traumas no son tan importantes para ellos y se restan directamente de su \HD.
+
+	\mysection[labelBestiary]{Bestiario}
+
+		\noindent
+		Las siguientes criaturas de ejemplo no deberían tomarse como indicación de que \nipajin\ se limita solamente a fantasía clásica.
+
+		\nipajinTableBestiary
+
+	\mysection[labelXP]{Experiencia}
+
+		\noindent
+		\nipajin\ no ha sido diseñado para ver crecer a los personajes durante el transcurso de una campaña larga. Si pasa un periodo de tiempo significativo en el mundo de juego, el Director de Juego podría, a pesar de ello, elevar el modificador de un personaje si eso suena razonable.
+
+		Las habilidades de los personajes definen, normalmente, el nivel de poder del escenario. Si el grupo consiste en típicos héroes de fantasía, el bestiario contiene PNJs con las aptitudes adecuadas. Si los personajes son goblins, un humano típico causando destrozos en su guarida sería tan poderoso como un troll. El Director de Juego debería comparar a los personajes y a los PNJs de manera relativa. Si los personajes se convierten en superhéroes de la noche a la mañana, esto no debería reflejarse mejorando a los personajes -- el Director de Juego debería en su lugar modificar el mundo y degradar a los PNJs.
+
+}
