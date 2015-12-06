@@ -19,6 +19,10 @@ en: setup
 	ln -sf ../content.en.tex out/content.tex
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-en -output-directory out ${TEX_NAME}
 
+es: setup
+	ln -sf ../content.es.tex out/content.tex
+	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-es -output-directory out ${TEX_NAME}
+
 pl: setup
 	ln -sf ../content.pl.tex out/content.tex
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-pl -output-directory out ${TEX_NAME}

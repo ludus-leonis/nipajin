@@ -1,0 +1,88 @@
+\renewcommand{\xmasVersion}{v1.0}
+
+% CHANGELOG-en
+%
+% 1.0
+%   - first translation
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\fsNormal}{\fontsize{9.5pt}{11.5pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.5pt}{10pt plus 0.1pt minus 0pt}}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={A short NIP'AJIN scenario about kids fighting off burglars.},
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\xmasCredits}{nobody}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\xmasPlayers}{%
+	This is a scenario for one to six characters.
+}
+\renewcommand{\xmasHeadline}{NIP'AJIN Alone at Home}
+\renewcommand{\xmasToc}{Scenario: NIP'AJIN Alone at Home}
+\renewcommand{\xmasText}{%
+	{\itshape
+		It is December 22th. You are 9 to 12 year old kids of two related families, traveling to a rich aunt's house in a New York suburb. There you are supposed to spend the days before Christmas, so your stressed out parents can prepare everything for the holidays. It is snowing heavily when the cab drops you off at the driveway at noon. The pre-payed driver mumbles something about this being his last trip for today -- the streets will be closed, a small blizzard is coming in the afternoon.
+
+		At the front door then the big surprise: Nobody is home! Thanks to a hidden key in the yard you can at least enter the house and call your parents. Well, there was a misunderstanding with your aunt. There is Pizza in the freezer. Wait until tomorrow morning and please, please don't do anything stupid.
+
+		Alone at your aunt's mansion the fun stops during a snowball fight as you eavesdrop on a conversation of what seems to be a corrupt cop. He talks to a friend on the police radio: It's like a ghost town here -- nobody is around, the ideal time and place for burglary. He agrees with the other person to meet here at dawn -- right before your aunt's house -- to rob the neighborhood.
+
+		You call your parents again, but they don't seem to believe your childish stories. Instead they order you to not go to the police as it might look bad: Why are there kids in a house without supervision? So it's obvious what you have to do: defend the house and make sure the burglars don't steal your aunt's pricey possessions!
+	}
+
+	\mysection{Setting}
+
+		\noindent
+		The scenario is set in a rich, snowy, deserted neighborhood near New York. The mansion is a neo-georgian brick building and consists of (2F=second floor, 1F=first floor, B=basement):
+
+		\keyword{2F/Sleeping room}: Two windows to the garden, door to the hallway. \keyword{2F/Guest room}: Two windows to the front lawn, door to the hallway, door to kid's room. \keyword{2F/Kid's room}: Two windows to the front lawn, doors to hallway and guest room. \keyword{2F/Spare room}: Window to the garden, door to the hallway. \keyword{2F/Attic}: Small room below the rooftop, can be accessed via a folding ladder in the ceiling of the spare room. Two roof hatches. \keyword{2F/Bathroom}: Window (frosted glass) to the garden, door to the hallway. \keyword{2F/Toilet}: No windows, door to the hallway. \keyword{1F/Entrance hall}: Doors to front lawn, dining room, living room and bathroom. Wide stairs lead to the second floor. \keyword{1F/Dining room}: Wide windows to the front lawn, doors to the hall and the kitchen. \keyword{1F/Kitchen}: Two windows to the garden, doors to the dining room and the living room, small stairs down to the boiler room. \keyword{1F/Bathroom}: No windows, door to the hall. \keyword{1F/Living room}: Large room with to windows and a door to the garden as well as two windows to the front lawn. \keyword{B/Boiler room}:	Small stairs to the kitchen, doors to stowage, hobby room and garden stairs. \keyword{B/Stowage}: Two small windows to the garden, doors to the boiler room and the hobby room. \keyword{B/Hobby room}: Workshop, three small windows to the front lawn, doors to the boiler room and the stowage. \keyword{Garden}: 4.000m², pool, tool shed, terrace with door to living room and stairs down to the boiler room. \keyword{Front lawn}: 200m², roofed parking space, door to entrance hall.
+
+		Each room contains 1d2 to 1d6 valuables. Players can also add furnishing of their choice. Unlikely requests should be resolved by rolling a die.
+
+	\mysection{Characters}
+
+		\noindent
+		In this scenario the charakters are kids aged 1d4+8:
+
+		\tabelle{l c X}{
+		\thead{PC} & \thead{\HD} & \thead{Description} \\
+		}{
+			Austin &  8 & Athlete of the group. Athletics+1, Technik-1. \\
+			Cody   &  6 & Overweight bookworm. Knowledge+1, Athletics-1. \\
+			Grace  &  6 & Champion of Hide\&Seek. Stealth+1, Social-1. \\
+			Katie  &  4 & Cute girl with freckles. Social+1, Guts-1. \\
+			Riley  &  6 & Chaotic tinkeress. Craft+1, Stealth-1. \\
+			Victor & 10 & Daring bully. Guts+1, Clever-1. \\
+		}
+
+	\mysection{Development}
+
+		\noindent
+		The GM should start by drawing a map of the house that shows where all doors and windows are. It is 14:00 when the kids start making plans. They now have a few hours to prepare the house with nasty surprises that will help to defend off the burglars. The GM has to keep track of this preparation time: preparing a trap or device is a \emph{long-term task} with a \TN~set by the GM. Each \emph{round} spent achieving it costs 30 minutes. Clever kids will split up to cover more ground.
+
+		Around 16:30 the sun will set. At 18:00 the burglars will arrive and do their despicable work. There is always one more robber than there are kids. If by 18:00 the kids could create the illusion that there are a lot of people in the house (\eg~by faking a Xmas party), the burglars will start with one of the other houses first, but latest at 21:00 they uncover the prank since no cars are parking in front of the aunt's house. They go investigate.
+
+		\nsc{Burglar}{10}{6}{6}, Brawl+2, Clever-1
+
+		The burglars will separate and try to gain access into the house in the following order: front door, back door (kitchen), basement stairs, kitchen window, dining room window, hobby room window, spare room (via a nearby tree), guest room (via rain pipe), living room window, sleeping room window (via ladder) and roof hatches (via ladder). To avoid a kid's trap, the invading burglar has to roll his \RD\ (\TN~set by the GM appropriate to it's nastiness). If the trap is successful, the burglar will take embarassing 1 to 2 points on his \HD\ and will try somewhere else. If the burglar avoids the trap, the kids can try to spring it anyway with a quick, spontaneous action (their \AD\ vs. his \RD), otherwise the burglar is in the house and chases the kids (likely into the next trap). Each trap/device only works once, the burglars are warned afterwards.
+
+		If no kids are present, a burglar stays in each room to search for valuables (\TN4 for each item). He continues after all valuables in a room are found.
+
+	\mysection{Setting rules}
+
+		\noindent
+		At the start of play, each player gets two candies. If a player waves around with his hands and cries \say{Whaaaahaa}, he may spend one candy and reroll one of his dice. Unused candies may be eaten after the game.
+
+	\mysection{All's well that ends well?}
+
+		\noindent
+		The kids win if the burglars loose more than half of their \HD-values in total -- no matter what burglar lost how much exactly. The kids loose if they all are covercome or the burglars flee with 16 valuables.
+}
