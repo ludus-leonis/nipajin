@@ -19,5 +19,10 @@ de: setup
 	ln -sf ../../content.de.tex out/content.tex
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de-`grep Version}{ content.de.tex | sed -e "s/.*{//;s/}.*//"` -output-directory out ${TEX_NAME}
 
+en: setup
+	ln -sf ../content.en.tex out/shot.tex
+	ln -sf ../../content.en.tex out/content.tex
+	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-en-`grep Version}{ content.en.tex | sed -e "s/.*{//;s/}.*//"` -output-directory out ${TEX_NAME}
+
 clean:
 	rm -rf out/*
