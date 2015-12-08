@@ -4,43 +4,47 @@ digraph plot {
 	rankdir=TD;
 	node [shape=none]
 
+	Start [shape=oval]
 	Start -> Hotel
+
+	Blumenshop
+	Blumenshop -> Hotel
+
+	Tankstelle
+	Tankstelle -> Hotel
 
 	Hotel [ label="vor\nHotel", color=blue ]
 	Hotel -> Vordereingang
-	Hotel -> Hintereingang
-	Hotel -> Garagenrampe
-
-	Garagenrampe [label="Garagen-\nrampe"]
-	Garagenrampe -> Vordereingang
-	Garagenrampe -> Hintereingang
-
-	Garage -> Lift
-	Garage -> Lobby
+	Hotel -> Einfahrt
 
 	Vordereingang [ label="Vorder-\neingang" ]
-	Vordereingang -> Lobby
-	Vordereingang -> Hintereingang
-	Vordereingang -> Garage
+	Vordereingang -> Lobby  [color=red]
+	Vordereingang -> Garage [color=gray]
 
-	Lobby [ color=blue ]
+	Einfahrt
+	Einfahrt -> Garage [color=red]
+
+	Garage -> Lift
+	Garage -> Vordereingang [color=gray]
+
+	Lobby
 	Lobby -> Portier
 	Lobby -> Lift
 	Lobby -> Bar
 
-	Portier [ fontcolor=pink ]
+	Portier
 	Portier -> Lobby
 
 	Lift [ color=blue ]
 	Lift -> Lobby
 	Lift -> Garage
-	Lift -> Penthouse
+	Lift -> Etage [color=red]
+
+	Etage -> Penthouse
 
 	Penthouse -> Selfie
 
-	Blumenshop -> Hotel
-
-	Tankstelle -> Hotel
+	Selfie [shape=oval]
 
 }
 
