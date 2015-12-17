@@ -33,3 +33,5 @@ Wenn du einen eigenen Shot verfassen möchtest, folge diesen Schritten:
 * Editiere `content.de.tex` und suche-und-ersetze auch dort den Makro-Präfix.
 * Jetzt kannst du in `content.de.tex` dein Szenario verfassen. Befülle einfach die Makros entsprechend.
 * Wenn du fertig bist, kannst du mit `make de` dein Szenario in ein PDF verwandeln.
+
+Im `metashot` Verzeichnis findest du übrigens einen Leitfaden, wie du auf dem wenigen Platz, der dir für einen Shot zur Verfügung steht, ein komplettes Szenario unterbringen kannst.
