@@ -1,0 +1,112 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply one-way compatible licenses.
+
+\renewcommand{\hanamiVersion}{v1.1-wip}
+
+% CHANGELOG-de
+%
+% 1.1
+%   - Überarbeitung und Lektorat
+% 1.0
+%   - Erstfassung CC BY-SA 4.0 von Nicole Goci
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\fsNormal}{\fontsize{9pt}{11.25pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.5pt}{9.5pt plus 0.1pt minus 0pt}}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={Ein NIP'AJIN Szenario im feudalen Japan.},
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\hanamiCredits}{Idee: Nicole Goci}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\hanamiPlayers}{%
+	Ein Szenario für 3-6 Charaktere nach einer Idee von Nicole Goci.
+}
+\renewcommand{\hanamiHeadline}{Hanami}
+\renewcommand{\hanamiToc}{Szenario: Hanami}
+\renewcommand{\hanamiText}{%
+	{\itshape
+		Friedenszeit in einer mittelalterlichen, japanischen Welt: Neben verschneiten Bergen und geheimnisvollen Wäldern prägen idyllische Graslandschaften und malerische Küstenregionen das Bild. Dazwischen ragen Pagoden, Torii, Schlösser, Festungen, Dörfer und Städte auf. Kaiserin Hanako ist das Sprachrohr der Götter auf Erden und regiert mit geheimnisvollen Fähigkeiten und der Hilfe ihrer Samurai das Land.
+
+		Ihr seid Mitglieder der Adelskaste und der Einladung der Kaiserin zum Kirschblütenfest folgend gerade in der Hauptstadt angekommen. Im Zentrum der Stadt thront auf einem Hügel ein imposanter Palast. Ihn umgibt ein Regierungs- und ein Tempelbezirk. Dahinter liegen dann Handels- und Handwerksbezirke, der Kultur- und Vergnügungsbezirk sowie die Wohnbezirke. Die Hauptstraße ist gesäumt von Kirschbäumen, zwischen denen Stände für Händler, Künstler und Wettkämpfer aufgebaut werden. Die Bewohner der Stadt sind mit den Vorbereitungen für das Fest schwer beschäftigt.
+
+		Obwohl der Frühling seine volle Pracht zeigt, ist euch nicht entgangen, dass keiner der Kirschbäume blüht. Als ihr beim kaiserlichen Tempel am Ende der Hauptstraße eure Aufwartung macht, um euch bei den Göttern für die sichere Reise zu bedanken, ergreift der Oberpriester das Wort: \say{Werte Gäste! Übermorgen soll das Kirschblütenfest stattfinden, aber die Bäume blühen nicht. Die Gärtner der Stadt haben bereits alles versucht, eine natürliche Ursache scheint ausgeschlossen. Bitte nehmt euch dem Problem an. Der Dank der Kaiserin wird euch sicher sein.}
+	}
+
+	\mysection{Charaktere}
+
+		\noindent
+		Die Spieler verkörpern in diesem Szenario Männer und Frauen der Adelskaste:
+
+		\tabelle{l c X}{
+		\thead{SC} & \thead{\HD} & \thead{Beschreibung} \\
+		}{
+			Diplomat   &  4 & Soziales+2, Kraft-1, Kunst+1 \\
+			Samurai    &  8 & Katana+1 (2 Wunden), Kunst-1 \\
+			Schütze    &  6 & Bogen+1 (2 Wunden), Kampf-1 \\
+			Onmyouji   &  6 & 2 Effekte zweier Kategorien* \\
+			Priester   &  6 & Effekt: Heilung, Wissen+1 \\
+			Gelehrter  &  4 & Wissen+2, Kraft-1, Kunst+1 \\
+		}
+
+		\noindent
+		Alle Zauber sind auf Papier kalligraphiert (Ofuda). Magier und Priester können ihre Effekte jeweils fünf Mal anwenden.
+
+		Als stolze Mitglieder der Adelskaste fällt es den Charakteren schwer, unehrenhaftes Verhalten an den Tag zu legen (-2 auf Schleichen, Hinterhalt,~\ldots).
+
+	\mysection{Ablauf}
+
+		\noindent
+		Dieses Szenario besteht aus einer umfangreichen \emph{langfristigen Aktion} (1 Stunde pro Runde), in der die Charaktere Hinweise über das Problem sammeln. Sie können dazu \zB\ Bewohner befragen oder in Bibliotheken recherchieren. Wenn es passend erscheint, spätestens jedoch beim Erreichen bestimmter Schwellwerte der langfristigen Aktion, werden Szenen ausgelöst. Die Schwellwerte hängen von der Spielerzahl ab.
+
+		\tabelle{c c X}{
+		\thead{3-4 SC} & \thead{5-6 SC} & \thead{Ereignis} \\
+		}{
+			\TN10 & \TN11 & Das Weinen. \\
+			\TN18 & \TN20 & Der Schrein. \\
+			\TN30 & \TN36 & Das Mädchen. \\
+			\TN42 & \TN50 & Das Warenhaus. \\
+		}
+
+		\noindent
+		Sollten die Charaktere einen eigenen Weg einschlagen, ändert sich die Reihenfolge aber nicht die Schwellwerte.
+
+		\subsection{Das Weinen}
+
+			Die Charaktere erhalten den Hinweis, dass Kirschbäume manchmal weinen. Schilderungen älterer Stadteinwohner oder alte Schriftrollen besagen, dass die Gottheit der Kirschbäume traurig sein könnte, die mal als Mädchen, mal als Frau im Kirschblüten-Kimono beschrieben wird.
+
+		\subsection{Der Schrein}
+
+			Die Charaktere erfahren, dass die Gottheit der Kirschblüten keinen Schrein mehr hat. Dieser war nie sehr populär gewesen und von einem alten Priesterpaar gepflegt worden. Bei einem tragischen Unfall im letzten Jahr brannte das kleine, unscheinbare Gebäude irgendwo am Rande des Tempelbezirks ab. Die Zwei kamen ums Leben und statt dem Tempel wurde ein anderes Gebäude errichtet. Nun gibt es niemanden mehr, der die Gebräuche und den Namen der Gottheit kennt. Wo genau sich der Schrein befand, ist jedoch (noch) unklar.
+
+		\subsection{Das Mädchen}
+
+			Sehen sich die Charaktere bei den Kirschbäumen auf der Hauptstraße um, können sie das Schluchzen eines Mädchens bemerken. Tagsüber ist das wegen dem Lärm schwer (Wahrnehmung\TN8), abends gelingt dies wegen der Stille automatisch.
+
+			Das Schluchzen führt zu einem Baum, hinter dem ein hübsches Mädchen im Kirschblüten-Kimono mit schwarzem Haar sitzt. Wenn die Charaktere ihr gut zureden (\TN4), stellt sich im Gespräch heraus, dass sie tatsächlich die Gottheit der Kirschbäume ist. Sie bedauert, dass den Menschen beim jährlichen Fest nicht bewusst ist, dass sie für die Blüten verantwortlich ist, sondern die Feiernden lediglich die Bäume bewundern, trinken und essen. Seit dem Verlust ihres Schreins, wo zumindest das alte Pärchen ihr gehuldigt hatte, habe sie nun nicht mal mehr einen Namen.
+
+			Das Mädchen verrät zudem, dass ein Mann in schwarzer Kleidung mit dem Symbol eines Totenkopfes versprach, ihr einen neuen Namen zu geben und sie in Gebeten zu ehren, wenn sie dafür verhindert, dass die Kirschen zum Fest blühen. Sie habe eingewilligt, bereue die Entscheidung aber. Doch solange der Mann das Versprechen nicht bricht, sei sie daran gebunden. Sie weiß aber nicht, wo sich der Mann befindet -- nur, dass er sein Wort hält.
+
+		\subsection{Das Warenhaus}
+
+			Am Ort des ehemaligen Tempels der Kirschbaumgottheit steht mittlerweile ein wenig benutztes Warenhaus des Händlers und Nekromanten Dokuro, der als Markenzeichen einen Totenkopf nutzt. Am Dachboden ist gerade eines der regelmäßig stattfindenden Rituale im Gange, in denen der Kaufmann und seine finstere Gesellen Oni um ihre Gunst bei diversen Geschäften bitten.
+
+			Es war Dokuro, der dem Mädchen einen Namen versprach. Für ehrenhafte Samurai besteht kein Zweifel, dass einem, mit Oni im Bunde stehenden Händler sofort kurzer Prozess gemacht werden muss. Unterlagen Dokuros lassen darauf schließen, dass er das Feuer im Schrein der Kirschbaumgottheit gelegt hat und das Fest der Kaiserin aus Rache für erhöhte Steuern sabotiert. Den dämonischen Namen, den Dokuro der Gottheit gab, sollte diese besser nicht behalten.
+
+			\nsc{Dokuro}{8}{6}{6}, Frosthand+1 (2 Wunden)
+
+			\nsc{Geselle}{6}{6}{6}, Anzahl: 1 + 1 pro SC
+
+	\mysection{Ende gut, alles gut?}
+
+		\noindent
+		Nachdem dem Dokuro das Handwerk gelegt ist, kann dem Mädchen ein neuer Name gegeben werden. Die dafür nötige Zeremonie übernimmt gerne die Belegschaft des kaiserlichen Tempels, die auch einen kleinen Nebenschrein der Kirschbaumgottheit weihen. Sollte noch etwas Spielzeit übrig sein, können die Charaktere die Zeremonie mit Einsatz von Kunst oder Sozialem selbst inszenieren. Kurz darauf erblühen die Kirschbäume und das Fest kann beginnen.
+}
