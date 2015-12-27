@@ -1,0 +1,49 @@
+% (c) 2009-2015 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+
+\documentclass{article}
+
+\newcommand{\fontsearchpath}{../../fonts}
+\usepackage{shot}
+
+% each language file has to re-define the following items:
+
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
+\newcommand{\shotSummary}{}
+\newcommand{\shotURL}{}
+
+\newcommand{\wildwestVersion}{v0.0}
+\newcommand{\wildwestCredits}{}
+\newcommand{\wildwestHeadline}{}
+\newcommand{\wildwestToc}{}
+\newcommand{\wildwestPlayers}{}
+\newcommand{\wildwestText}{}
+
+% Makefile will map the current language into those files
+\input{shot.tex}
+\input{content.tex}
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\shotCopyright}{\wildwestVersion}{\wildwestCredits}{\shotFineprint}{\shotSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\wildwestHeadline}}{\wildwestToc}
+
+\begin{multicols}{2}%
+\noindent\wildwestPlayers
+
+\wildwestText
+\end{multicols}
+
+\end{document}
