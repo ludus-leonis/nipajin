@@ -28,6 +28,12 @@ shot-clowns:
 	cd ../shots/clowns ; ! make all | grep undefined
 	./checkpdf.sh ../shots/clowns/out/*-de*pdf 2
 
+shot-hanami:
+	cd ../shots/hanami ; make clean
+	cd ../shots/hanami ; make all > /dev/null
+	cd ../shots/hanami ; ! make all | grep undefined
+	./checkpdf.sh ../shots/hanami/out/*-de*pdf 2
+
 shot-last-road:
 	cd ../shots/last-road ; make clean
 	cd ../shots/last-road ; make all > /dev/null
@@ -71,6 +77,12 @@ shot-wet-dwarves:
 	./checkpdf.sh ../shots/wet-dwarves/out/*-de*pdf 2
 	./checkpdf.sh ../shots/wet-dwarves/out/*-en*pdf 2
 
+shot-wild-west:
+	cd ../shots/wild-west ; make clean
+	cd ../shots/wild-west ; make all > /dev/null
+	cd ../shots/wild-west ; ! make all | grep undefined
+	./checkpdf.sh ../shots/wild-west/out/*-de*pdf 2
+
 shot-xmas-burglars:
 	cd ../shots/xmas-burglars ; make clean
 	cd ../shots/xmas-burglars ; make all > /dev/null
@@ -84,6 +96,6 @@ starter:
 	cd ../starter ; ! make all | grep undefined
 	./checkpdf.sh ../starter/out/*-de*pdf 15
 
-tests: core shot-archaea-12 shot-caribs shot-clowns shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-xmas-burglars starter
+tests: core shot-archaea-12 shot-caribs shot-clowns shot-hanami shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-wild-west shot-xmas-burglars starter
 
 default: tests
