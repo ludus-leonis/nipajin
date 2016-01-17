@@ -6,7 +6,7 @@ TEX_NAME="shot"
 
 default: de
 
-all: de
+all: de en
 
 setup:
 	mkdir -p out
