@@ -96,7 +96,7 @@ shot-xmas-burglars:
 	./checkpdf.sh ../shots/xmas-burglars/out/*-de*pdf 2
 	./checkpdf.sh ../shots/xmas-burglars/out/*-en*pdf 2
 
-shots: shot-androids hot-archaea-12 shot-caribs shot-clowns shot-hanami shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-wild-west shot-xmas-burglars
+shots: shot-androids shot-archaea-12 shot-caribs shot-clowns shot-hanami shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-wild-west shot-xmas-burglars
 
 starter:
 	cd ../starter ; make clean

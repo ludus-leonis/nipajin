@@ -65,4 +65,32 @@
 	\vspace*{2mm}
 }
 
+\newcommand{\shotsfooterBYNCSA}[3]{
+	\backgroundbottom{primary}{11mm}
+	\grenewcommand{\bgboxinjectonce}{%
+		\put(31,17){\parbox{19cm}{\color{white}%
+			\textbf{#1\ | \href{http://creativecommons.org/licenses/by-nc-sa/4.0/}{CC BY-NC-SA 4.0}}
+			\hspace*{6pt}
+			\parbox{12cm}{
+				\tiny#2\\
+				#3
+			}%
+		}}%
+	}
+}
+
+\newcommand{\shotsfooterBYSA}[3]{
+	\backgroundbottom{primary}{11mm}
+	\grenewcommand{\bgboxinjectonce}{%
+		\put(31,17){\parbox{19cm}{\color{white}%
+			\textbf{#1\ | \href{http://creativecommons.org/licenses/by-sa/4.0/}{CC BY-SA 4.0}}
+			\hspace*{6pt}
+			\parbox{12cm}{
+				\tiny#2\\
+				#3
+			}%
+		}}%
+	}
+}
+
 \newcommand{\nsc}[4]{\keyword{#1:} \HD#2, \AD#3 \RD#4}
