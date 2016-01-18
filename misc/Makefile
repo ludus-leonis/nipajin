@@ -9,6 +9,12 @@ core:
 	./checkpdf.sh ../core/out/*-en*pdf 4
 	./checkpdf.sh ../core/out/*-pl*pdf 4
 
+shot-androids:
+	cd ../shots/androids ; make clean
+	cd ../shots/androids ; make all > /dev/null
+	cd ../shots/androids ; ! make all | grep undefined
+	./checkpdf.sh ../shots/androids/out/*-de*pdf 2
+
 shot-archaea-12:
 	cd ../shots/archaea-12 ; make clean
 	cd ../shots/archaea-12 ; make all > /dev/null
@@ -90,7 +96,7 @@ shot-xmas-burglars:
 	./checkpdf.sh ../shots/xmas-burglars/out/*-de*pdf 2
 	./checkpdf.sh ../shots/xmas-burglars/out/*-en*pdf 2
 
-shots: shot-archaea-12 shot-caribs shot-clowns shot-hanami shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-wild-west shot-xmas-burglars
+shots: shot-androids hot-archaea-12 shot-caribs shot-clowns shot-hanami shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-wild-west shot-xmas-burglars
 
 starter:
 	cd ../starter ; make clean
