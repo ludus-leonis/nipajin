@@ -13,16 +13,16 @@
 \newcommand{\shotSummary}{}
 \newcommand{\shotURL}{}
 
-\newcommand{\archaeaVersion}{v0.0}
-\newcommand{\archaeaCredits}{}
-\newcommand{\archaeaHeadline}{}
-\newcommand{\archaeaToc}{}
-\newcommand{\archaeaPlayers}{}
-\newcommand{\archaeaText}{}
+\newcommand{\hanamiVersion}{v0.0}
+\newcommand{\hanamiCredits}{}
+\newcommand{\hanamiHeadline}{}
+\newcommand{\hanamiToc}{}
+\newcommand{\hanamiPlayers}{}
+\newcommand{\hanamiText}{}
 
 % Makefile will map the current language into those files
-\input{shots.tex}
-\input{archaea-12.tex}
+\input{shot.tex}
+\input{content.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -34,16 +34,16 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\shotCopyright}{\archaeaVersion}{\archaeaCredits}{\shotFineprint}{\shotSummary}
+\shotsbanner{\shotCopyright}{\hanamiVersion}{\hanamiCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\archaeaHeadline}}{\archaeaToc}
+\mybanner{\MakeUppercase{\hanamiHeadline}}{\hanamiToc}
 
 \begin{multicols}{2}%
-\noindent\archaeaPlayers
+\noindent\hanamiPlayers
 
-\archaeaText
+\hanamiText
 \end{multicols}
 
 \end{document}

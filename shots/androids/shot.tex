@@ -13,16 +13,16 @@
 \newcommand{\shotSummary}{}
 \newcommand{\shotURL}{}
 
-\newcommand{\archaeaVersion}{v0.0}
-\newcommand{\archaeaCredits}{}
-\newcommand{\archaeaHeadline}{}
-\newcommand{\archaeaToc}{}
-\newcommand{\archaeaPlayers}{}
-\newcommand{\archaeaText}{}
+\newcommand{\androidsVersion}{v0.0}
+\newcommand{\androidsCredits}{}
+\newcommand{\androidsHeadline}{}
+\newcommand{\androidsToc}{}
+\newcommand{\androidsPlayers}{}
+\newcommand{\androidsText}{}
 
 % Makefile will map the current language into those files
+\input{androids.tex}
 \input{shots.tex}
-\input{archaea-12.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -34,16 +34,16 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\shotCopyright}{\archaeaVersion}{\archaeaCredits}{\shotFineprint}{\shotSummary}
+\shotsbanner{\shotCopyright}{\androidsVersion}{\androidsCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\archaeaHeadline}}{\archaeaToc}
+\mybanner{\MakeUppercase{\androidsHeadline}}{\androidsToc}
 
 \begin{multicols}{2}%
-\noindent\archaeaPlayers
+\noindent\androidsPlayers
 
-\archaeaText
+\androidsText
 \end{multicols}
 
 \end{document}

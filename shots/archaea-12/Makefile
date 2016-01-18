@@ -1,4 +1,4 @@
-# (c) 2009-2015 by Markus Leupold-Löwenthal
+# (c) 2009-2016 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 PDF_NAME="NIPAJIN-Shots-Archaea-12"
@@ -15,14 +15,14 @@ setup:
 	ln -sf ../../shot.sty out/
 
 de: setup
-	ln -sf ../content.de.tex out/shot.tex
-	ln -sf ../../content.de.tex out/content.tex
-	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de-`grep Version}{ content.de.tex | sed -e "s/.*{//;s/}.*//"` -output-directory out ${TEX_NAME}
+	ln -sf ../archaea-12.de.tex out/archaea-12.tex
+	ln -sf ../../content.de.tex out/shots.tex
+	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de-`grep Version}{ archaea-12.de.tex | sed -e "s/.*{//;s/}.*//"` -output-directory out ${TEX_NAME}
 
 en: setup
-	ln -sf ../content.en.tex out/shot.tex
-	ln -sf ../../content.en.tex out/content.tex
-	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-en-`grep Version}{ content.en.tex | sed -e "s/.*{//;s/}.*//"` -output-directory out ${TEX_NAME}
+	ln -sf ../archaea-12.en.tex out/archaea-12.tex
+	ln -sf ../../content.en.tex out/shots.tex
+	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-en-`grep Version}{ archaea-12.en.tex | sed -e "s/.*{//;s/}.*//"` -output-directory out ${TEX_NAME}
 
 clean:
 	rm -rf out/*
