@@ -1,4 +1,4 @@
-% (c) 2009-2015 by Markus Leupold-Löwenthal
+% (c) 2009-2016 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 \renewcommand{\selfiesVersion}{v0.1}
@@ -19,128 +19,130 @@
 	pdfsubject={Ein NIP'AJIN Solo-Szenario rund um das Selfie des Jahres.},
 }
 
+\newcommand\room[1]{%
+  \medskip\refstepcounter{section}%
+  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}\zlabel{#1}\noindent\lettrine{\thesection}{\hspace*{3pt}}}
+
+\newcommand\seeroom[1]{{\ding{231}\zref{#1}}}
+
+\newcommand\nipajincheck[2]{\makebox{#1}: \makebox{\ding{51}\hspace{1pt}#2}}
+\newcommand\nipajincheckfail[3]{\makebox{#1}: \makebox{\ding{51}\hspace{1pt}#2}, \makebox{\ding{55}\hspace{1pt}#3}}
+
+\usepackage{pifont}
+
 % --- fine print ---------------------------------------------------------------
 
 \renewcommand{\selfiesCredits}{nobody}
 
 % --- main texts ---------------------------------------------------------------
 
-\newcommand{\lorem}{Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam (labore\TN3 > 4) duo dolores et ea rebum. Consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, (ipsum\TN5 > 8 > 3).}
-
 \renewcommand{\selfiesPlayers}{%
-	Ein Szenario für einen Spieler
+	%Ein Szenario für einen Spieler
 }
 \renewcommand{\selfiesHeadline}{Selfie Quest}
 \renewcommand{\selfiesToc}{Szenario: Selfie Quest}
 \renewcommand{\selfiesText}{%
-	{\itshape
-		Dir ist langweilig. Deine Timeline zeigt dir nichts, was du nicht schon zig-mal gesehen hast. Langweilige Leute vor langweiligen Hintergründen.
 
-		\lorem
+	\noindent
+	Ein Solo-Szenario für einen Spieler.
+
+	{\itshape
+		Selfies sind angesagt. Alle deine Freunde knipsen sie. Auch heute Abend, wo sie dich im Stich gelassen haben und gemeinsam irgendwo feiern. Deine Timeline auf Facebook ist voll mit ihren fröhlichen Gesichtern. Ach, wenn du das nur Kontern könntest. Da liest du, dass euer Lieblingspopstar gerade in der Stadt ist und sich im Plaza Hotel einquartiert hat -- die Gelegenheit! Vielleicht kannst du noch heute Nacht an ihn oder sie heran kommen und euch gemeinsam verewigen? Da würden deine Freunde aber schön staunen!
 	}
 
-	\mysection{Anleitung}
+	\medskip\noindent
+	Hallo! Ich bin dein Spielleiter und werde dich durch ein Solo-Szenario führen. Ich setze voraus, dass du die NIP'AJIN Regeln bereits kennst. Du spielst einen ganz normalen Staatsbürger mit dem W6 als \HD. Wirst du überwunden, gibst du auf und fährst heim. Auf Vor- und Nachteile deines Charakters verzichten wir gänzlich. Notiere dir als Ausrüstung dein Handy, eine Kreditkarte und €50 in bar.
 
-	\noindent
-	\lettrine{1}{ } \lorem
+	Der Verlauf des Szenarios hängt von deinen Entscheidungen und manchmal vom Würfelglück ab. Lies daher nur die Abschnitte, auf die du verwiesen wirst. Steht im Text \makebox{\say{\nipajincheckfail{X}{\ding{231}Y}{Z},}} befolgst du erst Anweisung X -- zumeist ist das ein Wurf. Bei einem Erfolg lies weiter bei \ding{231}Y, bei einem Fehlschlag befolge Anweisung Z, wenn eine angegeben ist.
 
-	\noindent
-	\lettrine{2}{ } \lorem
+	Dein Ausflug beginnt kurz vor Mitternacht bei Abschnitt \seeroom{plaza}.
 
-	\noindent
-	\lettrine{3}{ } \lorem
+	% room 1 !!!
+	\room{dummy} Stop! Bitte die Abschnitte nicht der Reihe nach lesen! Lies erst die Einleitung -- die sagt dir, wie das hier funktioniert und wo es wirklich losgeht!
 
-	\noindent
-	\lettrine{4}{ } \lorem
+		% flexible
+		\room{bar} Die Hotelbar befindet sich im Untergeschoss. Dort hat sich der Architekt mit einem Klein-Hawaii verewigt, komplett mit Bambuslogen und Plastikvulkan. Das Personal begrüßt dich mit einem energischen \say{Aloha ahiahi}. Es sind aber kaum Gäste anwesend. Wenn du einen Gutschein hast, kannst du dir am Tresen dein Glas Cola abholen (\seeroom{barcola}). Du kannst dir aber auch für €35 in einer Loge einen Kokosnusscocktail servieren lassen (\seeroom{barcocktail}), musst ihn aber bar bezahlen. Wenn du nichts trinken magst, kannst auch zurück zum Aufzug gehen (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{5}{ } \lorem
+	% room 3 !!!
+	\room{floorThree} Du bist im Flur des 3. Stockes und öffnest dein Zimmer mit der Zutrittskarte (\seeroom{room}).
 
-	\noindent
-	\lettrine{6}{ } \lorem
+	% room 4 !!
+	\room{Pizza} Du präsentierst die mittlerweile kalte Pizza den Bodyguards. Die nicken wissend und öffnen für dich die Türe zum Penthouse (\seeroom{penthouse}).
 
-	\noindent
-	\lettrine{7}{ } \lorem
+		% flexible
+		\room{ropeSuccess} Im Eiltempo bindest du unbemerkt das Seil an und schwingst dich mutig über das Geländer. Du landest unbemerkt auf dem Balkon der Penthouse Suite (\seeroom{penthouse}).
 
-	\noindent
-	\lettrine{8}{ } \lorem
+	% DDD -2 !!
+	\room{frontdeskChange} Du fragst den Concierge, ob du in ein Zimmer im 7. Stock wechseln kannst  (Überreden\TN4). Bist du erfolgreich, erhältst du eine neue Karte mit eben dieser Nummer. Falls nicht, lehnt er ab und du kannst für das restliche Szenario dies nicht erneut versuchen. In jedem Fall gehst du zurück in die Lobby (\seeroom{lobby}).
 
-	\noindent
-	\lettrine{9}{ } \lorem
+	% room 7 !!!
+	\room{floorSeven} Du bist im Flur des 7. Stocks. Du kannst hier dein Zimmer betreten (\seeroom{room}), oder dich der breiten Türe am Ende des Ganges nähern, die von vier Bodyguards bewacht wird (\seeroom{penthouseDoor}).
 
-	\noindent
-	\lettrine{10}{ } \lorem
+	% DDD +2 !!
+	\room{frontdesk} Der Concierge betrachtet dich kurz, hebt eine Augenbraue und fragt: \say{Was kann ich für Sie tun?} Er beantwortet leider keine Fragen zu anderen Gästen. Wenn du es noch nicht getan hast, kannst du mit deiner Kreditkarte einchecken -- und dir in vier bis sechs Wochen Gedanken über die Kosten machen. Du bekommst dann einen Gutschein für ein Glas Cola in der Hotelbar und eine Zutrittskarte ausgehändigt, die als Zimmerschlüssel dient und auf der Stockwerk Drei aufgedruckt ist. Dann gehst du zurück in die Lobby (\seeroom{lobby}).
 
-	\noindent
-	\lettrine{11}{ } \lorem
+		% flexible
+		\room{room} Dein Zimmer ist relativ klein aber hübsch eingerichtet. Auf einem kleinen Schreibtisch liegt eine Infomappe, die unter anderem die Geschäfte in der Nähe auflistet. Dazu zählt eine Tankstelle, nur einen Block vom Hotel entfernt. Du kannst jederzeit das Hotel verlassen und sie besuchen. Lies dann bei \seeroom{gasstation} weiter. Nach einer kurzen Rast verlässt du dein Zimmer wieder und rufst und den Aufzug (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{12}{ } \lorem
+		% flexible
+		\room{backdoor} Die Rückseite des Hotels nimmt ein hässliches Parkhaus ein. Ein Sicherheitsbediensteter bewacht die Einfahrt und kontrolliert alle Autos. Besitzt du eine Zugangskarte, lässt er dich durch (\seeroom{garage}). Falls nicht, kannst du einmalig versuchen, den Kofferraum eines wartenden Autos zu knacken, um als blinder Passagier vorbei zu kommen. Du hast 90 Sekunden. Gelingt es dir nicht rechtzeitig, musst du den Vordereingang benutzen (\nipajincheckfail{langfr. Aktion, \TN11, max. 3 Runden}{\seeroom{garage}}{\seeroom{frontdoor}}).
 
-	\noindent
-	\lettrine{13}{ } \lorem
+		% flexible
+		\room{barcocktail} Du bezahlst stolze €35 und genießt in deiner Loge bei Konfetti-Vulkan-Ausbruch den pseudo-hawaiianischen Cocktail. Dabei hörst du, wie ein Kellner dem anderen sagt: \say{Unser Stargast hat Champagner zur Pizza bestellt, kannst du den hinaufbringen?} Der andere antwortet: \say{Ich kann hier jetzt nicht weg. Bring' ihn rüber in die Küche, die sollen ihn mit der Pizza im Speiseaufzug hinaufsenden.} Du weißt jetzt, dass es in der Küche einen Speiseaufzug gibt. Wenn du das nächste mal dort bist, subtrahiere 5 von ihrer Abschnittsnummer, um ihn zu inspizieren. Wenn du ausgetrunken hast, verlässt du, etwas angeheitert, die Bar (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{14}{ } \lorem
+		% flexible
+		\room{lobby} Du stehst in der von Marmorsäulen getragenen, pompösen Lobby des Plaza Hotels. Überall glänzt und glitzert es, die Kronleuchter suchen ihresgleichen. An der edel-hölzernen Rezeption bedient ein geschniegelter Concierge die Gäste, während das Gepäck im Rollwagen weggebracht wird. Ein Pianist beschallt den Raum mit zeitlosen Klassikern. Du hast die Möglichkeit, dich an der Rezeption anzustellen (\seeroom{frontdesk}) oder schnell in den Aufzug zu huschen (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{15}{ } \lorem
+	% CCC -3 !!!
+	\room{rope} Du würdest gerne das Seil an das Geländer der Terrasse binden, aber die zahlreichen feiernden Gäste machen dir das nicht leicht. Du musst das entweder ungesehen tun (\nipajincheckfail{Heimlichkeit\TN5}{\seeroom{ropeSuccess}}{\seeroom{ropeFail}}), oder du willst das nicht riskieren und verlässt die Terrasse über den Aufzug (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{16}{ } \lorem
+		% flexible
+		\room{barcola} Der Barkeeper nimmt mit deinen Gutschein mit einem \say{Mahalo} entgegen und gibt dir dein Getränk. Während du es schlürfst, fragt eine Kellnerin den Barkeeper: \say{Ich muss Tischtücher holen gehen. Wie lautet der neue Zahlencode?}. \say{6077} antwortet er. Nachdem du ausgetrunken hast, gehst du zurück zum Aufzug (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{17}{ } \lorem
+		% flexible
+		\room{kitchenElevatorFail} Du presst dich in den Speiseaufzug, aber du bist zu groß und schwer. Der Motor überhitzt und die Elektrik schmort durch! Gerade rechtzeitig kletterst du wieder heraus, als der Küchenchef ankommt: \say{Du Trampel! Sieh, was du getan hast! Jetzt geh' mir aus den Augen und bring die Pizza selbst nach oben! Ich muss den Hausmeister anrufen!} Er scheint anzunehmen, dass du weißt, wo du hin gehen sollst. Notiere dir die Pizza \say{Vier Jahreszeiten} und verlasse die Küche für das restliche Szenario, ehe jemand fragt, wer du eigentlich bist (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{18}{ } \lorem
+	% CCC +3 !!!
+	\room{roof} Du stehst auf einer Dachterrasse, von der aus man einen wundervollen Blick über den Hauptplatz und die Lichter der Stadt hat. Hier findet gerade eine wilde Feier statt, zahlreiche Gäste sind anwesend. An einer Seitenwand befindet sich eine Türe mit der Aufschrift \say{Wäscherei}. Sie ist mit einem Zahlenschloss gesichert -- wenn du die Kombination kennst, kannst du sie öffnen und beim Abschnitt ihrer Ziffernsumme weiterlesen. Der Aufzug ist nur einen kleinen Vorraum entfernt (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{19}{ } \lorem
+		% flexible
+		\room{frontdoor} Du befindest dich im, mit roten Teppichen ausgelegten und verspiegelten Eingangsbereich. Dass deine Pop-Ikone hier ist, hat sich herumgesprochen: Zahlreiche Fans haben sich versammelt und blockieren den Weg. Das Personal ist bemüht, Schaulustige aus dem Hotel zu halten. Solltest du bereits eine Zugangskarte haben, kannst du sie vorweisen und die Masse umgehen (\seeroom{lobby}). Falls nicht, musst du dich an den Fans und Türstehern vorbeizudrängeln (\nipajincheckfail{Elbogentaktik\TN4}{\seeroom{lobby}}{\HD-1}). Du kannst das so oft probieren wie nötig, oder jederzeit aufgeben und zum Hintereingang gehen (\seeroom{backdoor}).
 
-	\noindent
-	\lettrine{20}{ } \lorem
+		% flexible
+		\room{penthouse} Unglaublich, du hast es ins Penthouse geschafft! Dein Popstar sitzt gerade im übergroßen Wohnzimmer auf der Couch, als du angelaufen kommst, das Handy zückst und das Sensation-Selfie knipst, das dich grinsend und dein Idol etwas verschreckt zeigt. Dann stürmen auch schon vier Bodyguards ins Zimmer, werfen dich zu Boden und versuchen, dir das Handy abzunehmen. Aber zu spät: automatisch ins Internet hochgeladen macht sich dein Selfie auf, zum meistgesehenen Bild der nächsten Wochen zu werden. Gratulation, du hast das Szenario erfolgreich bestanden!
 
-	\noindent
-	\lettrine{21}{ } \lorem
+	% AAA -3 !!
+	\room{garage} Du stehst in einem grauen Parkdeck, das nach Abgasen riecht. An einer Seite befindet sich der Kontrollraum der Gebäudeüberwachung: ein Raum, in dem zwei Personen hinter Milchglasscheiben sitzen und vermutlich auf Überwachungsmonitore starren. Wenn du die Hoteluniform besitzt, kannst du sie hier einsetzen. Falls nicht, kannst du nur den Aufzug rufen (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{22}{ } \lorem
+	% room 20 !!!
+	\room{laundry} Du öffnest die Türe mit dem Zahlenschloss. Der hintere Teil des Daches wird zum Trocknen von Wäsche genutzt. Hier flattern Tischtücher, Leintücher aber auch Bedienstetenuniformen im Wind. Nachdem niemand hier ist, kannst du eine in der richtigen Größe an dich nehmen. In allen Abschnitten, in denen der Satz \say{Wenn du die Hoteluniform besitzt, kannst du sie hier einsetzen} steht, kannst du 3 zur Abschnittsnummer addieren und dort weiterlesen, um durch die Verkleidung einen Vorteil zu erlangen. Du kehrst zur Terrasse zurück (\seeroom{roof}).
 
-	\noindent
-	\lettrine{23}{ } \lorem
+	% BBB -5 !!!
+	\room{kitchenElevator} Du siehst dir den kleinen Speiseaufzug näher an. Eine Pizzaschachtel wartet darauf, ins Penthouse gesendet zu werden. Wenn du sehr mutig bist, kannst du versuchen, in den engen Speiseaufzug zu klettern und so nach oben zu gelangen (\nipajincheckfail{Kleinmachen\TN5}{\seeroom{penthouse}}{\seeroom{kitchenElevatorFail}}). Falls du das nicht riskieren möchtest, kannst du nur zurück zum Aufzug gehen (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{24}{ } \lorem
+	% AAA + 3 !!!
+	\room{securityKnock} Du klopfst und wirst in Verkleidung von der Security in die Überwachungszentrale gelassen. Du täuscht vor, hier neu zu sein und den Weg zur Lobby zu suchen. Während man dich auslacht und dir den Aufzug nahe legt, kannst du einen Blick auf die Monitore erhaschen. Einer zeigt die Dachterrasse, unter der ein Balkon der Penthouse Suite liegt. Solltest du dich später mit einem Seil auf der Dachterrasse aufhalten, subtrahiere 3 von ihrer Abschnittsnummer und lies dort weiter. Um die Wachen nicht zu verärgern, gehst du dann wieder hinaus ins Parkdeck (\seeroom{garage}).
 
-	\noindent
-	\lettrine{25}{ } \lorem
+	% EEE+3
+	\room{restaurant} Der Prunksaal des Hotels dient zeitgleich als Restaurant, ist um diese Uhrzeit allerdings bereits geschlosse. Mehrere Angestellte sind dabei, das morgige Frühstücksbuffet vorzubereiten. Wenn du die Hoteluniform besitzt, kannst du sie hier einsetzen, um am Personal vorbei in die Küche zu gelangen. Ansonsten bleibt dir nur der Aufzug (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{26}{ } \lorem
+		% flexible
+		\room{ropeFail} Es gelingt dir nicht, die neugierigen Gäste fern zu halten und das Seil ungesehen anzubringen. Eine ältere Dame stellt sich sogar neben dich und beäugt dich ganz genau. Dann beginnt sie ein Gespräch: \say{Furchtbar, ich sag es Ihnen! Mein Zimmer liegt unter der Terrasse und ich kann kein Auge zu tun. Dieser Lärm! Können Sie nicht etwas tun?} Du schlägst vor, das Zimmer zu tauschen und ihr begebt euch zur Rezeption. Der Consierge tauscht deine Zutrittskarte gegen eine vom siebten Stock. Eine Stunde später ist der Umzug abgeschlossen. Aber auch die Dachterrasse wird für die Nacht abgeriegelt und du kannst sie jetzt nicht mehr betreten. Du stehst nun wieder in der Lobby (\seeroom{lobby}).
 
-	\noindent
-	\lettrine{27}{ } \lorem
+		% flexible
+		\room{plaza} Du stehst am Hauptplatz direkt vor dem Plaza Hotel. Fünf Sterne hat es und erinnert an einen Palast: Die gelbe Fassade wird von Scheinwerfern erhellt, weiße Säulen und Figuren zieren die Wände. An der Einfahrt fährt eine Limousine nach der anderen vor. Du kannst versuchen, durch den Vordereingang (\seeroom{frontdoor}) oder den Hintereingang (\seeroom{backdoor}) ins Hotel zu gelangen.
 
-	\noindent
-	\lettrine{28}{ } \lorem
+	% BBB +5 !! EEE-3
+	\room{kitchen} Du stehst in der sauberen Großküche des Hotels. Dort ist sogar um Mitternacht noch Betrieb, da Gäste rund um die Uhr Essen ins Zimmer bestellen können. Wenn du aus einem bestimmten Grund hier bist, dann tu, was du nicht lassen kannst. Falls nicht, kannst du durch das Restaurant zurück zum Aufzug gehen (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{29}{ } \lorem
+		% flexible
+		\room{penthouseDoor} Vier, den Beulen an ihren Jacketts nach bewaffnete Bodyguards bewachen die Doppelflügeltüre der Penthouse Suite. \say{Sind Sie der Pizzalieferant?} fragt dich einer. Wenn du die Pizza dabei hast, lies den Abschnitt mit der Nummer in ihrem Namen. Falls nicht, kannst du nur verneinen und zum Aufzug zurückgehen (\seeroom{elevator}).
 
-	\noindent
-	\lettrine{30}{ } \lorem
+		% flexible
+		\room{gasstation} Um diese Zeit ist bei der kleinen Tankstelle neben dem Hotel nicht mehr viel Betrieb. Der Verkäufer im Tank-Shop beachtet dich kaum, als du durch die Regale schlenderst. Nur ein Gegenstand fällt dir ins Auge: ein Abschleppseil für €24. Du kannst hier aber nur bar bezahlen. Wenn du die Tankstelle verlässt, stehst du wieder am Hauptplatz vor dem Hotel (\seeroom{plaza}).
 
-	\noindent
-	\lettrine{31}{ } \lorem
-
-	\noindent
-	\lettrine{32}{ } \lorem
-
-	\noindent
-	\lettrine{33}{ } \lorem
-
-	\noindent
-	\lettrine{34}{ } \lorem
+		% flexible
+		\room{elevator} Der hochmoderne Aufzug passt nicht so recht zum gediegenen Ambiente des Hotels: Schwarz-weiße Granitmuster und Edelstahl bestimmen das Bild. Ein Kartenleser wartet auf eine Zugangskarte, um in die oberen Stockwerke zu fahren. Wenn du eine hast, lies beim Abschnitt mit der aufgedruckten Nummer nach, um in den entsprechenden Stock zu fahren. Folgende Orte sind auch ohne Karte zu erreichen: die Lobby (\seeroom{lobby}), die Garage (\seeroom{garage}), die Hotelbar (\seeroom{bar}), das Restaurant (\seeroom{restaurant}) und die Dachterasse (\seeroom{roof}).
 
 }
