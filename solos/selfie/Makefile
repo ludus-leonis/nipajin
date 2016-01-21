@@ -1,12 +1,13 @@
-# (c) 2009-2015 by Markus Leupold-Löwenthal
+# (c) 2009-2016 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 PDF_NAME="NIPAJIN-Solos-Selfie-Quest"
 TEX_NAME="solo"
+VERSION_DE = $(shell grep Version}{ selfie.de.tex | sed -e "s/.*{//;s/}.*//")
 
 default: de
 
-all: de en
+all: de
 
 setup:
 	mkdir -p out
@@ -15,9 +16,12 @@ setup:
 	ln -sf ../../solo.sty out/
 
 de: setup
-	ln -sf ../content.de.tex out/solo.tex
-	ln -sf ../../content.de.tex out/content.tex
-	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-de-`grep Version}{ content.de.tex | sed -e "s/.*{//;s/}.*//"` -output-directory out ${TEX_NAME}
+	ln -sf ../selfie.de.tex out/selfie.tex
+	ln -sf ../../content.de.tex out/solos.tex
+	xelatex \
+		-output-driver="xdvipdfmx -V 5 -z 9" \
+		-jobname=${PDF_NAME}-de-${VERSION_DE} \
+		-output-directory out ${TEX_NAME}
 
 graph: setup
 	dot -Tsvg plot.gv > out/plot.svg

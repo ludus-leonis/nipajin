@@ -98,12 +98,20 @@ shot-xmas-burglars:
 
 shots: shot-androids shot-archaea-12 shot-caribs shot-clowns shot-hanami shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-wild-west shot-xmas-burglars
 
+solo-selfie:
+	cd ../solo/selfie ; make clean
+	cd ../solo/selfie ; make all > /dev/null
+	cd ../solo/selfie ; ! make all | grep undefined
+	./checkpdf.sh ../solo/selfie/out/*-de*pdf 4
+
+solos: solo-selfie
+
 starter:
 	cd ../starter ; make clean
 	cd ../starter ; make all > /dev/null
 	cd ../starter ; ! make all | grep undefined
 	./checkpdf.sh ../starter/out/*-de*pdf 15
 
-tests: core shots starter
+tests: core shots solos starter
 
 default: tests

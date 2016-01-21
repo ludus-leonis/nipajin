@@ -1,4 +1,4 @@
-% (c) 2009-2015 by Markus Leupold-Löwenthal
+% (c) 2009-2016 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 \documentclass{article}
@@ -13,16 +13,16 @@
 \newcommand{\soloSummary}{}
 \newcommand{\soloURL}{}
 
-\newcommand{\selfiesVersion}{v0.0}
-\newcommand{\selfiesCredits}{}
-\newcommand{\selfiesHeadline}{}
-\newcommand{\selfiesToc}{}
-\newcommand{\selfiesPlayers}{}
-\newcommand{\selfiesText}{}
+\newcommand{\selfieVersion}{v0.0}
+\newcommand{\selfieCredits}{}
+\newcommand{\selfieHeadline}{}
+\newcommand{\selfieToc}{}
+\newcommand{\selfiePlayers}{}
+\newcommand{\selfieText}{}
 
 % Makefile will map the current language into those files
-\input{content.tex}
-\input{solo.tex}
+\input{selfie.tex}
+\input{solos.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -34,16 +34,16 @@
 
 % ### BANNER ################################################################
 
-\solosbanner{\soloCopyright}{\selfiesVersion}{\selfiesCredits}{\soloFineprint}{\soloSummary}
+\solosbanner{\soloCopyright}{\selfieVersion}{\selfieCredits}{\soloFineprint}{\soloSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\selfiesHeadline}}{\selfiesToc}
+\mybanner{\MakeUppercase{\selfieHeadline}}{\selfieToc}
 
 \begin{multicols}{2}%
-\noindent\selfiesPlayers
+\noindent\selfiePlayers
 
-\selfiesText
+\selfieText
 \end{multicols}
 
 \end{document}

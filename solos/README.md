@@ -16,6 +16,6 @@ In jedem Unterverzeichnis finden sich alle nötigen Dateien für jeweils ein Sol
 solo-name$ make de
 ```
 
-das deutsche PDF un in einen `out` Ordner gelegt.
+das deutsche PDF in einen `out` Ordner.
 
 Welche anderen Sprachen bereits verfügbar sind, ist im `Makefile` ersichtlich.
