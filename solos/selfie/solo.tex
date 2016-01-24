@@ -1,28 +1,28 @@
-% (c) 2009-2015 by Markus Leupold-Löwenthal
+% (c) 2009-2016 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 \documentclass{article}
 
 \newcommand{\fontsearchpath}{../../fonts}
-\usepackage{shot}
+\usepackage{solo}
 
 % each language file has to re-define the following items:
 
-\newcommand{\shotCopyright}{}
-\newcommand{\shotFineprint}{}
-\newcommand{\shotSummary}{}
-\newcommand{\shotURL}{}
+\newcommand{\soloCopyright}{}
+\newcommand{\soloFineprint}{}
+\newcommand{\soloSummary}{}
+\newcommand{\soloURL}{}
 
-\newcommand{\wildwestVersion}{v0.0}
-\newcommand{\wildwestCredits}{}
-\newcommand{\wildwestHeadline}{}
-\newcommand{\wildwestToc}{}
-\newcommand{\wildwestPlayers}{}
-\newcommand{\wildwestText}{}
+\newcommand{\selfieVersion}{v0.0}
+\newcommand{\selfieCredits}{}
+\newcommand{\selfieHeadline}{}
+\newcommand{\selfieToc}{}
+\newcommand{\selfiePlayers}{}
+\newcommand{\selfieText}{}
 
 % Makefile will map the current language into those files
-\input{shot.tex}
-\input{content.tex}
+\input{selfie.tex}
+\input{solos.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -34,16 +34,16 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\shotCopyright}{\wildwestVersion}{\wildwestCredits}{\shotFineprint}{\shotSummary}
+\solosbanner{\soloCopyright}{\selfieVersion}{\selfieCredits}{\soloFineprint}{\soloSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\wildwestHeadline}}{\wildwestToc}
+\mybanner{\MakeUppercase{\selfieHeadline}}{\selfieToc}
 
 \begin{multicols}{2}%
-\noindent\wildwestPlayers
+\noindent\selfiePlayers
 
-\wildwestText
+\selfieText
 \end{multicols}
 
 \end{document}

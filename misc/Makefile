@@ -83,11 +83,11 @@ shot-wet-dwarves:
 	./checkpdf.sh ../shots/wet-dwarves/out/*-de*pdf 2
 	./checkpdf.sh ../shots/wet-dwarves/out/*-en*pdf 2
 
-shot-wild-west:
-	cd ../shots/wild-west ; make clean
-	cd ../shots/wild-west ; make all > /dev/null
-	cd ../shots/wild-west ; ! make all | grep undefined
-	./checkpdf.sh ../shots/wild-west/out/*-de*pdf 2
+shot-wildwest:
+	cd ../shots/wildwest ; make clean
+	cd ../shots/wildwest ; make all > /dev/null
+	cd ../shots/wildwest ; ! make all | grep undefined
+	./checkpdf.sh ../shots/wildwest/out/*-de*pdf 2
 
 shot-xmas-burglars:
 	cd ../shots/xmas-burglars ; make clean
@@ -96,7 +96,15 @@ shot-xmas-burglars:
 	./checkpdf.sh ../shots/xmas-burglars/out/*-de*pdf 2
 	./checkpdf.sh ../shots/xmas-burglars/out/*-en*pdf 2
 
-shots: shot-androids shot-archaea-12 shot-caribs shot-clowns shot-hanami shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-wild-west shot-xmas-burglars
+shots: shot-androids shot-archaea-12 shot-caribs shot-clowns shot-hanami shot-last-road shot-lucky-irish shot-mean-celebrities shot-metashot shot-nottingham shot-street-racer shot-wet-dwarves shot-wildwest shot-xmas-burglars
+
+solo-selfie:
+	cd ../solos/selfie ; make clean
+	cd ../solos/selfie ; make all > /dev/null
+	cd ../solos/selfie ; ! make all | grep undefined
+	./checkpdf.sh ../solos/selfie/out/*-de*pdf 4
+
+solos: solo-selfie
 
 starter:
 	cd ../starter ; make clean
@@ -104,6 +112,6 @@ starter:
 	cd ../starter ; ! make all | grep undefined
 	./checkpdf.sh ../starter/out/*-de*pdf 15
 
-tests: core shots starter
+tests: core shots solos starter
 
 default: tests

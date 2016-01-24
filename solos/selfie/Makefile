@@ -1,9 +1,9 @@
-# (c) 2009-2015 by Markus Leupold-Löwenthal
+# (c) 2009-2016 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
-PDF_NAME="NIPAJIN-Shots-Metashot"
-TEX_NAME="shot"
-VERSION_DE=-de-`grep Version}{ metashot.de.tex | sed -e "s/.*{//;s/}.*//"`
+PDF_NAME="NIPAJIN-Solos-Selfie-Quest"
+TEX_NAME="solo"
+VERSION_DE = $(shell grep Version}{ selfie.de.tex | sed -e "s/.*{//;s/}.*//")
 
 default: de
 
@@ -13,15 +13,18 @@ setup:
 	mkdir -p out
 	ln -sf ../../../core/nipajin.sty out/
 	ln -sf ../../../core/ocgx.sty out/
-	ln -sf ../../shot.sty out/
+	ln -sf ../../solo.sty out/
 
 de: setup
-	ln -sf ../metashot.de.tex out/metashot.tex
-	ln -sf ../../content.de.tex out/shots.tex
+	ln -sf ../selfie.de.tex out/selfie.tex
+	ln -sf ../../content.de.tex out/solos.tex
 	xelatex \
 		-output-driver="xdvipdfmx -V 5 -z 9" \
 		-jobname=${PDF_NAME}-de-${VERSION_DE} \
 		-output-directory out ${TEX_NAME}
+
+graph: setup
+	dot -Tsvg plot.gv > out/plot.svg
 
 clean:
 	rm -rf out/*

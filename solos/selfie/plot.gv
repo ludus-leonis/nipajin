@@ -1,0 +1,78 @@
+digraph plot {
+	// &#9829; &#9830; &#9824; &#9827;
+
+	rankdir=TD;
+	node [shape=none]
+
+	Start [shape=oval]
+	Start -> Hotel
+
+//	Blumenshop
+//	Blumenshop -> Hotel
+
+	Tankstelle [ label="Tankstelle\nSeil&#9313; €25\nWhiskey&#9314; €40" ]
+	Tankstelle -> Hotel
+
+	Hotel [ label="vor\nHotel", color=blue ]
+	Hotel -> Vordereingang
+	Hotel -> Hintereingang
+
+	Vordereingang [ label="Vorder-\neingang" ]
+	Vordereingang -> Lobby [color=red]
+	Vordereingang -> Hintereingang [color=gray]
+
+	Hintereingang [ label="Hinter-\neingang" ]
+	Hintereingang -> Garage [color=red]
+	Hintereingang -> Vordereingang [color=gray]
+
+	Garage
+	Garage -> Lift
+	Garage -> Security
+
+	Security [ label="Security" ]
+	Security -> Garage
+	Security -> Tankstelle  [color=gray]
+
+	Lobby
+	Lobby -> Portier
+	Lobby -> Lift
+
+	Portier
+	Portier -> Lobby
+	Portier -> Portierinfo [color=red]
+
+	Portierinfo  [label="Portierinfo\nKeycard&#9315;"]
+
+	Lift [ color=blue ]
+	Lift -> Lobby
+	Lift -> Bar
+	Lift -> Zimmer
+	Lift -> Dach [label="&#9312;" color=blue]
+	Lift -> Etage [color=blue label="&#9315;"]
+
+	Zimmer [label="Stock-7-Zimmer"]
+	Zimmer -> Lift
+
+	Etage -> Vorzimmer [color=blue label="&#9314;"]
+
+	Dach [ label="Dach\nUniform&#9316;" ]
+	Dach -> Terasse [color=blue label="&#9313;"]
+
+	Bar
+	Bar -> Kellner [label="€25"]
+	Bar -> Drummer [label="€10"]
+
+	Kellner [label="Kellner&#9312;"]
+
+	// --------------------------------
+
+	Terasse -> Vorzimmer
+	Vorzimmer -> Terasse
+	Vorzimmer -> Wohnzimmer
+
+	{rank=same ; Vordereingang; Hintereingang; }
+	{rank=same ; Lift; Portier; }
+	{rank=same ; Garage; Security; }
+	{rank=same ; Terasse ; Vorzimmer ; }
+
+}

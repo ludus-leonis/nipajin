@@ -13,15 +13,15 @@
 \newcommand{\shotSummary}{}
 \newcommand{\shotURL}{}
 
-\newcommand{\metashotVersion}{v0.0}
-\newcommand{\metashotCredits}{}
-\newcommand{\metashotHeadline}{}
-\newcommand{\metashotToc}{}
-\newcommand{\metashotPlayers}{}
-\newcommand{\metashotText}{}
+\newcommand{\wildwestVersion}{v0.0}
+\newcommand{\wildwestCredits}{}
+\newcommand{\wildwestHeadline}{}
+\newcommand{\wildwestToc}{}
+\newcommand{\wildwestPlayers}{}
+\newcommand{\wildwestText}{}
 
 % Makefile will map the current language into those files
-\input{metashot.tex}
+\input{wildwest.tex}
 \input{shots.tex}
 
 % ###########################################################################
@@ -34,16 +34,15 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\shotCopyright}{\metashotVersion}{\metashotCredits}{\shotFineprint}{\shotSummary}
+\shotsbanner{\shotCopyright}{\wildwestVersion}{\wildwestCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\metashotHeadline}}{\metashotToc}
-
+\mybanner{\MakeUppercase{\wildwestHeadline}}{\wildwestToc}
 \begin{multicols}{2}%
-\noindent\metashotPlayers
+\noindent\wildwestPlayers
 
-\metashotText
+\wildwestText
 \end{multicols}
 
 \end{document}
