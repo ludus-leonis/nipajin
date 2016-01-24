@@ -13,16 +13,16 @@
 \newcommand{\shotSummary}{}
 \newcommand{\shotURL}{}
 
-\newcommand{\robinVersion}{v0.0}
-\newcommand{\robinCredits}{}
-\newcommand{\robinHeadline}{}
-\newcommand{\robinToc}{}
-\newcommand{\robinPlayers}{}
-\newcommand{\robinText}{}
+\newcommand{\nottinghamVersion}{v0.0}
+\newcommand{\nottinghamCredits}{}
+\newcommand{\nottinghamHeadline}{}
+\newcommand{\nottinghamToc}{}
+\newcommand{\nottinghamPlayers}{}
+\newcommand{\nottinghamText}{}
 
 % Makefile will map the current language into those files
-\input{content.tex}
-\input{shot.tex}
+\input{nottingham.tex}
+\input{shots.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -34,16 +34,16 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\shotCopyright}{\robinVersion}{\robinCredits}{\shotFineprint}{\shotSummary}
+\shotsbanner{\shotCopyright}{\nottinghamVersion}{\nottinghamCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\robinHeadline}}{\robinToc}
+\mybanner{\MakeUppercase{\nottinghamHeadline}}{\nottinghamToc}
 
 \begin{multicols}{2}%
-\noindent\robinPlayers
+\noindent\nottinghamPlayers
 
-\robinText
+\nottinghamText
 \end{multicols}
 
 \end{document}
