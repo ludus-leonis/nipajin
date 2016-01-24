@@ -13,16 +13,16 @@
 \newcommand{\shotSummary}{}
 \newcommand{\shotURL}{}
 
-\newcommand{\metaVersion}{v0.0}
-\newcommand{\metaCredits}{}
-\newcommand{\metaHeadline}{}
-\newcommand{\metaToc}{}
-\newcommand{\metaPlayers}{}
-\newcommand{\metaText}{}
+\newcommand{\metashotVersion}{v0.0}
+\newcommand{\metashotCredits}{}
+\newcommand{\metashotHeadline}{}
+\newcommand{\metashotToc}{}
+\newcommand{\metashotPlayers}{}
+\newcommand{\metashotText}{}
 
 % Makefile will map the current language into those files
-\input{content.tex}
-\input{shot.tex}
+\input{metashot.tex}
+\input{shots.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -34,16 +34,16 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\shotCopyright}{\metaVersion}{\metaCredits}{\shotFineprint}{\shotSummary}
+\shotsbanner{\shotCopyright}{\metashotVersion}{\metashotCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\metaHeadline}}{\metaToc}
+\mybanner{\MakeUppercase{\metashotHeadline}}{\metashotToc}
 
 \begin{multicols}{2}%
-\noindent\metaPlayers
+\noindent\metashotPlayers
 
-\metaText
+\metashotText
 \end{multicols}
 
 \end{document}
