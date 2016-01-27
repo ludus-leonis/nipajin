@@ -7,8 +7,9 @@
 \ProvidesFile{solo.sty}
 \ProvidesPackage{solo}
 
-\usepackage{nipajin} % this style file is the basic red layout
+\usepackage{nipajin}  % this style file is the basic red layout
 \usepackage{lettrine} % for large numbers
+\usepackage{pifont}   % for some dingbats
 
 % ------------------------------------------------------------------------------
 
@@ -63,3 +64,19 @@
 	\end{multicols}
 	\vspace*{2mm}
 }
+
+% Add a section, aka. room, to the solo. Will not show up in the TOC.
+% 1 - (internal) name of the label
+\newcommand\room[1]{%
+  \medskip\refstepcounter{section}%
+  %\addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
+  \sectionmark{#1}\zlabel{#1}\noindent\lettrine{\thesection}{\hspace*{0.5em}}}
+
+% Reference another section, aka. room, with a small arrow.
+\newcommand\seeroom[1]{{\ding{231}\zref{#1}}}
+
+% Unified way to ask the player: do X, if successfull do Y
+\newcommand\nipajincheck[2]{\makebox{#1}: \makebox{\ding{51}\hspace{1pt}#2}}
+
+% Unified way to ask the player: do X, if successfull do Y, else do Z
+\newcommand\nipajincheckfail[3]{\makebox{#1}: \makebox{\ding{51}\hspace{1pt}#2}, \makebox{\ding{55}\hspace{1pt}#3}}

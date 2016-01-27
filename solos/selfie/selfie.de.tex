@@ -23,18 +23,6 @@
 	pdfsubject={Ein NIP'AJIN Solo-Szenario rund um das Selfie des Jahres.},
 }
 
-\newcommand\room[1]{%
-  \medskip\refstepcounter{section}%
-  \addcontentsline{toc}{section}{\protect\numberline{\thesection}#1}%
-  \sectionmark{#1}\zlabel{#1}\noindent\lettrine{\thesection}{\hspace*{0.5em}}}
-
-\newcommand\seeroom[1]{{\ding{231}\zref{#1}}}
-
-\newcommand\nipajincheck[2]{\makebox{#1}: \makebox{\ding{51}\hspace{1pt}#2}}
-\newcommand\nipajincheckfail[3]{\makebox{#1}: \makebox{\ding{51}\hspace{1pt}#2}, \makebox{\ding{55}\hspace{1pt}#3}}
-
-\usepackage{pifont}
-
 % --- fine print ---------------------------------------------------------------
 
 \renewcommand{\selfieCredits}{
@@ -58,7 +46,7 @@
 	}
 
 	\medskip\noindent
-	Hallo! Ich bin dein Spielleiter und werde dich durch ein Solo-Szenario führen. Ich setze voraus, dass du die NIP'AJIN Regeln bereits kennst. Du spielst einen ganz normalen Staatsbürger mit dem W6 als \HD. Wirst du überwunden, gibst du auf und fährst heim. Auf Vor- und Nachteile deines Charakters verzichten wir gänzlich. Notiere dir als Ausrüstung dein Handy, eine Kreditkarte und €50 in bar. Dein Ausflug beginnt kurz vor Mitternacht bei Abschnitt 1.
+	Hallo! Ich bin dein Spielleiter und werde dich durch ein Solo-Szenario führen. Ich setze voraus, dass du die NIP'AJIN Regeln bereits kennst. Du spielst einen ganz normalen Staatsbürger mit dem W6 als \HD. Wirst du überwunden, gibst du auf und fährst heim. Auf Vor- und Nachteile deines Charakters verzichten wir gänzlich. Notiere dir als Ausrüstung dein Handy, deine Kreditkarte und €50 in bar. Dein Ausflug beginnt kurz vor Mitternacht beim Abschnitt mit der Nummer 1.
 
 	Der Verlauf des Szenarios hängt von deinen Entscheidungen und manchmal vom Würfelglück ab. Lies daher nur die Abschnitte, auf die du verwiesen wirst. Steht im Text \makebox{\say{\nipajincheckfail{X}{\ding{231}Y}{Z},}} befolgst du erst Anweisung X -- zumeist ist das ein Wurf. Bei einem Erfolg lies weiter bei \ding{231}Y, bei einem Fehlschlag befolge Anweisung Z, wenn eine angegeben ist.
 
