@@ -1,10 +1,13 @@
 % (c) 2009-2015 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
-\renewcommand{\nipajinVersion}{v1.7.2}
+\renewcommand{\nipajinVersion}{v1.8}
 
 % CHANGELOG-de
 %
+% 1.8
+%   - Attacken gelingen bei Gleichstand
+%   - minimum-Zielwert bei misslungener Verteidigung im Konflikt
 % 1.7.2
 %   - kleines Lektorat
 % 1.7.1
@@ -148,7 +151,7 @@
 
 		Die gewählten \AD\ der Spieler geben ihre \keyword{Reihenfolge} vor. Würfel mit weniger Seiten handeln zuerst (\zB\ W6 vor W8). Bei Gleichstand entscheidet das Los.
 
-		Für einen erfolgreichen Angriff muss der \AD\ des Angreifers ein höheres Ergebnis erzielen als der \RD\ des Gegners, eine gewürfelte Eins ist immer ein Fehlschlag. Bei einem erfolgreichen Angriff erleidet der Reagierende eine \keyword{Wunde} und reduziert den \HD\ um 1. Gewaltlose Aktionen helfen ebenfalls, den Widerstand der Gegner zu brechen: Sie verursachen \keyword{Traumata}, die durch Spielsteine o.\,Ä. symbolisiert werden.
+		Bei einem Angriff würfelt der Verteidiger zuerst und gibt mit seinem \RD\ einen \TN\ vor. Bei einem automatischen Fehlschlag, oder falls der Verteidiger diese Runde keinen \RD\ hat, ist er 0, sonst mindestens 1. Der Angreifer tritt nun mit seinem \AD\ gegen diesen \TN\ an. Bei einem Erfolg erleidet der Verteidiger eine \keyword{Wunde} und reduziert den \HD\ um 1. Gewaltlose Aktionen helfen ebenfalls, den Widerstand der Gegner zu brechen: Sie verursachen \keyword{Traumata}, die durch Spielsteine o.\,Ä. symbolisiert werden.
 
 		Vernachlässigt ein Spieler die Verteidigung und wählt in einer Runde keinen \RD, kann er mit einer \keyword{Mehrfachaktion} Würfe im Ausmaß bis zum halben \AD\ ansagen (zwei beim W4, drei beim W6,~\ldots). Dazu zählen \zB\ zweihändige Angriffe, Doppelschüsse, Flächenangriffe wie Rundumschläge oder Feuerbälle, das Einschüchtern von Gruppen oder Abfolgen sonstiger Aktionen. \emph{Alle} Aktionen werden pro Zusatzaktion oder -ziel um \makebox{-2} modifiziert. Auf jede Aktion darf einzeln reagiert werden.
 
