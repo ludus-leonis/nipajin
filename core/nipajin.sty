@@ -236,6 +236,7 @@
 
 \newcommand{\bgbox}{}
 \newcommand{\bgboxinjectonce}{}
+\newcommand{\bgboxinjectalways}{}
 \newcommand{\bgboxverticalheight}{2mm}
 \newcommand{\bgboxtopcolor}{primary}
 \newcommand{\bgboxtopheight}{\bgboxverticalheight}
@@ -277,7 +278,7 @@
 					yshift=-2.0\paperheight,
 					yshift=\bgboxbottomheight
 				] (0,0) rectangle (1.5\paperwidth,1.5\paperheight);% top box
-			\end{tikzpicture}\bgboxinjectonce%
+			\end{tikzpicture}\bgboxinjectonce\bgboxinjectalways%
 			\bgbox%
 			\grenewcommand{\bgboxtopcolor}{primary}%
 			\grenewcommand{\bgboxtopheight}{\bgboxverticalheight}%
