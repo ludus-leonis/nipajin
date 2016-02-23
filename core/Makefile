@@ -6,7 +6,7 @@ TEX_NAME="nipajin"
 
 default: de
 
-all: de pl en
+all: de pl en es
 
 setup:
 	mkdir -p out
