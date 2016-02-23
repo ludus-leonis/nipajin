@@ -89,9 +89,11 @@
 % --- pdf tweaks -------------------------------------------------------
 
 % fix a transparent png rendering bug
+\AddToShipoutPicture{%
 \makeatletter%
 \special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
 \makeatother%
+}
 
 % some usefull default pdf settings
 \usepackage{hyperref}
