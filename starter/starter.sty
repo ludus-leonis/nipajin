@@ -1,4 +1,4 @@
-% (c) 2009-2015 by Markus Leupold-Löwenthal
+% (c) 2009-2016 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 \ProvidesFile{starter.sty}
@@ -68,8 +68,7 @@
 \usepackage{sectsty}
 \usepackage[abs]{overpic}
 
-\newcommand{\chapterfontsize}{\fontsize{20pt}{18pt plus 6pt minus 6pt}}
-\chapterfont{\color{primary}\sc\fffancy\chapterfontsize\selectfont\sectionrule{0ex}{0pt}{-1ex}{2pt}}
+\chapterfont{\color{primary}\sc\fffancy\fontsize{20pt}{18pt plus 6pt minus 6pt}\selectfont\sectionrule{0ex}{0pt}{-1ex}{2pt}}
 \renewcommand{\sectionfontsize}{\fontsize{12pt}{12pt plus 6pt minus 6pt}}
 \sectionfont{\color{primary}\raggedleft\fffancy\sectionfontsize\selectfont}
 \renewcommand{\subsectionfontsize}{\fontsize{10pt}{10pt}}
@@ -81,7 +80,7 @@
 \noindent\hspace*{-11.6mm}
 \begin{overpic}[width=151mm]%
 	{images/headline.png}
-	\put(0,11.1){\parbox{\textwidth}{\hspace*{17mm}\bf\color{primary}\fffancy\chapterfontsize\selectfont\centering#1}}
+	\put(0,11.1){\parbox{\textwidth}{\hspace*{17mm}\bf\color{primary}\fffancy\fontsize{20pt}{18pt plus 6pt minus 6pt}\selectfont\centering#1}}
 \end{overpic}
 }\vspace*{-9mm}}
 

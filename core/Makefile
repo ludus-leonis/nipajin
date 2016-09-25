@@ -1,4 +1,4 @@
-# (c) 2009-2015 by Markus Leupold-Löwenthal
+# (c) 2009-2016 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 PDF_NAME="NIPAJIN"
@@ -6,7 +6,7 @@ TEX_NAME="nipajin"
 
 default: de
 
-all: de pl en
+all: de pl en es
 
 setup:
 	mkdir -p out

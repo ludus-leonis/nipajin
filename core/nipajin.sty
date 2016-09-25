@@ -1,4 +1,4 @@
-% (c) 2009-2015 by Markus Leupold-Löwenthal
+% (c) 2009-2016 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 \ProvidesFile{nipajin.sty}
@@ -55,23 +55,22 @@
 \setlength{\parindent}{1em}
 \setlength{\parskip}{0mm}
 
-\clubpenalty = 10000
-\widowpenalty = 10000
-\displaywidowpenalty = 10000
-\finalhyphendemerits = 10000
-\brokenpenalty = 7500
-\pretolerance 2500
-\tolerance 500
-\hyphenpenalty 250
-\exhyphenpenalty 100
-\doublehyphendemerits 7500
-\finalhyphendemerits 7500
-\lefthyphenmin 3
-\righthyphenmin 3
-\looseness 1
-
-\multicolpretolerance 2500
-\multicoltolerance 500
+\clubpenalty=10000
+\widowpenalty=10000
+\displaywidowpenalty=10000
+\finalhyphendemerits=10000
+\brokenpenalty=7500
+\pretolerance=2500
+\tolerance=500
+\hyphenpenalty=225
+\exhyphenpenalty=100
+\doublehyphendemerits=7500
+\finalhyphendemerits=7500
+\lefthyphenmin=3
+\righthyphenmin=3
+\looseness=1
+\multicolpretolerance=2500
+\multicoltolerance=500
 \setcounter{collectmore}{-1}
 
 \usepackage[final]{microtype}
@@ -90,9 +89,11 @@
 % --- pdf tweaks -------------------------------------------------------
 
 % fix a transparent png rendering bug
+\AddToShipoutPicture{%
 \makeatletter%
 \special{pdf: put @thispage <</Group << /S /Transparency /I true /CS /DeviceRGB>> >>}%
 \makeatother%
+}
 
 % some usefull default pdf settings
 \usepackage{hyperref}
@@ -153,12 +154,19 @@
 ]{NIPAJIN-Dingbats}
 
 \newcommand{\TN}{{\ffdings \textit{t}}}
-\newcommand{\book}{{\ffdings \textup{p}}}
 \newcommand{\HD}{{\ffdings \textbf{h}}}
 \newcommand{\AD}{{\ffdings \textbf{f}}}
 \newcommand{\RD}{{\ffdings \textbf{s}}}
 \newcommand{\PT}{{\ffdings \textup{b}}}
 \newcommand{\FT}{{\ffdings \textup{a}}}
+
+\newcommand{\dTen}{{\ffdings \textup{4}}}
+\newcommand{\weight}{{\ffdings \textup{w}}}
+\newcommand{\book}{{\ffdings \textup{p}}}
+\newcommand{\chat}{{\ffdings \textup{C}}}
+\newcommand{\gears}{{\ffdings \textup{G}}}
+\newcommand{\suit}{{\ffdings \textup{S}}}
+\newcommand{\tools}{{\ffdings \textup{T}}}
 
 \newcommand{\nipajin}{\href{http://ludus-leonis.com/nipajin}{\makebox{NIP'AJIN}}}
 \newcommand{\ludusleonis}{\href{http://ludus-leonis.com/}{\makebox{LUDUS} \makebox{LEONIS}}}
@@ -237,6 +245,7 @@
 
 \newcommand{\bgbox}{}
 \newcommand{\bgboxinjectonce}{}
+\newcommand{\bgboxinjectalways}{}
 \newcommand{\bgboxverticalheight}{2mm}
 \newcommand{\bgboxtopcolor}{primary}
 \newcommand{\bgboxtopheight}{\bgboxverticalheight}
@@ -278,7 +287,7 @@
 					yshift=-2.0\paperheight,
 					yshift=\bgboxbottomheight
 				] (0,0) rectangle (1.5\paperwidth,1.5\paperheight);% top box
-			\end{tikzpicture}\bgboxinjectonce%
+			\end{tikzpicture}\bgboxinjectonce\bgboxinjectalways%
 			\bgbox%
 			\grenewcommand{\bgboxtopcolor}{primary}%
 			\grenewcommand{\bgboxtopheight}{\bgboxverticalheight}%
@@ -294,9 +303,9 @@
 % --- lists ------------------------------------------------------------
 
 \newcommand{\mylist}[1]{%
-    \begin{list}{
-        \color{primary}\textbullet}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
-    \end{list}
+	\begin{list}{
+		\color{primary}\dTen}{\leftmargin=1.5em\itemsep=3pt\parsep=0pt}#1
+	\end{list}
 }
 
 % --- headlindes -------------------------------------------------------
@@ -306,6 +315,8 @@
 \setcounter{secnumdepth}{-1} % no headline numbers
 \setcounter{figure}{-1}      % no figure numbers
 
+\newcommand{\partfontsize}{\fontsize{24pt}{20pt}}
+\newcommand{\chapterfontsize}{\fontsize{32pt}{28pt plus 6pt minus 6pt}}
 \newcommand{\sectionfontsize}{\fontsize{15pt}{10pt plus 12pt minus 6pt}}
 \newcommand{\subsectionfontsize}{\fontsize{10pt}{10pt}}
 
