@@ -1,0 +1,230 @@
+% (c) 2009-2017 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+
+\renewcommand{\nipajinVersion}{v1.8.1}
+
+% CHANGELOG-fr
+%   - 22.04.2017 : Traduction en français
+
+% --- language dependent typography stuff ------------------------------
+
+\renewcommand{\say}[1]{«~\textit{#1}~»}
+\setdefaultlanguage[]{french}
+
+\renewcommand{\fsNormal}{\fontsize{9.75pt}{11.25pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.5pt}{9.5pt plus 0.1pt minus 0pt}}
+
+% --- pdf metadata & stuff ---------------------------------------------
+
+\hypersetup{
+	pdftitle={NIP'AJIN},
+	pdfauthor={Markus Leupold-Loewenthal},
+	pdfsubject={Un système de jeu de rôle allégé et libre d'usage.},
+	pdfkeywords={nipajin, nip'ajin, jeu de rôle, jeux de rôle, système, libre, RPG}
+}
+
+\renewcommand{\backgroundlayername}{Hintergrund}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\nipajinCopyright}{\copyright\ 2009--2017, Markus Leupold-Löwenthal}
+\renewcommand{\nipajinCredits}{La traduction : Alain Curato}
+\renewcommand{\nipajinFineprint}{(Logos et marque déposés.)}
+\renewcommand{\nipajinURL}{http://ludus-leonis.com/fr/}
+
+% --- language macros --------------------------------------------------
+
+\newcommand{\pe}{p.~ex.}
+
+% --- main texts -------------------------------------------------------
+
+\renewcommand{\nipajinSummary}{%
+	Un système de jeu de rôle simple et universel, par \ludusleonis.
+
+	\nipajin\ Conçu en vue d'aventures one-shot et de campagnes courtes, ce jeu se prononce \say{nip-atschin} - acronyme de \say{personne n'est parfait, amais chacun peut contribuer}. Il vise à permettre aux personnages de se partager le premier rôle, sans les enfermer dans un carcan de règles.
+}
+
+\newcommand{\nipajinTableModifier}{%
+	\tabelle{X c}{
+		\thead{L'historique indique...} & \thead{+/-} \\
+	}{
+		claire défaillance                       & -4 \\
+		novice, maladroit                        & -2 \\
+		quelque peu rouillé                      & -1 \\
+		moyen sans plus                          &  0 \\
+		amateur, assez doué                      & +1 \\
+		professionnel, routinier, expérimenté    & +2 \\
+		vétéran, expérience mesurée en décennies & +4 \\
+	}
+}
+
+\newcommand{\nipajinTableTargets}{%
+	\tabelle{l c X}{
+		\thead{Difficulté} & \thead{\TN} & \thead{Exemple} \\
+	}{
+		facile               & 2 & -- \\
+		bonnes conditions    & 3 & bons outils \\
+		moyen                & 4 & -- \\
+		mauvaises conditions & 5 & manque de lumière \\
+		difficile            & 6 & jongler avec des couteaux \\
+		très difficile       & 8 & corde raide \\
+		légendaire           & 12 & -- \\
+	}
+}
+
+\renewcommand{\nipajinHeadlinePlayer}{Règles pour les joueurs}
+\renewcommand{\nipajinTocPlayer}{Règles pour les joueurs}
+\renewcommand{\nipajinTextPlayer}{%
+	Chaque \keyword{personnage} est au départ une feuille A4 vierge. On trace sur cette \keyword{feuille de personnage} une ligne afin de la partager en deux feuilles A5, et la partie de droit est encore scindée en deux A6.
+
+	Dans la moitié de gauche, les joueurs notent une brève description de leur héros : nom, origine, apparence générale, suivie de son \keyword{historique}, écrit de façon télégraphique ou en phrases complètes. Cette description doit montrer ce que le personnage a accompli, plutôt que ses talents - c'est le meneur, au cours du jeu, qui décidera de ces derniers. Ainsi, on écrira \pe\ \say{a été déménageur de force} plutôt que \say{est fort}. \keyword{Possessions} (\refPage{labelEquipment}) und die ggf. beherrschten \keyword{Pouvoirs} (\refPage{labelEffects}) enthalten, was Spieler und Spielleiter für richtig befinden.
+
+	Le joueur dispose ensuite dans la section de droite, en haut, une suite de D4, D6, D8, D10 et D12. Il en choisit un comme \keyword{Dé de résistance} (\HD) et le pose, sa face la plus forte visible, dans la partie de gauche de sa feuille. Si le \HD\ descend en-dessous de 1 au cours du jeu, le personnage est éliminé.
+
+	\mysection[labelTaskresolution]{Résolution des actions}
+
+		\noindent
+		Si tout le monde est d'accord sur le résultat d'une \keyword{action} d'un personnage, la narration continue. Si par contre, un doute existe, alors son joueur choisit et lance un \keyword{dé disponible} dans la partie suéprieure droite de sa feuille. Sur un jet de 1, l'action est un \keyword{échec automatique}. Sinon, le meneur de jeu cherche dans l'historique du personnage un éventuel \keyword{modificateur} à ajouter au dé.
+
+		\nipajinTableModifier
+
+		\noindent
+		Si le résultat final égale ou dépasse le \keyword{seuil} (\TN) de l'action, c'est un succès. Un total final de 1 n'est pas un échec automatique, mais ça ne suffira que rarement.
+
+		\nipajinTableTargets
+
+		\noindent
+		Après le jet, le \keyword{dé dépensé} est transféré vers le quart inférieur de la feuille de personnage. Si un nouveau modificateur a été décidé, il doit être noté sur la feuile, afin qu'on n'ait plus à le réestimer, \pe~\say{Lancer+1}.
+
+		Un dé ne peut pas donner de succès ne peut pas être dépensé. Si un personnage veut \keyword{retenter} une action infructueuse (la sienne ou celle d'un autre), le \keyword{seuil} augmente de 1 à chaque essai.
+
+		Quand tous les dés d'un personnage ont été dépensés, celui-ci ne peut plus accomplir aucune action, il doit \keyword{souffler} pendant une durée estimée par le meneur de jeu. Après cela, les dés sont de nouveau disponibles et remis dans le quart supérieur.
+
+	\mysection[labelConflict]{Conflits}
+
+		\noindent
+		Les conflits se déroulent en \keyword{tours} d'une durée déterminée par le meneur de jeu. A chaque tour, chaque personnage dispose d'une action, \pe\ attaquer, et peut réagir à celles de rivaux, \pe\ parer. Le but est d'amener le \HD\ de son rival en-dessous de 1, de façon violente ou pas.
+
+		Au début de chaque tour, les joueurs choisissent simultanément, dans leur réserve, leur \keyword{dé d'action} (\AD) et leur \keyword{dé de réaction} (\RD). Ils serviront à toutes leurs actions et réactions ce tour. Un joueur peut renoncer à utiliser un \AD\ ou un \RD. En cas de surprise, la victime n'a aucun \AD\ au premier tour. Ce n'est que quand, darf die Runde aussetzen, um durchzuatmen.
+
+		Le \AD\ choisi par le joueur donne aussi son \keyword{ordre d'action} dans le tour. Le plus petit dé agit en premier (\pe\ un D6 avant un D8). On tire au sort les ex aequo.
+
+		Lors d'une attaque, le défenseur lance son \RD\ en premier pour avoir un \TN. En cas d'échec automatique, ou si le défenseur n'a pas de \RD\ ce tour, le \TN\ est de 0; autrement il est égal au jet de dé ou à 1 (le plus élevé). L'attaquant doit égaler ce \TN\ avec son \AD. Sur un succès, le défenseur encaisse une \keyword{blessure} et réduit son \HD\ de 1. Les actions non-violentes peuvent aussi aider à réduire la résistance de l'adversaire: cela s'appelle des \keyword{Traumatismes}, marqués en jeu par des.
+
+		Un joueur peut choisir de renoncer à se défendre et à avoir un \RD; il peut alors annoncer autant d'\keyword{actions multiples} que la moitié de son \AD\ (deux avec D4, trois avec D6~\ldots). Cela comprend \pe\ les attaques à deux mains, le double tir, les attaques de zone comme le balayage ou les boules de feu, intimider un groupe, ou une succession de tâches. \emph{Toutes} ces actions ont un modificateur de \makebox{-2} par action ou cible après la première. Chaque action peut être résistée individuellement.
+
+		Enfin, un personnage peut en \keyword{couvrir} un autre s'il n'a pas choisi de \AD\ ce tour. Il réagit à autant d'attaques que la moitié de son \RD, du moment que la cible est à sa portée. Si le défenseur manque sa réaction, il reçoit lui-même les blessures.
+
+		Si le \HD\ d'un personnage tombe en-dessous de 1, ou si le total des traumatismes est égal au chiffre actuel de son \HD, il est neutralisé (mort, paralysé~\ldots).
+
+	\mysection[labelEquipment]{Possessions}
+
+		\noindent
+		Il n'y a pas de liste d'équipement. Les armes normales causent une blessure par touche, les armes spéciales ou magiques en causent deux, les armes à feu ou les explosifs en causent trois ou quatre. Le matériel improvisé ajoute un malus de \makebox{-1} au jet. L'armure ajoute +1 ou +2 au \RD.
+
+	\mysection[labelHeal]{Récupération}
+
+		\noindent
+		Après chaque \keyword{nuit de sommeil} chaque personnage récupère tous ses dés et peut tenter de récupérer. Le joueur note la valeur de son \HD\ et le lance. Si le score du jet est meilleur que la valeur précédente, on garde le \HD\ à ce niveau, sinon il garde son ancienne valeur.
+
+		Les \keyword{traumatismes} guérissent à la discrétion du meneur de jeu. Ceux dû à l'intimidation dureront jusqu'à la fin de la scène; les phobies, malédictions etc. prendront plusieurs jours voire semaine à s'effacer.
+}
+
+\renewcommand{\nipajinHeadlineEffects}{Pouvoirs}
+\renewcommand{\nipajinTocEffects}{Pouvoirs}
+\renewcommand{\nipajinTextEffects}{\zlabel{labelEffects}%
+	\noindent
+	La magie, les miracles, les pouvoirs psi ou superpouvoirs sont des \keyword{pouvoirs} définis à la création du personnage. Les règles exactes des pouvoirs dépendent du scénario, mais vous pouvez utiliser par défaut le système standard \nipajin qui suit:
+
+	Le personnage doit se concentrer ou gesticuler durant un {temps de préparation} (\PT). S'il est \keyword{variable}, le joueur décide de sa durée avant le jet, \pe\ \say{une minute}. A la fin de ce \PT\ le joueur lance le dé, avec le malus susdit de \makebox{-2} par cible. Chaque victime peut faire un jet de réaction pour ignorer l'effet du pouvoir. Pour les objets et les pouvoirs qui ne font pas de victimes, le meneur définira le \TN. En cas de succès, le pouvoir fait effet pour sa \keyword{durée} (\FT) :
+
+	\keyword{Les pouvoirs de Mêlée} équivalent à des armes normales, \pe\ \emph{Main de glace} ou \emph{Epée spectrale}. Chaque touche cause une blessure. \PT:~1~tour; \FT:~permanent
+
+	\keyword{Les pouvoirs d'Attaque à distance} équivalent à des armes de tir et exigent de consommer à chaque fois une ressource donnée, \pe\ un \emph{Projectile magique} requerra de la poudre noire ou une petite gemme, une \emph{Boule de feu} exigera d'utiliser une grenade alchimique. \PT:~1~tour; \FT:~permanent
+
+	\keyword{Les pouvoirs Incapacitants} paralysent leurs cibles par le \pe\ \emph{Sommeil}, la \emph{Pétrification}, la \emph{Peur} ou le \emph{Bannissement}. \PT:~variable; \FT:~dépense \PT
+
+	\keyword{Les pouvoirs de Soutien} aident une créature ou améliorent un aspect d'un objet, \pe\ \emph{ininflammabilité}, \emph{chute de plume}, \emph{Barrière} ou \emph{Lumière}. \PT:~variable; \FT:~dépense \PT
+
+	\keyword{Les Transformations} changent ou déplacent lentement la matière non vivante ou les sentiments, \pe\ \emph{Eau en Vin}, \emph{Charme} ou \emph{Télékinésie}. \PT:~variable; \FT:~dépense \PT
+
+	\keyword{Les Illusions} trompent un unique sens, \pe\ \emph{Or des fous}, \emph{Bruit illusoire} ou \emph{Invisibilité}. \PT:~variable; \FT:~dépense \PT
+
+	\keyword{La Divination} révèle des secrets, \pe\ \emph{Détection de la magie}, \emph{Clairvoyance} ou \emph{Sens du danger}. \PT:~une minute pour le présent, une heure pour le passé, un jour pour l'avenir; \FT:~--
+
+	\keyword{La Guérison} efface les blessures, maladies et empoisonnements. \PT:~une heure par blessure, un jour par maladie; \FT:~permanent
+}
+
+\newcommand{\nipajinTableNSC}{%
+	\tabelle{c X}{
+	\thead{\AD/\RD} & \thead{Dangerosité}  \\
+	}{
+		W2  & dangereux en masse \\
+		W3  & recrue novice \\
+		W4  & débutant \\
+		W6  & moyen \\
+		W8  & aguerri \\
+		W10 & dangereux \\
+		W12 & très dangereux \\
+		W20 & épique \\
+	}
+}
+
+\newcommand{\nipajinTableBestiary}{%
+	\tabelle{p{1.1cm} c c c X}{
+	\thead{Kreatur} & \thead{\HD} & \thead{\AD} & \thead{\RD} & \thead{Fähigkeiten}  \\
+	}{
+		Rat géant &  1 &  2 &  3 & Courir+4, Se cacher+2 \\
+		Gobelin   &  3 &  4 &  4 & Perception+1 \\
+		Orc       &  6 &  6 &  6 & Intimider+1, Combattre+1, Astuce-1 \\
+		Troll     & 10 &  8 &  6 & Combattre+1, régénère une blessure par tour \\
+		Géant     & 20 &  8 &  8 & Combattre+2, Force+4 \\
+		Drache    & 40 & 12 & 10 & Souffle enflammé+4, ne peut être Incapacité \\
+	}
+}
+
+\renewcommand{\nipajinHeadlineGM}{Règles du Meneur de jeu}
+\renewcommand{\nipajinTocGM}{Règles du Meneur de jeu}
+\renewcommand{\nipajinTextGM}{%
+	\mysection[labelPJs]{Historique}
+
+		\noindent
+		L'historique d'un personnage-joueur (PJ) est d'une grande importance dans \nipajin. Il devrait inclure l'enfance, l'éducation et les activités récentes du personnage, avec son âge, son apparence et une ou deux expériences marquantes pour compléter.
+
+		C'est au groupe de décider à quel point cette description doit être codifiée. Le meneur doit pouvoir en tirer assez d'indices sur les forces et faiblesses du PJ et ainsi informer ses décisions. Les lacunes dans l'historique devraient être  complétées dès que possible. Les scénarios publiés donnent généralement des idées de traits pour des personnages prétirés; vous les compélterez en cours de jeu.
+
+	\mysection[labelGroups]{Travail d'équipe}
+
+		\noindent
+		Si plusieurs PJ (pas forcément tous) coopèrent sur une même action, c'est une \keyword{action de groupe}: chacun des participants choisit son \AD, puis on désigne un PJ comme leader. Ce joueur fait son jet en premier et décide si son score est suffisant ou pas. Si non, il passe la main à un autre PJ, dont le jet \emph{remplace les précédents}. Un score de 1 au dé signifie que l'action échoue pour tous. Seuls les dés effectivement utilisés sont consommés.
+
+		Si une action de groupe a lieu pendant un conflit, leur initiative est égale à la plus basse parmi tous les participants. L'adversaire réagit avec son \RD\ contre le score final; s'il échoue, il encaisse toutes les blessures infligées par chacun des participants. Une action de groupe ne permet pas d'action supplémentaire.
+
+		\keyword{Les actions prolongées} sont des actions avec une haute difficulté, \pe\ \say{Réparer, \TN20}. Les PJ participants passent plusieurs tours à l'atteindre. A chaque tour, de durée décidée par le meneur, on procède à une action de groupe. On cumule les scores jusqu'à ce que le \TN\ soit atteint. Un score de 1 au dé annule un tour seulement, et non l'action entière.
+
+	\mysection[labelNSCs]{Personnages non-joueur}
+
+		\noindent
+		Le meneur gère tous les amis et ennemis que rencontrera le groupe. Ces \keyword{Personnages non-joueurs} (PNJ) obéissent à des règles simplifiées: en plus de leur description et des motivations qui les font interagir avec les PJ, ils n'ont qu'un \HD\ tandis que leurs compétences sont représentées par un seul \AD\ et un seul \RD. Ce peut être des demi-dés type D2 ou D3.
+
+		\nipajinTableNSC
+
+		\noindent
+		On y rajoute une paire de modificateurs préétablis, \pe\ Combat+1 ou Agilité-2. Veillez à ne pas cumuler de bons attributs et des modificateurs trop élevés, ou vos PNJ seront trop forts.
+
+		Les PNj ont l'avantage de ne jamais tomber à court de \AD/\RD. En retour, ils sont en général moins puissants. Les traumatismes ne les affectent pas durablement et sont directement déduits de leur \HD.
+
+	\mysection[labelBestiaire]{Bestiarium}
+
+		\noindent
+		Les créatures ci-après sont des exemples dont il ne faut pas déduire que \nipajin\ se limite au genre médiéval-fantastique.
+
+		\nipajinTableBestiary
+
+	\mysection[labelXP]{Expérience}
+
+		\noindent
+		\nipajin\ n'a pas pour vocation de voir les personnages progresser au cours de longues campagnes. Cependant, si une longue période de temps fictif s'écoule durant un scénario, le meneur peut améliorer un modificateur appartenant à un PJ, si cela reste plausible.
+
+		Les personnages définissent en général le niveau de puissance dans le cadre de jeu. Si ce sont des aventuriers aguerris, les exemples du Bestiaire sont de niveau adéquat. Si par contre ce sont des gobelins, un simple héros PNJ humain ravageant leur tanière sera pour eux comparable à un Troll. Le meneur devrait faire correspondre les PJ et les PNJ. Si les PJ deviennent d'un jour à l'autres des superhéros, il n'y a pas besoin de leur donner d'anormes bonus, il suffit au contraire de réduire les capacités de leurs ennemis.
+}
