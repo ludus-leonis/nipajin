@@ -1,7 +1,7 @@
 % (c) 2009-2017 by Markus Leupold-Löwenthal
 % This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
-\renewcommand{\nipajinVersion}{v1.8.1-rc1}
+\renewcommand{\nipajinVersion}{v1.8.1-rc2}
 
 % CHANGELOG-fr
 %   - 22.04.2017 : Traduction en français
@@ -23,12 +23,12 @@
 	pdfkeywords={nipajin, nip'ajin, jeu de rôle, jeux de rôle, système, libre, RPG}
 }
 
-\renewcommand{\backgroundlayername}{Hintergrund}
+\renewcommand{\backgroundlayername}{Arrière-plan}
 
 % --- fine print ---------------------------------------------------------------
 
 \renewcommand{\nipajinCopyright}{\copyright\ 2009--2017, Markus Leupold-Löwenthal}
-\renewcommand{\nipajinCredits}{La traduction : Alain Curato}
+\renewcommand{\nipajinCredits}{Traduction française : Alain Curato}
 \renewcommand{\nipajinFineprint}{(Logos et marque déposés.)}
 \renewcommand{\nipajinURL}{http://ludus-leonis.com/fr/}
 \renewcommand{\nipajinURLPrint}{ludus-leonis.com/fr/}
@@ -42,7 +42,7 @@
 \renewcommand{\nipajinSummary}{%
 	Un système de jeu de rôle simple et universel, par \ludusleonis.
 
-	\nipajin\ Conçu en vue d'aventures one-shot et de campagnes courtes, ce jeu se prononce \nipajinPronounce\ -- acronyme de \say{personne n'est parfait, amais chacun peut contribuer}. Il vise à permettre aux personnages de se partager le premier rôle, sans les enfermer dans un carcan de règles.
+	\nipajin\ Conçu en vue d'aventures one-shot et de campagnes courtes, ce jeu se prononce \nipajinPronounce\ -- acronyme de \say{personne n'est parfait, mais chacun peut contribuer}. Il vise à permettre aux personnages de se partager le premier rôle, sans les enfermer dans un carcan de règles.
 }
 
 \newcommand{\nipajinTableModifier}{%
@@ -67,7 +67,7 @@
 		bonnes conditions    & 3 & bons outils \\
 		moyen                & 4 & -- \\
 		mauvaises conditions & 5 & manque de lumière \\
-		difficile            & 6 & jongler avec des couteaux \\
+		difficile            & 6 & saut à moto \\
 		très difficile       & 8 & corde raide \\
 		légendaire           & 12 & -- \\
 	}
@@ -76,16 +76,16 @@
 \renewcommand{\nipajinHeadlinePlayer}{Règles pour les joueurs}
 \renewcommand{\nipajinTocPlayer}{Règles pour les joueurs}
 \renewcommand{\nipajinTextPlayer}{%
-	Chaque \keyword{personnage} est au départ une feuille A4 vierge. On trace sur cette \keyword{feuille de personnage} une ligne afin de la partager en deux feuilles A5, et la partie de droit est encore scindée en deux A6.
+	Chaque \keyword{personnage} est au départ une feuille A4 vierge. On trace sur cette \keyword{feuille de personnage} une ligne afin de la partager en deux feuilles A5, et la partie de droite est encore scindée en deux A6.
 
-	Dans la moitié de gauche, les joueurs notent une brève description de leur héros : nom, origine, apparence générale, suivie de son \keyword{historique}, écrit de façon télégraphique ou en phrases complètes. Cette description doit montrer ce que le personnage a accompli, plutôt que ses talents -- c'est le meneur, au cours du jeu, qui décidera de ces derniers. Ainsi, on écrira \pe\ \say{a été déménageur de force} plutôt que \say{est fort}. \keyword{Possessions} (\refPage{labelEquipment}) und die ggf. beherrschten \keyword{Pouvoirs} (\refPage{labelEffects}) enthalten, was Spieler und Spielleiter für richtig befinden.
+	Dans la moitié de gauche, les joueurs notent une brève description de leur héros : nom, origine, apparence générale, suivie de son \keyword{historique}, écrit de façon télégraphique ou en phrases complètes. Cette description doit montrer ce que le personnage a accompli, plutôt que ses talents -- c'est le meneur, au cours du jeu, qui décidera de ces derniers. Ainsi, on écrira \pe\ \say{a été déménageur de force} plutôt que \say{est fort}. Le meneur et les joueurs se mettent d'accord sur les \keyword{Possessions} (\refPage{labelEquipment}) et les \keyword{Pouvoirs} (\refPage{labelEffects}) qui leur semblent convenir.
 
 	Le joueur dispose ensuite dans la section de droite, en haut, une suite de D4, D6, D8, D10 et D12. Il en choisit un comme \keyword{Dé de résistance} (\HD) et le pose, sa face la plus forte visible, dans la partie de gauche de sa feuille. Si le \HD\ descend en-dessous de 1 au cours du jeu, le personnage est éliminé.
 
 	\mysection[labelTaskresolution]{Résolution des actions}
 
 		\noindent
-		Si tout le monde est d'accord sur le résultat d'une \keyword{action} d'un personnage, la narration continue. Si par contre, un doute existe, alors son joueur choisit et lance un \keyword{dé disponible} dans la partie suéprieure droite de sa feuille. Sur un jet de 1, l'action est un \keyword{échec automatique}. Sinon, le meneur de jeu cherche dans l'historique du personnage un éventuel \keyword{modificateur} à ajouter au dé.
+		Si tout le monde est d'accord sur le résultat d'une \keyword{action} d'un personnage, la narration continue. Si par contre, un doute existe, alors son joueur choisit et lance un \keyword{dé disponible} dans la partie supérieure droite de sa feuille. Sur un jet de 1, l'action est un \keyword{échec automatique}. Sinon, le meneur de jeu cherche dans l'historique du personnage un éventuel \keyword{modificateur} à ajouter au dé.
 
 		\nipajinTableModifier
 
@@ -106,7 +106,7 @@
 		\noindent
 		Les conflits se déroulent en \keyword{tours} d'une durée déterminée par le meneur de jeu. A chaque tour, chaque personnage dispose d'une action, \pe\ attaquer, et peut réagir à celles de rivaux, \pe\ parer. Le but est d'amener le \HD\ de son rival en-dessous de 1, de façon violente ou pas.
 
-		Au début de chaque tour, les joueurs choisissent simultanément, dans leur réserve, leur \keyword{dé d'action} (\AD) et leur \keyword{dé de réaction} (\RD). Ils serviront à toutes leurs actions et réactions ce tour. Un joueur peut renoncer à utiliser un \AD\ ou un \RD. En cas de surprise, la victime n'a aucun \AD\ au premier tour. Ce n'est que quand, darf die Runde aussetzen, um durchzuatmen.
+		Au début de chaque tour, les joueurs choisissent simultanément, dans leur réserve, leur \keyword{dé d'action} (\AD) et leur \keyword{dé de réaction} (\RD). Ils serviront à toutes leurs actions et réactions ce tour. Un joueur peut renoncer à utiliser un \AD\ ou un \RD. En cas de surprise, la victime n'a aucun \AD\ au premier tour. Ce n'est que quand on n'a plus de dés qu'on peut passer son tour pour souffler.
 
 		Le \AD\ choisi par le joueur donne aussi son \keyword{ordre d'action} dans le tour. Le plus petit dé agit en premier (\pe\ un D6 avant un D8). On tire au sort les ex aequo.
 
@@ -135,7 +135,7 @@
 \renewcommand{\nipajinTocEffects}{Pouvoirs}
 \renewcommand{\nipajinTextEffects}{\zlabel{labelEffects}%
 	\noindent
-	La magie, les miracles, les pouvoirs psi ou superpouvoirs sont des \keyword{pouvoirs} définis à la création du personnage. Les règles exactes des pouvoirs dépendent du scénario, mais vous pouvez utiliser par défaut le système standard \nipajin qui suit:
+	La magie, les miracles, les pouvoirs psi ou superpouvoirs sont des \keyword{pouvoirs} définis à la création du personnage. Les règles exactes des pouvoirs dépendent du scénario, mais vous pouvez utiliser par défaut le système standard \nipajin  qui suit:
 
 	Le personnage doit se concentrer ou gesticuler durant un {temps de préparation} (\PT). S'il est \keyword{variable}, le joueur décide de sa durée avant le jet, \pe\ \say{une minute}. A la fin de ce \PT\ le joueur lance le dé, avec le malus susdit de \makebox{-2} par cible. Chaque victime peut faire un jet de réaction pour ignorer l'effet du pouvoir. Pour les objets et les pouvoirs qui ne font pas de victimes, le meneur définira le \TN. En cas de succès, le pouvoir fait effet pour sa \keyword{durée} (\FT) :
 
@@ -143,13 +143,13 @@
 
 	\keyword{Les pouvoirs d'Attaque à distance} équivalent à des armes de tir et exigent de consommer à chaque fois une ressource donnée, \pe\ un \emph{Projectile magique} requerra de la poudre noire ou une petite gemme, une \emph{Boule de feu} exigera d'utiliser une grenade alchimique. \PT:~1~tour; \FT:~permanent
 
-	\keyword{Les pouvoirs Incapacitants} paralysent leurs cibles par le \pe\ \emph{Sommeil}, la \emph{Pétrification}, la \emph{Peur} ou le \emph{Bannissement}. \PT:~variable; \FT:~dépense \PT
+	\keyword{Les pouvoirs Incapacitants} paralysent leurs cibles par le \pe\ \emph{Sommeil}, la \emph{Pétrification}, la \emph{Peur} ou le \emph{Bannissement}. \PT:~variable; \FT:~égal à \PT
 
-	\keyword{Les pouvoirs de Soutien} aident une créature ou améliorent un aspect d'un objet, \pe\ \emph{ininflammabilité}, \emph{chute de plume}, \emph{Barrière} ou \emph{Lumière}. \PT:~variable; \FT:~dépense \PT
+	\keyword{Les pouvoirs de Soutien} aident une créature ou améliorent un aspect d'un objet, \pe\ \emph{ininflammabilité}, \emph{chute de plume}, \emph{Barrière} ou \emph{Lumière}. \PT:~variable; \FT:~égal à \PT
 
-	\keyword{Les Transformations} changent ou déplacent lentement la matière non vivante ou les sentiments, \pe\ \emph{Eau en Vin}, \emph{Charme} ou \emph{Télékinésie}. \PT:~variable; \FT:~dépense \PT
+	\keyword{Les Transformations} changent ou déplacent lentement la matière non vivante ou les sentiments, \pe\ \emph{Eau en Vin}, \emph{Charme} ou \emph{Télékinésie}. \PT:~variable; \FT:~égal à \PT
 
-	\keyword{Les Illusions} trompent un unique sens, \pe\ \emph{Or des fous}, \emph{Bruit illusoire} ou \emph{Invisibilité}. \PT:~variable; \FT:~dépense \PT
+	\keyword{Les Illusions} trompent un unique sens, \pe\ \emph{Or des fous}, \emph{Bruit illusoire} ou \emph{Invisibilité}. \PT:~variable; \FT:~égal à \PT
 
 	\keyword{La Divination} révèle des secrets, \pe\ \emph{Détection de la magie}, \emph{Clairvoyance} ou \emph{Sens du danger}. \PT:~une minute pour le présent, une heure pour le passé, un jour pour l'avenir; \FT:~--
 
@@ -173,14 +173,14 @@
 
 \newcommand{\nipajinTableBestiary}{%
 	\tabelle{p{1.1cm} c c c X}{
-	\thead{Kreatur} & \thead{\HD} & \thead{\AD} & \thead{\RD} & \thead{Fähigkeiten}  \\
+	\thead{Créature} & \thead{\HD} & \thead{\AD} & \thead{\RD} & \thead{Capacités}  \\
 	}{
 		Rat géant &  1 &  2 &  3 & Courir+4, Se cacher+2 \\
 		Gobelin   &  3 &  4 &  4 & Perception+1 \\
 		Orc       &  6 &  6 &  6 & Intimider+1, Combattre+1, Astuce-1 \\
 		Troll     & 10 &  8 &  6 & Combattre+1, régénère une blessure par tour \\
 		Géant     & 20 &  8 &  8 & Combattre+2, Force+4 \\
-		Drache    & 40 & 12 & 10 & Souffle enflammé+4, ne peut être Incapacité \\
+		Dragon    & 40 & 12 & 10 & Souffle enflammé+4, ne peut être Incapacité \\
 	}
 }
 
@@ -192,7 +192,7 @@
 		\noindent
 		L'historique d'un personnage-joueur (PJ) est d'une grande importance dans \nipajin. Il devrait inclure l'enfance, l'éducation et les activités récentes du personnage, avec son âge, son apparence et une ou deux expériences marquantes pour compléter.
 
-		C'est au groupe de décider à quel point cette description doit être codifiée. Le meneur doit pouvoir en tirer assez d'indices sur les forces et faiblesses du PJ et ainsi informer ses décisions. Les lacunes dans l'historique devraient être  complétées dès que possible. Les scénarios publiés donnent généralement des idées de traits pour des personnages prétirés; vous les compélterez en cours de jeu.
+		C'est au groupe de décider à quel point cette description doit être codifiée. Le meneur doit pouvoir en tirer assez d'indices sur les forces et faiblesses du PJ et ainsi informer ses décisions. Les lacunes dans l'historique devraient être  complétées dès que possible. Les scénarios publiés donnent généralement des idées de traits pour des personnages prétirés; vous les compléterez en cours de jeu.
 
 	\mysection[labelGroups]{Travail d'équipe}
 
@@ -215,7 +215,7 @@
 
 		Les PNj ont l'avantage de ne jamais tomber à court de \AD/\RD. En retour, ils sont en général moins puissants. Les traumatismes ne les affectent pas durablement et sont directement déduits de leur \HD.
 
-	\mysection[labelBestiaire]{Bestiarium}
+	\mysection[labelBestiaire]{Bestiaire}
 
 		\noindent
 		Les créatures ci-après sont des exemples dont il ne faut pas déduire que \nipajin\ se limite au genre médiéval-fantastique.
@@ -227,5 +227,5 @@
 		\noindent
 		\nipajin\ n'a pas pour vocation de voir les personnages progresser au cours de longues campagnes. Cependant, si une longue période de temps fictif s'écoule durant un scénario, le meneur peut améliorer un modificateur appartenant à un PJ, si cela reste plausible.
 
-		Les personnages définissent en général le niveau de puissance dans le cadre de jeu. Si ce sont des aventuriers aguerris, les exemples du Bestiaire sont de niveau adéquat. Si par contre ce sont des gobelins, un simple héros PNJ humain ravageant leur tanière sera pour eux comparable à un Troll. Le meneur devrait faire correspondre les PJ et les PNJ. Si les PJ deviennent d'un jour à l'autres des superhéros, il n'y a pas besoin de leur donner d'anormes bonus, il suffit au contraire de réduire les capacités de leurs ennemis.
+		Les personnages définissent en général le niveau de puissance dans le cadre de jeu. Si ce sont des aventuriers aguerris, les exemples du Bestiaire sont de niveau adéquat. Si par contre ce sont des gobelins, un simple héros PNJ humain ravageant leur tanière sera pour eux comparable à un Troll. Le meneur devrait faire correspondre les PJ et les PNJ. Si les PJ deviennent d'un jour à l'autre des superhéros, il n'y a pas besoin de leur donner d'énormes bonus, il suffit au contraire de réduire les capacités de leurs ennemis.
 }
