@@ -152,6 +152,13 @@
 	ItalicFont={NIPAJIN-Dingbats-Italic},
 	BoldFont={NIPAJIN-Dingbats-Bold}
 ]{NIPAJIN-Dingbats}
+\newfontfamily{\ffipa}[
+	Path=\fontsearchpath/doulos-sil/,
+	Mapping=tex-text,
+	UprightFont={DoulosSIL-R},
+	ItalicFont={DoulosSIL-R},
+	BoldFont={DoulosSIL-R}
+]{DoulosSIL}
 
 \newcommand{\TN}{{\ffdings \textit{t}}}
 \newcommand{\HD}{{\ffdings \textbf{h}}}
@@ -168,7 +175,11 @@
 \newcommand{\suit}{{\ffdings \textup{S}}}
 \newcommand{\tools}{{\ffdings \textup{T}}}
 
-\newcommand{\nipajin}{\href{http://ludus-leonis.com/nipajin}{\makebox{NIP'AJIN}}}
+\newcommand{\nipajinURL}{http://ludus-leonis.com/nipajin}
+\newcommand{\nipajinURLPrint}{ludus-leonis.com/nipajin}
+\newcommand{\nipajinPronounce}{{\ffipa[ˈnɪp\,aˌʧɪn]}}
+
+\newcommand{\nipajin}{\href{\nipajinURL}{\makebox{NIP'AJIN}}}
 \newcommand{\ludusleonis}{\href{http://ludus-leonis.com/}{\makebox{LUDUS} \makebox{LEONIS}}}
 
 % --- images & graphics ------------------------------------------------
@@ -440,7 +451,7 @@
 
 			\vspace*{6pt}
 
-			\centerline{\href{http://ludus-leonis.com/nipajin}{\textbf{ludus-leonis.com/nipajin}}}
+			\centerline{\href{\nipajinURL}{\textbf{\nipajinURLPrint}}}
 		}
 
 	\end{multicols}

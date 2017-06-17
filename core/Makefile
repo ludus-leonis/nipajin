@@ -1,4 +1,4 @@
-# (c) 2009-2016 by Markus Leupold-Löwenthal
+# (c) 2009-2017 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 
 PDF_NAME="NIPAJIN"
@@ -6,7 +6,7 @@ TEX_NAME="nipajin"
 
 default: de
 
-all: de pl en es
+all: de pl en es fr
 
 setup:
 	mkdir -p out
@@ -22,6 +22,10 @@ en: setup
 es: setup
 	ln -sf ../content.es.tex out/content.tex
 	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-es -output-directory out ${TEX_NAME}
+
+fr: setup
+	ln -sf ../content.fr.tex out/content.tex
+	xelatex -output-driver="xdvipdfmx -V 5 -z 9" -jobname=${PDF_NAME}-fr -output-directory out ${TEX_NAME}
 
 pl: setup
 	ln -sf ../content.pl.tex out/content.tex
