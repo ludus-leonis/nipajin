@@ -4,7 +4,7 @@
 
 ## Introduction
 
-NIP’AJIN is a pen-an-paper roleplaying game written by [LUDUS LEONIS](http://ludus-leonis.com/nipajin), that fits on 4 pages. The system uses 5 dice (d4 to d12) that get exhausted after use. Only after all your dice got exhausted, they get available again. This forces characters to show weakness, as they do not always have good (larger) dice available. NIP’AJIN ...
+NIP’AJIN is a pen-an-paper roleplaying game written by [Ludus Leonis](https://ludus-leonis.com/nipajin), that fits on 4 pages. The system uses 5 dice (d4 to d12) that get exhausted after use. Only after all your dice got exhausted, they get available again. This forces characters to show weakness, as they do not always have good (larger) dice available. NIP’AJIN ...
 
 * is free,
 * does not need much preparation,
@@ -20,7 +20,7 @@ This repository contains all LaTeX-files needed to build upon NIP'AJIN in own wo
 * `core` contains the core rulebooklet
 * `fonts` contains all necessary fonts
 * `scenario` contains a template for scenarios/modules, that incorporates the stuff from `core`
-* `shots` contain multiple short NIP'AJIN-Scenarios (a.k.a. [NIP'AJIN Shots](http://ludus-leonis.com/nipajin/shots)). Using them as template allows writing own Shots and converting them to PDF.
+* `shots` contain multiple short NIP'AJIN-Scenarios (a.k.a. [NIP'AJIN Shots](https://ludus-leonis.com/nipajin/shots)). Using them as template allows writing own Shots and converting them to PDF.
 
 Please read the README.md in each folder.
 

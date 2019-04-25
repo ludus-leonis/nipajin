@@ -6,7 +6,7 @@ Please also read the license information in the root folder.
 
 ## Quickstart
 
-Using the files in this directory you can generate the rules booklet for [NIP'AJIN](http://ludus-leonis.com/nipajin). Given all prerequisites are fulfilled, do
+Using the files in this directory you can generate the rules booklet for [NIP'AJIN](https://ludus-leonis.com/nipajin). Given all prerequisites are fulfilled, do
 ```
 core$ make en
 ```

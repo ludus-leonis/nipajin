@@ -4,7 +4,7 @@
 
 ## Einleitung
 
-NIP’AJIN ist ein freies Pen-and-paper Rollenspiel auf vier A5-Seiten von [LUDUS LEONIS](http://ludus-leonis.com/nipajin). Das Regelsystem verwendet fünf Würfel von W4 bis W12, die nach jeder Probe *verbraucht* werden. Erst wenn alle Würfel einmal benutzt wurden, werden sie wieder *verfügbar*. Dadurch sind die Charaktere gezwungen, auch Schwäche zu zeigen, da sie mal gute (große) und mal schlechte (kleine) Würfel benutzen. NIP’AJIN ...
+NIP’AJIN ist ein freies Pen-and-paper Rollenspiel auf vier A5-Seiten von [Ludus Leonis](https://ludus-leonis.com/nipajin). Das Regelsystem verwendet fünf Würfel von W4 bis W12, die nach jeder Probe *verbraucht* werden. Erst wenn alle Würfel einmal benutzt wurden, werden sie wieder *verfügbar*. Dadurch sind die Charaktere gezwungen, auch Schwäche zu zeigen, da sie mal gute (große) und mal schlechte (kleine) Würfel benutzen. NIP’AJIN ...
 
 * ist kostenlos,
 * benötigt kaum Vorbereitung,
@@ -20,7 +20,7 @@ In diesem GIT-Repository findest du LaTeX-Quellen, um NIP'AJIN als Basis für ei
 * `core` enthält das komplette, vierseitige Grundregelwerk.
 * `fonts` enthält die für die PDFs benutzten Schriftarten.
 * `scenario` enthält eine Layout-Vorlage für ein komplettes Szenario/Abenteuer/Modul, die ihrerseits die Regeln aus `core` benutzt.
-* `shots` enthält mehrere kurze NIP'AJIN-Szenarien ([NIP'AJIN Shots](http://ludus-leonis.com/nipajin/shots) genannt). Mit der Vorlage können auch eigene Shots verfasst und in PDFs verwandelt werden.
+* `shots` enthält mehrere kurze NIP'AJIN-Szenarien ([NIP'AJIN Shots](https://ludus-leonis.com/nipajin/shots) genannt). Mit der Vorlage können auch eigene Shots verfasst und in PDFs verwandelt werden.
 
 Bitte beachte das `README.md` im jeweiligen Ordner für Details.
 
