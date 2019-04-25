@@ -1,4 +1,4 @@
-Copyright (c) 2015, Markus Leupold-Löwenthal (http://ludus-leonis.com/),
+Copyright (c) 2015, Markus Leupold-Löwenthal (https://ludus-leonis.com/),
 with Reserved Font Name "NIP'AJIN Dingbats".
 
 This Font Software is licensed under the SIL Open Font License, Version 1.1.
