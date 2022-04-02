@@ -1,0 +1,113 @@
+% (c) 2009-2022 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply one-way compatible licenses.
+
+\renewcommand{\tortugaVersion}{v1.0.0}
+
+% CHANGELOG-de
+%
+% 1.0
+%   - Erstfassung
+
+% --- language dependent typography stuff --------------------------------------
+
+\renewcommand{\fsNormal}{\fontsize{8.75pt}{11.25pt plus 0.1pt minus 0pt}}
+\renewcommand{\fsSmall}{\fontsize{8.75pt}{11.25pt plus 0.1pt minus 0pt}}
+
+% --- pdf metadata -------------------------------------------------------------
+
+\hypersetup{
+	pdfsubject={Ein NIP'AJIN Szenario in der Karibik um 1700.},
+}
+
+% --- fine print ---------------------------------------------------------------
+
+\renewcommand{\tortugaCredits}{
+	Text:~Markus Leupold-Löwenthal%
+}
+
+% --- main texts ---------------------------------------------------------------
+
+\renewcommand{\tortugaPlayers}{%
+	Ein Szenario für 2-6 SC in der Karibik um 1700.
+}
+\renewcommand{\tortugaHeadline}{Tortuga}
+\renewcommand{\tortugaToc}{Szenario: Tortuga}
+\renewcommand{\tortugaText}{%
+
+	\mysection{Setting}
+
+		\noindent
+		\emph{Tortuga -- eine unwegsame Karibikinsel, nördlich vor Hispaniola gelegen. Vergessen von den Spaniern und Engländern. Regiert von Piraten.}
+
+		\emph{Hier seid ihr aufgewachsen, an der Südküste im Waisenhaus von Pater Pedro. Vor genau zehn Jahren -- gerade volljährig geworden -- wart ihr in die Welt hinaus gesegelt. Vom Leben als Pirat habt ihr geträumt, doch die Realität hat euch eingeholt. Kartoffelschälen und Decks schrubben waren eure Heldentaten. Ein eigenes Schiff konntet ihr euch noch nicht leisten. Nun seid ihr zurück nach Tortuga gekehrt, um ein Versprechen einzulösen: Pater Pedro zu besuchen.}
+
+	\mysection{Charaktere}
+
+		\noindent
+		Die gleichaltrigen SC kennen einander und sind einfache Seeleute. Äußeres und Namen dürfen ihre Spieler frei festlegen. Die SC erhalten keine Vor- oder Nachteile, allerdings besitzt jeder einen einzigartigen Gegenstand, der niemals verloren geht. Bei dessen (auch kreativer) Anwendung gibt es +1 auf den Wurf.
+
+		\keyword{Gegenstand:} Glasauge, Fernrohr, Tritonshorn (große Seemuschel), Rumflasche, Papagei, Kompass, Captain Rotbarts Tagebuch
+
+		Werden SC in einer Szene überwunden, dürfen sie in der Folgeszene mit 2\HD\ wieder einsteigen.
+
+	\mysection{Ablauf}
+
+		\subsection{Szene I: Das Waisenhaus}
+
+		\noindent
+		\emph{Pedros Waisenhaus macht immer noch einen gepflegten Eindruck. Doch das Holztor und die bunten Fensterläden sind geschlossen. Auf euer Klopfen antwortet eine Mädchenstimme: \say{Pater Pedro ist nicht da, er ist zum Castillo de León\ \ldots} Ihr hört einen Klatscher. \say{Oh, wir dürfen ja nicht mit Piraten sprechen.}}
+
+		Das Vertrauen der Waisen zu erlangen -- oder ins Haus einzudringen -- erfordert eine \emph{Gruppenaktion}\TN8. Bei Erfolg finden oder erhalten die SC das Tagebuch Pater Pedros. Bei einem Fehlschlag werden achtsame Nachbarn aufmerksam.
+
+		Pedros Tagebuch ist für das Szenario nicht essenziell. Der letzte Eintrag besagt, dass er vor einer Woche zum Castillo ging, um die dort seit kurzem ansässige Piratin Marina von \say{heidnischen Praktiken} abzuhalten, die ganz Tortuga bedrohen.
+
+		Das Castillo liegt an der Nordküste. Die SC haben die Wahl: Der Landweg (Szene II) ist beschwerlich, der Seeweg (Szene III) schneller aber gefährlicher. Pedros Fischerboot wartet, gut vertäut, am Pier 7.
+
+		\nsc{Achtsamer Nachbar}{3}{4}{4}, Anzahl:~1~pro~SC
+
+		\subsection{Szene II: Der Landweg}
+
+		\emph{Ihr folgt einer Straße nach Norden. Vorbei an verlassenen Tabakplantagen wird die Straße bald ein Pfad, der euch zur anderen Seite der Insel führt. Als ihr aus dem Urwald in die felsige Küstenlandschaft tretet, könnt ihr das Castillo schon sehen. Ihr geht darauf zu, als sich unter und um euch die Felsen bewegen. Da bemerkt ihr: Das sind keine Steine, sondern Krabben. Hunderte.}
+
+		Die Krabben sind den SC nicht direkt feindlich gestimmt, fühlen sich aber bedroht. Werden alle SC bewusstlos, lassen die Krabben von ihnen ab.
+
+		\nsc{Krabbenschwarm}{SCx3}{3}{4}, 25\,cm große, rotbraune Krabben mit je einer übergroßen Schere
+
+		\subsection{Szene III: Der Seeweg}
+
+		\noindent
+		\emph{In der Santa Maria, Pedros kleinem Fischerboot, segelt ihr um die Küste Tortugas. Nach einer Stunde erfasst euch eine Strömung, die euch nahe zu den Felsen drückt. Als ihr versucht, wieder die Kontrolle zu erlangen, hört ihr Rufe: \say{So ein schönes Boot! Wir sollten tauschen!} Die Rufe stammen von Piraten, die in Fässern angepaddelt kommen. Sie kennen die Strömungen hier besser als ihr, denn Augenblicke später haben sie euch erreicht.}
+
+		Die Piraten wollen das Boot. Werden SC überwunden, fallen sie ins Wasser. Sind alle SC überwunden, fahren die Piraten mit der Santa Maria davon, lassen aber die Fässer zurück.
+
+		\nsc{Fasspiraten}{3}{4}{3}, Fass \& Paddel, Enterhaken, Anzahl:~1~pro~SC
+
+		\subsection{Szene IV: Castillo de León}
+
+		\emph{Das Castillo aus dunklem Korallenstein wurde auf einer felsigen Anhöhe erbaut. Es hat die Form einer Pfeilspitze, die zur See zeigt. Vom Land aus kann es über eine Steinbrücke erreicht werden, oder auch über eine steile Felstreppe vom Meer aus. Obwohl es nicht kürzlich geregnet hat, sind alle Mauern nass. An vielen Stellen haften Muscheln und Seesterne.}
+
+		Die Tore stehen offen. Lugen die SC ins Fort, sehen sie im Innenhof einen frei stehenden Käfig, in dem Pedro steckt. Ein großes Gatter im leicht trichterförmigen Boden des Hofs verdeckt einen Schacht, der ins Dunkle führt (Szene V).
+
+		Pedros Käfig aufzubrechen benötigt Zeit (\emph{langfristige Aktion}, \TN15, 1min/Runde). Der Boden im Fort ist glitschig (-1 auf Würfe). In den verwinkelten Kammern und Räumen findet sich die allgemeine Ausrüstung von etwa 20 Seefahrern. Bis vor kurzem war das Fort die Behausung von erfolglosen Piraten. In den Räumen halten sich Seekreaturen verschanzt. Sie greifen an, wenn der Käfig aufgebrochen wird.
+
+		Pedro erzählt nach seiner Rettung, dass Marina keine Piratin ist, sondern eine waschechte Seehexe. Sie hat die Piraten hier übernommen und \say{zu den ihrigen} gemacht. Nun ist sie in einer Höhle unter der Festung, um \emph{El Tortuga} zu erwecken -- jene riesige Schildkröte, die der Legende nach die Insel Tortuga auf ihrem Rücken trägt! Pedro fleht die SC an, Marina aufzuhalten.
+
+		\nsc{Seekreatur}{3}{4}{4}, Piraten mit Meeresmutation (z.B. Krabbenhand, Tentakel,~\ldots), Anzahl:~1~pro~SC
+
+		\nsc{Pater Pedro}{1}{4}{4}, ausgehungerter Priester
+
+		\subsection{Szene V: Cueva de León}
+
+		\emph{Unter dem Gatter führt ein Tunnel nach einigen Biegungen in eine gigantische Kammer auf See-Niveau. Groß genug, um ein Piratenschiff zu verstecken! In der Rückwand der halb gefluteten, majestätisch glitzernden Höhle ist ein rund 25\,m langes Fossil freigelegt worden -- das Bein einer Schildkröte. Vor dem Fossil wurde ein einfacher Altar aufgebaut. Hier stehen zwei singende Seekreaturen -- und Marina. Die in Trance versunkene Seehexe bewirft das Fossil im Takt des Gesangs mit Seetang. Und sie hat ihre wahre Gestalt angenommen: Eine 2\,m große Krabbe mit dem Oberkörper einer dicken, muschelbesetzten Frau mit grünem Haar.}
+
+		Marina und ihre zwei Helfer sind in das Ritual vertieft. SCs können problemlos näher schleichen, um einen ersten Schlag gegen sie zu führen. Danach werden die drei sich jedoch gegen die Eindringlinge wehren. Wird Marina nicht aufgehalten, wird sie in ein paar Stunden ihr Ritual beenden und El Tortuga erwecken. Sollte es dazu kommen, wird die Schildkröte mitsamt der Insel abtauchen und in der Karibik verschwinden.
+
+		\nsc{Marina}{SCx4}{10}{8}, Seehexe
+
+		\nsc{Seekreatur}{2}{4}{4}, Anzahl: 2
+
+	\mysection{Ende gut, alles gut?}
+
+		\noindent
+		Nachdem Marina überwunden wurde, dürfen die SC das Piratenschiff behalten~\ldots~und damit auf die Suche nach neuen Abenteuern in der Karibik gehen.
+}

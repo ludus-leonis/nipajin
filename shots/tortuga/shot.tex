@@ -1,0 +1,54 @@
+% (c) 2009-2021 by Markus Leupold-Löwenthal
+% This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
+% This file is also released under CC BY 4.0.
+
+\documentclass{article}
+
+\newcommand{\fontsearchpath}{../../fonts}
+\usepackage{shot}
+
+\usepackage{lipsum} % filler text
+
+% each language file has to re-define the following items:
+
+\newcommand{\shotCopyright}{}
+\newcommand{\shotFineprint}{}
+\newcommand{\shotSummary}{}
+\newcommand{\shotURL}{}
+
+\newcommand{\tortugaVersion}{v0.0}
+\newcommand{\tortugaCredits}{}
+\newcommand{\tortugaHeadline}{}
+\newcommand{\tortugaToc}{}
+\newcommand{\tortugaPlayers}{}
+\newcommand{\tortugaText}{}
+
+% Makefile will map the current language into those files
+\input{content.tex}
+\input{shot.tex}
+
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+% ###########################################################################
+
+\begin{document}\fftext
+
+% ### BANNER ################################################################
+
+\shotsbanner{\shotCopyright}{\tortugaVersion}{\tortugaCredits}{\shotFineprint}{\shotSummary}
+
+% ### CONTENT #################################################################
+
+\mybanner{\MakeUppercase{\tortugaHeadline}}{\tortugaToc}
+
+\vspace*{3mm}
+
+\begin{multicols}{2}%
+\noindent\tortugaPlayers
+
+\tortugaText
+\end{multicols}
+
+\end{document}
