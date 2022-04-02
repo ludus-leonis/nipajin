@@ -7,6 +7,8 @@
 \newcommand{\fontsearchpath}{../../fonts}
 \usepackage{shot}
 
+\usepackage{lipsum} % filler text
+
 % each language file has to re-define the following items:
 
 \newcommand{\shotCopyright}{}
@@ -14,16 +16,16 @@
 \newcommand{\shotSummary}{}
 \newcommand{\shotURL}{}
 
-\newcommand{\archaeaVersion}{v0.0}
-\newcommand{\archaeaCredits}{}
-\newcommand{\archaeaHeadline}{}
-\newcommand{\archaeaToc}{}
-\newcommand{\archaeaPlayers}{}
-\newcommand{\archaeaText}{}
+\newcommand{\tortugaVersion}{v0.0}
+\newcommand{\tortugaCredits}{}
+\newcommand{\tortugaHeadline}{}
+\newcommand{\tortugaToc}{}
+\newcommand{\tortugaPlayers}{}
+\newcommand{\tortugaText}{}
 
 % Makefile will map the current language into those files
-\input{shots.tex}
-\input{archaea-12.tex}
+\input{content.tex}
+\input{shot.tex}
 
 % ###########################################################################
 % ###########################################################################
@@ -35,16 +37,18 @@
 
 % ### BANNER ################################################################
 
-\shotsbanner{\shotCopyright}{\archaeaVersion}{\archaeaCredits}{\shotFineprint}{\shotSummary}
+\shotsbanner{\shotCopyright}{\tortugaVersion}{\tortugaCredits}{\shotFineprint}{\shotSummary}
 
 % ### CONTENT #################################################################
 
-\mybanner{\MakeUppercase{\archaeaHeadline}}{\archaeaToc}
+\mybanner{\MakeUppercase{\tortugaHeadline}}{\tortugaToc}
+
+\vspace*{3mm}
 
 \begin{multicols}{2}%
-\noindent\archaeaPlayers
+\noindent\tortugaPlayers
 
-\archaeaText
+\tortugaText
 \end{multicols}
 
 \end{document}

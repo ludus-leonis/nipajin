@@ -1,8 +1,8 @@
-# (c) 2009-2021 by Markus Leupold-Löwenthal
+# (c) 2009-2022 by Markus Leupold-Löwenthal
 # This file is released under CC BY-SA 4.0. Please do not apply other licenses one-way.
 # This file is also released under CC BY 4.0.
 
-PDF_NAME="NIPAJIN-Shots-Clowns"
+PDF_NAME="NIPAJIN-Shots-Tortuga"
 TEX_NAME="shot"
 
 default: de
